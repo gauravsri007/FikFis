@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CD542C5B988F00EBCCC5 /* Extension.swift */; };
+		1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */; };
+		1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5B2C5BA37700EBCCC5 /* README.txt */; };
+		1873CD712C5BA37700EBCCC5 /* Poppins Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5E2C5BA37700EBCCC5 /* Poppins Bold 700.ttf */; };
+		1873CD762C5BA37700EBCCC5 /* Poppins SemiBold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD632C5BA37700EBCCC5 /* Poppins SemiBold 600.ttf */; };
+		1873CD782C5BA37700EBCCC5 /* Poppins Regular 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD652C5BA37700EBCCC5 /* Poppins Regular 400.ttf */; };
+		1873CD7A2C5BA37700EBCCC5 /* Poppins Italic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD672C5BA37700EBCCC5 /* Poppins Italic 400.ttf */; };
+		1873CD7D2C5BA37700EBCCC5 /* Poppins Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD6A2C5BA37700EBCCC5 /* Poppins Medium 500.ttf */; };
+		18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */; };
+		18BB93DF2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */; };
+		18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */; };
+		18BB93E32C5E1BD200B6AAA0 /* OtpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E22C5E1BD200B6AAA0 /* OtpVM.swift */; };
+		18BB93E52C5E200300B6AAA0 /* CreatePasswordV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E42C5E200300B6AAA0 /* CreatePasswordV.swift */; };
+		18BB93E72C5E201300B6AAA0 /* CreatePasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E62C5E201300B6AAA0 /* CreatePasswordVM.swift */; };
+		18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E82C5E217500B6AAA0 /* SignUpV.swift */; };
+		18BB93EB2C5E218700B6AAA0 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93EA2C5E218700B6AAA0 /* SignUpVM.swift */; };
+		18BB93EE2C5F551500B6AAA0 /* HomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93ED2C5F551500B6AAA0 /* HomeV.swift */; };
+		18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93EF2C5F557900B6AAA0 /* HomeVM.swift */; };
+		18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93F12C5F584600B6AAA0 /* Struct.swift */; };
+		18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93F32C60AAD800B6AAA0 /* ImagePagerM.swift */; };
+		18BB93F72C60C8EA00B6AAA0 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93F62C60C8EA00B6AAA0 /* CustomNavigation.swift */; };
+		18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93FC2C61507600B6AAA0 /* CartV.swift */; };
+		18BB93FF2C61508600B6AAA0 /* OptionsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93FE2C61508600B6AAA0 /* OptionsV.swift */; };
+		18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94002C61509500B6AAA0 /* AccountV.swift */; };
+		18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94022C6150A400B6AAA0 /* OffersV.swift */; };
+		18BB940A2C636E5900B6AAA0 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94092C636E5900B6AAA0 /* Enum.swift */; };
+		18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */; };
+		18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF002C5A1F550026E335 /* ContentView.swift */; };
+		18D4FF032C5A1F560026E335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D4FF022C5A1F560026E335 /* Assets.xcassets */; };
+		18D4FF062C5A1F560026E335 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D4FF052C5A1F560026E335 /* Preview Assets.xcassets */; };
+		18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF452C5A99140026E335 /* LoginVM.swift */; };
+		18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF4C2C5AA3D30026E335 /* SplashV.swift */; };
+		18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF522C5B69CB0026E335 /* LoginV.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1873CD542C5B988F00EBCCC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black 900.ttf"; sourceTree = "<group>"; };
+		1873CD5B2C5BA37700EBCCC5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		1873CD5E2C5BA37700EBCCC5 /* Poppins Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Bold 700.ttf"; sourceTree = "<group>"; };
+		1873CD632C5BA37700EBCCC5 /* Poppins SemiBold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins SemiBold 600.ttf"; sourceTree = "<group>"; };
+		1873CD652C5BA37700EBCCC5 /* Poppins Regular 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Regular 400.ttf"; sourceTree = "<group>"; };
+		1873CD672C5BA37700EBCCC5 /* Poppins Italic 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Italic 400.ttf"; sourceTree = "<group>"; };
+		1873CD6A2C5BA37700EBCCC5 /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
+		1873CD7E2C5BA5B500EBCCC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceV.swift; sourceTree = "<group>"; };
+		18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceVM.swift; sourceTree = "<group>"; };
+		18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpV.swift; sourceTree = "<group>"; };
+		18BB93E22C5E1BD200B6AAA0 /* OtpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVM.swift; sourceTree = "<group>"; };
+		18BB93E42C5E200300B6AAA0 /* CreatePasswordV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordV.swift; sourceTree = "<group>"; };
+		18BB93E62C5E201300B6AAA0 /* CreatePasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordVM.swift; sourceTree = "<group>"; };
+		18BB93E82C5E217500B6AAA0 /* SignUpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpV.swift; sourceTree = "<group>"; };
+		18BB93EA2C5E218700B6AAA0 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		18BB93ED2C5F551500B6AAA0 /* HomeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeV.swift; sourceTree = "<group>"; };
+		18BB93EF2C5F557900B6AAA0 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		18BB93F12C5F584600B6AAA0 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		18BB93F32C60AAD800B6AAA0 /* ImagePagerM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePagerM.swift; sourceTree = "<group>"; };
+		18BB93F62C60C8EA00B6AAA0 /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		18BB93FC2C61507600B6AAA0 /* CartV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartV.swift; sourceTree = "<group>"; };
+		18BB93FE2C61508600B6AAA0 /* OptionsV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsV.swift; sourceTree = "<group>"; };
+		18BB94002C61509500B6AAA0 /* AccountV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountV.swift; sourceTree = "<group>"; };
+		18BB94022C6150A400B6AAA0 /* OffersV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersV.swift; sourceTree = "<group>"; };
+		18BB94092C636E5900B6AAA0 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		18D4FEFB2C5A1F550026E335 /* FikFis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FikFis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikFisApp.swift; sourceTree = "<group>"; };
+		18D4FF002C5A1F550026E335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18D4FF022C5A1F560026E335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18D4FF052C5A1F560026E335 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18D4FF452C5A99140026E335 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		18D4FF4C2C5AA3D30026E335 /* SplashV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashV.swift; sourceTree = "<group>"; };
+		18D4FF522C5B69CB0026E335 /* LoginV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginV.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18D4FEF82C5A1F550026E335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1873CD562C5B996700EBCCC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1873CD572C5BA35D00EBCCC5 /* Font */,
+				18D4FF022C5A1F560026E335 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1873CD572C5BA35D00EBCCC5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */,
+				1873CD5E2C5BA37700EBCCC5 /* Poppins Bold 700.ttf */,
+				1873CD672C5BA37700EBCCC5 /* Poppins Italic 400.ttf */,
+				1873CD6A2C5BA37700EBCCC5 /* Poppins Medium 500.ttf */,
+				1873CD652C5BA37700EBCCC5 /* Poppins Regular 400.ttf */,
+				1873CD632C5BA37700EBCCC5 /* Poppins SemiBold 600.ttf */,
+				1873CD5B2C5BA37700EBCCC5 /* README.txt */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		18BB93EC2C5F54DD00B6AAA0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93ED2C5F551500B6AAA0 /* HomeV.swift */,
+				18BB93EF2C5F557900B6AAA0 /* HomeVM.swift */,
+				18BB93F32C60AAD800B6AAA0 /* ImagePagerM.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18BB93F52C60C8C600B6AAA0 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93F62C60C8EA00B6AAA0 /* CustomNavigation.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		18BB93F82C61503D00B6AAA0 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				18BB94022C6150A400B6AAA0 /* OffersV.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		18BB93F92C61505000B6AAA0 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				18BB94002C61509500B6AAA0 /* AccountV.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		18BB93FA2C61505A00B6AAA0 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93FE2C61508600B6AAA0 /* OptionsV.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		18BB93FB2C61506500B6AAA0 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93FC2C61507600B6AAA0 /* CartV.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		18D4FEF22C5A1F550026E335 = {
+			isa = PBXGroup;
+			children = (
+				18D4FEFD2C5A1F550026E335 /* FikFis */,
+				18D4FEFC2C5A1F550026E335 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18D4FEFC2C5A1F550026E335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D4FEFB2C5A1F550026E335 /* FikFis.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18D4FEFD2C5A1F550026E335 /* FikFis */ = {
+			isa = PBXGroup;
+			children = (
+				1873CD7E2C5BA5B500EBCCC5 /* Info.plist */,
+				1873CD562C5B996700EBCCC5 /* Resources */,
+				18D4FF3F2C5A98CD0026E335 /* Utilities */,
+				18D4FF3E2C5A98C20026E335 /* Screens */,
+				18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */,
+				18D4FF002C5A1F550026E335 /* ContentView.swift */,
+				18D4FF042C5A1F560026E335 /* Preview Content */,
+			);
+			path = FikFis;
+			sourceTree = "<group>";
+		};
+		18D4FF042C5A1F560026E335 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				18D4FF052C5A1F560026E335 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18D4FF3E2C5A98C20026E335 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93FB2C61506500B6AAA0 /* Cart */,
+				18BB93FA2C61505A00B6AAA0 /* Options */,
+				18BB93F92C61505000B6AAA0 /* Account */,
+				18BB93F82C61503D00B6AAA0 /* Offers */,
+				18BB93F52C60C8C600B6AAA0 /* Custom Views */,
+				18BB93EC2C5F54DD00B6AAA0 /* Home */,
+				18D4FF4B2C5AA32B0026E335 /* Splash */,
+				18D4FF4A2C5A99770026E335 /* SignUp */,
+				18D4FF492C5A994C0026E335 /* Create Password */,
+				18D4FF482C5A993A0026E335 /* Temporary Code */,
+				18D4FF472C5A991C0026E335 /* Password Assistance */,
+				18D4FF402C5A98DC0026E335 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		18D4FF3F2C5A98CD0026E335 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1873CD542C5B988F00EBCCC5 /* Extension.swift */,
+				18BB93F12C5F584600B6AAA0 /* Struct.swift */,
+				18BB94092C636E5900B6AAA0 /* Enum.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18D4FF402C5A98DC0026E335 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18D4FF452C5A99140026E335 /* LoginVM.swift */,
+				18D4FF522C5B69CB0026E335 /* LoginV.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18D4FF472C5A991C0026E335 /* Password Assistance */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */,
+				18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */,
+			);
+			path = "Password Assistance";
+			sourceTree = "<group>";
+		};
+		18D4FF482C5A993A0026E335 /* Temporary Code */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */,
+				18BB93E22C5E1BD200B6AAA0 /* OtpVM.swift */,
+			);
+			path = "Temporary Code";
+			sourceTree = "<group>";
+		};
+		18D4FF492C5A994C0026E335 /* Create Password */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93E42C5E200300B6AAA0 /* CreatePasswordV.swift */,
+				18BB93E62C5E201300B6AAA0 /* CreatePasswordVM.swift */,
+			);
+			path = "Create Password";
+			sourceTree = "<group>";
+		};
+		18D4FF4A2C5A99770026E335 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				18BB93E82C5E217500B6AAA0 /* SignUpV.swift */,
+				18BB93EA2C5E218700B6AAA0 /* SignUpVM.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		18D4FF4B2C5AA32B0026E335 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				18D4FF4C2C5AA3D30026E335 /* SplashV.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18D4FEFA2C5A1F550026E335 /* FikFis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D4FF092C5A1F560026E335 /* Build configuration list for PBXNativeTarget "FikFis" */;
+			buildPhases = (
+				18D4FEF72C5A1F550026E335 /* Sources */,
+				18D4FEF82C5A1F550026E335 /* Frameworks */,
+				18D4FEF92C5A1F550026E335 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FikFis;
+			productName = FikFis;
+			productReference = 18D4FEFB2C5A1F550026E335 /* FikFis.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18D4FEF32C5A1F550026E335 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					18D4FEFA2C5A1F550026E335 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 18D4FEF62C5A1F550026E335 /* Build configuration list for PBXProject "FikFis" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18D4FEF22C5A1F550026E335;
+			productRefGroup = 18D4FEFC2C5A1F550026E335 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18D4FEFA2C5A1F550026E335 /* FikFis */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18D4FEF92C5A1F550026E335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1873CD7D2C5BA37700EBCCC5 /* Poppins Medium 500.ttf in Resources */,
+				1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */,
+				1873CD782C5BA37700EBCCC5 /* Poppins Regular 400.ttf in Resources */,
+				1873CD7A2C5BA37700EBCCC5 /* Poppins Italic 400.ttf in Resources */,
+				1873CD712C5BA37700EBCCC5 /* Poppins Bold 700.ttf in Resources */,
+				18D4FF062C5A1F560026E335 /* Preview Assets.xcassets in Resources */,
+				18D4FF032C5A1F560026E335 /* Assets.xcassets in Resources */,
+				1873CD762C5BA37700EBCCC5 /* Poppins SemiBold 600.ttf in Resources */,
+				1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18D4FEF72C5A1F550026E335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */,
+				18BB93DF2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift in Sources */,
+				18BB940A2C636E5900B6AAA0 /* Enum.swift in Sources */,
+				18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */,
+				18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */,
+				18BB93E52C5E200300B6AAA0 /* CreatePasswordV.swift in Sources */,
+				18BB93FF2C61508600B6AAA0 /* OptionsV.swift in Sources */,
+				18BB93F72C60C8EA00B6AAA0 /* CustomNavigation.swift in Sources */,
+				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
+				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
+				18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */,
+				18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */,
+				18BB93EB2C5E218700B6AAA0 /* SignUpVM.swift in Sources */,
+				18BB93EE2C5F551500B6AAA0 /* HomeV.swift in Sources */,
+				1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */,
+				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
+				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
+				18BB93E72C5E201300B6AAA0 /* CreatePasswordVM.swift in Sources */,
+				18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */,
+				18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */,
+				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
+				18BB93E32C5E1BD200B6AAA0 /* OtpVM.swift in Sources */,
+				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
+				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		18D4FF072C5A1F560026E335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18D4FF082C5A1F560026E335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18D4FF0A2C5A1F560026E335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
+				DEVELOPMENT_TEAM = MWRK2SX28Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FikFis/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18D4FF0B2C5A1F560026E335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
+				DEVELOPMENT_TEAM = MWRK2SX28Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FikFis/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18D4FEF62C5A1F550026E335 /* Build configuration list for PBXProject "FikFis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D4FF072C5A1F560026E335 /* Debug */,
+				18D4FF082C5A1F560026E335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D4FF092C5A1F560026E335 /* Build configuration list for PBXNativeTarget "FikFis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D4FF0A2C5A1F560026E335 /* Debug */,
+				18D4FF0B2C5A1F560026E335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18D4FEF32C5A1F550026E335 /* Project object */;
+}
