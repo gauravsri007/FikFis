@@ -7,30 +7,28 @@
 
 import SwiftUI
 
-struct Collection1: Identifiable {
-    var id: Int
-    var title,imageUrl : String
-}
 
 struct CollectionView: View {
-    let collec : Collection1
+    let collec : Card
+    @State var size: CGFloat = 85
     var body: some View {
         VStack {
             Image("\(collec.imageUrl)")
                 .resizable()
                 .cornerRadius(12)
-                .frame(width: 80, height: 80)
+                .frame(width: size, height: size)
+                .aspectRatio(contentMode: .fill)
             Text(collec.title)
-                .font(.subheadline)
+                .font(.custom_font(.regular,size: 12))
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
-                .frame(width: 80, height: 60, alignment: .top)
+                .frame(width: size, height: 60, alignment: .top)
         }
     }
 }
 
 struct FrameView: View {
-    let collec : Collection1
+    let collec : Card
     var body: some View {
         VStack(alignment: .leading) {
             Image("\(collec.imageUrl)")
@@ -47,7 +45,7 @@ struct FrameView: View {
 }
 
 struct ProductItem: View {
-    let item : Collection1
+    let item : Card
     var body: some View {
         VStack(alignment: .leading) {
             Image("\(item.imageUrl)")
@@ -103,6 +101,9 @@ struct StarRatingView: View {
     }
 }
 
+
+
+
 struct ForwardButton: View {
     
     var size: CGFloat = 30.0
@@ -123,9 +124,6 @@ struct ForwardButton: View {
     }
 }
 
-#Preview {
-    ForwardButton()
-}
 
 struct HomeV: View {
     
@@ -133,55 +131,21 @@ struct HomeV: View {
     @State private var searchIsActive = false
     let coverImages: [ImagePagerM]
     var corners: UIRectCorner = .allCorners
-    var arrCollection1 : [String] = ["Kid shoes","Womens clothes","Mens clothes"]
-    let collection1 : [Collection1] = [
-        Collection1(id: 0, title: "Kid shoes", imageUrl: "paging1"),
-        Collection1(id: 1, title: "Womens shoes", imageUrl: "paging1"),
-        Collection1(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "paging1"),
-        Collection1(id: 3, title: "Kid clothes", imageUrl: "paging1"),
-        Collection1(id: 4, title: "Min. 40% off | Washing machines", imageUrl: "paging1"),
-        Collection1(id: 5, title: "Mens clothes", imageUrl: "paging1")
+    @State var arrCollection1 : [String] = ["Kid shoes","Womens clothes","Mens clothes"]
+    @State var collection1 : [Card] = [
+        Card(id: 0, title: "Kid shoes", imageUrl: "paging1"),
+        Card(id: 1, title: "Womens shoes", imageUrl: "paging1"),
+        Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "paging1"),
+        Card(id: 3, title: "Kid clothes", imageUrl: "paging1"),
+        Card(id: 4, title: "Min. 40% off | Washing machines", imageUrl: "paging1"),
+        Card(id: 5, title: "Mens clothes", imageUrl: "paging1")
     ]
 
     var body: some View {
-        
-        Group{
-            HStack(){
-                VStack(alignment: .leading){
-                    Text("Welcome FikFis")
-                        .font(.custom_font(.semibold,size: 34))
-                    Text("Free Shipping | \(7) Days Return")
-                        .font(.custom_font(.regular,size: 15))
-                        .foregroundColor(.white)
-                }
-                .padding(10)
-                //                .background(Color.blue)
-                //                .frame(maxWidth: .infinity)
-                Spacer()
-                //                .cornerRadius(40,corners: [.bottomLeft,.bottomRight])
-                
-                Button(action: {
-                    // handle tap
-                }) {
-                    Image("bell_navigation")
-                        .renderingMode(.template)
-                        .foregroundStyle(Color.black)
-                        .padding(15)
-                        .background {
-                            Circle()
-                                .foregroundStyle(Color.white)
-                        }
-                }
-                .padding(10)
-                
-            }
-            .font(.headline)
-            .background(Color.yellow.ignoresSafeArea())
-            //            .cornerRadius(40,corners: [.bottomLeft,.bottomRight])
-            
-            
+        HomeNavigationV()
+
+        VStack{
             ScrollView(showsIndicators: false) {
-                
                 TabView {
                     ForEach(coverImages,id: \.self) { item in
                         Image(uiImage: item.image ?? UIImage())
@@ -261,7 +225,36 @@ struct HomeV: View {
                     })
                 }
                 
+                Group{
+                    ScrollView(.horizontal) {
+                        HStack{
+                            ForEach((0...9999), id: \.self) {_ in
+                                Image(systemName: "lock")
+                                    .font(.system(size: 30))
+                                    .frame(width: 50, height: 50)
+                                    .cornerRadius(10)
+                                //                    ForEach(collection1.identifie) { collection1 in
+                                //                        CollectionView(collec: collection1)
+                            }
+                        }
+                        
+                    }
+                }
+                .background(Color.white)
+                .frame(height: 200)
+                Spacer()
+                
+                Group{
+                    HStack{
+                        TabV()
+                    }
+                }
+                .background(Color.red)
+                .frame(height: 200)
+                Spacer()
+
             }
+//            TabV()
         }
     }
 

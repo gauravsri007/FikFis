@@ -16,12 +16,10 @@ struct SignUpV: View {
     @State private var alertMessage: String = ""
     let leadingSpace : CGFloat = 5
     var body: some View {
-        
         Group{
             LazyVStack(alignment: .leading) {
                 Group(){
                     LazyVStack(alignment: .leading) {
-                        
                         Text("Sign Up")
                             .font(.custom_font(.medium,size: 26))
                             .underline(true,color: .yellow)

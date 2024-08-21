@@ -15,6 +15,10 @@
 		1873CD782C5BA37700EBCCC5 /* Poppins Regular 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD652C5BA37700EBCCC5 /* Poppins Regular 400.ttf */; };
 		1873CD7A2C5BA37700EBCCC5 /* Poppins Italic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD672C5BA37700EBCCC5 /* Poppins Italic 400.ttf */; };
 		1873CD7D2C5BA37700EBCCC5 /* Poppins Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD6A2C5BA37700EBCCC5 /* Poppins Medium 500.ttf */; };
+		18ADCED32C67F1D100E081DD /* TabV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED22C67F1D100E081DD /* TabV.swift */; };
+		18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED42C68962800E081DD /* HomeNavigationV.swift */; };
+		18ADCED72C69027400E081DD /* CardView_category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED62C69027400E081DD /* CardView_category.swift */; };
+		18ADCEDA2C69038E00E081DD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED92C69038E00E081DD /* Card.swift */; };
 		18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */; };
 		18BB93DF2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */; };
 		18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */; };
@@ -33,6 +37,8 @@
 		18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94002C61509500B6AAA0 /* AccountV.swift */; };
 		18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94022C6150A400B6AAA0 /* OffersV.swift */; };
 		18BB940A2C636E5900B6AAA0 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB94092C636E5900B6AAA0 /* Enum.swift */; };
+		18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB940C2C66116000B6AAA0 /* NavigationHeader.swift */; };
+		18BB94102C6619EB00B6AAA0 /* CategoryV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB940F2C6619EB00B6AAA0 /* CategoryV.swift */; };
 		18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */; };
 		18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF002C5A1F550026E335 /* ContentView.swift */; };
 		18D4FF032C5A1F560026E335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D4FF022C5A1F560026E335 /* Assets.xcassets */; };
@@ -52,6 +58,10 @@
 		1873CD672C5BA37700EBCCC5 /* Poppins Italic 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Italic 400.ttf"; sourceTree = "<group>"; };
 		1873CD6A2C5BA37700EBCCC5 /* Poppins Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium 500.ttf"; sourceTree = "<group>"; };
 		1873CD7E2C5BA5B500EBCCC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		18ADCED22C67F1D100E081DD /* TabV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabV.swift; sourceTree = "<group>"; };
+		18ADCED42C68962800E081DD /* HomeNavigationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationV.swift; sourceTree = "<group>"; };
+		18ADCED62C69027400E081DD /* CardView_category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView_category.swift; sourceTree = "<group>"; };
+		18ADCED92C69038E00E081DD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceV.swift; sourceTree = "<group>"; };
 		18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceVM.swift; sourceTree = "<group>"; };
 		18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpV.swift; sourceTree = "<group>"; };
@@ -70,6 +80,8 @@
 		18BB94002C61509500B6AAA0 /* AccountV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountV.swift; sourceTree = "<group>"; };
 		18BB94022C6150A400B6AAA0 /* OffersV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersV.swift; sourceTree = "<group>"; };
 		18BB94092C636E5900B6AAA0 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		18BB940C2C66116000B6AAA0 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
+		18BB940F2C6619EB00B6AAA0 /* CategoryV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryV.swift; sourceTree = "<group>"; };
 		18D4FEFB2C5A1F550026E335 /* FikFis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FikFis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikFisApp.swift; sourceTree = "<group>"; };
 		18D4FF002C5A1F550026E335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,12 +126,21 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		18ADCED82C69035400E081DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18ADCED92C69038E00E081DD /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18BB93EC2C5F54DD00B6AAA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				18BB93ED2C5F551500B6AAA0 /* HomeV.swift */,
 				18BB93EF2C5F557900B6AAA0 /* HomeVM.swift */,
 				18BB93F32C60AAD800B6AAA0 /* ImagePagerM.swift */,
+				18ADCED42C68962800E081DD /* HomeNavigationV.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -164,6 +185,24 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		18BB940B2C66113500B6AAA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18BB940C2C66116000B6AAA0 /* NavigationHeader.swift */,
+				18ADCED22C67F1D100E081DD /* TabV.swift */,
+				18ADCED62C69027400E081DD /* CardView_category.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18BB940E2C6619C700B6AAA0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18BB940F2C6619EB00B6AAA0 /* CategoryV.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		18D4FEF22C5A1F550026E335 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +222,8 @@
 		18D4FEFD2C5A1F550026E335 /* FikFis */ = {
 			isa = PBXGroup;
 			children = (
+				18ADCED82C69035400E081DD /* Model */,
+				18BB940B2C66113500B6AAA0 /* Views */,
 				1873CD7E2C5BA5B500EBCCC5 /* Info.plist */,
 				1873CD562C5B996700EBCCC5 /* Resources */,
 				18D4FF3F2C5A98CD0026E335 /* Utilities */,
@@ -205,6 +246,7 @@
 		18D4FF3E2C5A98C20026E335 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				18BB940E2C6619C700B6AAA0 /* Category */,
 				18BB93FB2C61506500B6AAA0 /* Cart */,
 				18BB93FA2C61505A00B6AAA0 /* Options */,
 				18BB93F92C61505000B6AAA0 /* Account */,
@@ -368,21 +410,27 @@
 				18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */,
 				18BB93E52C5E200300B6AAA0 /* CreatePasswordV.swift in Sources */,
 				18BB93FF2C61508600B6AAA0 /* OptionsV.swift in Sources */,
+				18ADCEDA2C69038E00E081DD /* Card.swift in Sources */,
 				18BB93F72C60C8EA00B6AAA0 /* CustomNavigation.swift in Sources */,
 				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
 				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
 				18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */,
 				18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */,
+				18BB94102C6619EB00B6AAA0 /* CategoryV.swift in Sources */,
 				18BB93EB2C5E218700B6AAA0 /* SignUpVM.swift in Sources */,
 				18BB93EE2C5F551500B6AAA0 /* HomeV.swift in Sources */,
+				18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */,
 				1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */,
 				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
 				18BB93E72C5E201300B6AAA0 /* CreatePasswordVM.swift in Sources */,
 				18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */,
 				18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */,
+				18ADCED72C69027400E081DD /* CardView_category.swift in Sources */,
 				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
 				18BB93E32C5E1BD200B6AAA0 /* OtpVM.swift in Sources */,
+				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
+				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,
 				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
 				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,
 			);
