@@ -35,7 +35,6 @@ struct CategoryV: View {
                 .searchable(text: $inputText)
                 .background(Color.themeColor.ignoresSafeArea())
             CardView_category()
-            TabV()
         }
     }
 }

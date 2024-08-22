@@ -21,12 +21,12 @@ struct HeaderTab: View {
             Spacer()
             Text(collection.title)
                 .font(.custom_font(.regular,size: 12))
-                .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .frame(width: 100, height: 40, alignment: .top)
                 .background(Color.red)
+                .multilineTextAlignment(.center)
 
-            Spacer()
+//            Spacer()
 
         }
         .frame(width: (UIScreen.screenWidth / 2) - 30, height: 50, alignment: .top)
@@ -34,9 +34,15 @@ struct HeaderTab: View {
          }
 }
 
+
+struct Policies: Identifiable {
+    var id: Int
+    var title : String
+}
+
 struct AccountV: View {
     @State private var inputText: String = ""
-
+    
     @State var collection1 : [Card] = [
         Card(id: 0, title: "Your Profile", imageUrl: "user"),
         Card(id: 1, title: "Your Orders", imageUrl: "shopping"),
@@ -49,28 +55,325 @@ struct AccountV: View {
         Card(id: 8, title: "Logout", imageUrl: "arrow_exit")
     ]
     
+    @State var policies : [Policies] = [Policies(id: 0, title: "FAQ's"),
+                                        Policies(id: 1, title: "Terms & Condition"),
+                                        Policies(id: 2, title: "Privacy Policy"),
+                                        Policies(id: 3, title: "Disclaimer"),
+                                        Policies(id: 4, title: "Refund policy"),
+                                        Policies(id: 5, title: "Returns & Refunds"),
+                                        Policies(id: 6, title: "Shippings & Delivery"),
+                                        Policies(id: 7, title: "Order Cancellation")
+    ]
+    
+    
     var body: some View {
         VStack{
             NavigationHeader()
-                .searchable(text: $inputText)
                 .background(Color.themeColor.ignoresSafeArea())
                 .padding(.bottom)
             Spacer()
             ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: [
-                    GridItem(.flexible(), alignment: .top),
-                    GridItem(.flexible(), alignment: .top)
-                ]) {
-                    ForEach(collection1) { collection in
-                        HeaderTab(collection: collection)
-                            
+                
+                Group{
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVGrid(columns: [
+                            GridItem(.flexible(), alignment: .top),
+                            GridItem(.flexible(), alignment: .top)
+                        ]) {
+                            ForEach(collection1) { collection in
+                                HeaderTab(collection: collection)
+                                
+                            }
+                        }
+                        
+                        .padding(.horizontal)
                     }
                 }
-                .padding(.horizontal)
+                
+                HStack{
+                    policies_view
+                    
+                    followUs
+                    
+                }
+                
+                fikfis_view
+                
+                channel_view
+                
             }
         }
     }
+    
+    
+    
+    var policies_view : some View{
+        VStack(alignment: .leading){
+            Text("FikFis")
+                .font(.custom_font(.medium,size: 26))
+                .underline(true,color: .yellow)
+            Spacer()
+            Button{
+                
+            }
+        label:{
+            Text("FAQ's")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Terms & Condition")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Privacy Policy")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Disclaimer")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Refund policy")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Returns & Refunds")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Shippings & Delivery")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Order Cancellation")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+        }
+        .padding()
+        
+    }
+    
+    
+    
+    var followUs : some View{
+        VStack(alignment: .leading){
+            Text("FikFis")
+                .font(.custom_font(.medium,size: 26))
+                .underline(true,color: .yellow)
+            //            Spacer()
+            Button(){
+                
+            }
+        label:{
+            Image("youtube_followUs")
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            
+            Button(){
+                
+            }
+        label:{
+            Image("twitter_followUs")
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            Button(){
+                
+            }
+        label:{
+            Image("instagram_followUs")
+            Spacer()
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            Button(){
+                
+            }
+        label:{
+            Image("facebook_followUs")
+            Spacer()
+            
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            Spacer()
+            
+        }
+        .padding()
+        
+    }
+    
+    
+    var fikfis_view : some View{
+        VStack(alignment: .leading){
+            Text("FikFis")
+                .font(.custom_font(.medium,size: 26))
+                .underline(true,color: .yellow)
+            Spacer()
+            Button{
+                
+            }
+        label:{
+            Text("About Us")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Blog")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+        }
+            
+            Spacer()
+            
+            Button{
+                
+            }
+        label:{
+            Text("Contact US")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            Spacer()
+    
+        }
+        .padding()
+        
+    }
+    
+    
+    
+    var channel_view : some View{
+        VStack(alignment: .leading){
+            Text("FikFis")
+                .font(.custom_font(.medium,size: 26))
+                .underline(true,color: .yellow)
+            //            Spacer()
+            Button(){
+                
+            }
+        label:{
+            Image(systemName: "globe")
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+            
+        }
+            
+            
+            Button(){
+                
+            }
+        label:{
+            Image(systemName: "apple.logo")
+            Text("@fikfis")
+                .font(.custom_font(.regular,size: 14))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity,alignment: .leading)
+                .background(content: {
+                    RoundedRectangle(cornerRadius: 26)
+                        .foregroundColor(Color.theme)
+                })
+            
+        }
+            
+            
+            
+        }
+    }
 }
+
+
 
 #Preview {
     AccountV()
