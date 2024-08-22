@@ -10,28 +10,25 @@ import SwiftUI
 struct HeaderTab: View {
     let collection : Card
     @State var size: CGFloat = 20
+
     var body: some View {
         HStack {
-            Spacer()
             Image("\(collection.imageUrl)")
                 .resizable()
                 .cornerRadius(12)
                 .frame(width: size, height: size)
                 .aspectRatio(contentMode: .fit)
-            Spacer()
             Text(collection.title)
-                .font(.custom_font(.regular,size: 12))
+                .font(.custom_font(.regular,size: 16))
                 .lineLimit(2)
-                .frame(width: 100, height: 40, alignment: .top)
-                .background(Color.red)
+                .frame(width: 100, height: 40, alignment: .leading)
                 .multilineTextAlignment(.center)
 
-//            Spacer()
-
         }
-        .frame(width: (UIScreen.screenWidth / 2) - 30, height: 50, alignment: .top)
+        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
+        .cornerRadius(6.0)
         .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-         }
+    }
 }
 
 
@@ -55,6 +52,11 @@ struct AccountV: View {
         Card(id: 8, title: "Logout", imageUrl: "arrow_exit")
     ]
     
+    @State private var showingAlert = false
+    @State private var alertTitle: String = "Important message"
+    @State private var alertMessage: String = ""
+    @State var header_font: CGFloat = 30
+
     @State var policies : [Policies] = [Policies(id: 0, title: "FAQ's"),
                                         Policies(id: 1, title: "Terms & Condition"),
                                         Policies(id: 2, title: "Privacy Policy"),
@@ -71,9 +73,7 @@ struct AccountV: View {
             NavigationHeader()
                 .background(Color.themeColor.ignoresSafeArea())
                 .padding(.bottom)
-            Spacer()
             ScrollView(.vertical, showsIndicators: false) {
-                
                 Group{
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVGrid(columns: [
@@ -81,8 +81,7 @@ struct AccountV: View {
                             GridItem(.flexible(), alignment: .top)
                         ]) {
                             ForEach(collection1) { collection in
-                                HeaderTab(collection: collection)
-                                
+                                HeaderTab(collection: collection)                                
                             }
                         }
                         
@@ -108,9 +107,10 @@ struct AccountV: View {
     
     
     var policies_view : some View{
-        VStack(alignment: .leading){
-            Text("FikFis")
-                .font(.custom_font(.medium,size: 26))
+        var policy_font_size: CGFloat = 15
+        return VStack(alignment: .leading){
+            Text("Policies")
+                .font(.custom_font(.medium,size: header_font))
                 .underline(true,color: .yellow)
             Spacer()
             Button{
@@ -118,7 +118,7 @@ struct AccountV: View {
             }
         label:{
             Text("FAQ's")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
         }
@@ -130,7 +130,7 @@ struct AccountV: View {
             }
         label:{
             Text("Terms & Condition")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
         }
@@ -142,7 +142,7 @@ struct AccountV: View {
             }
         label:{
             Text("Privacy Policy")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -155,7 +155,7 @@ struct AccountV: View {
             }
         label:{
             Text("Disclaimer")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -167,7 +167,7 @@ struct AccountV: View {
             }
         label:{
             Text("Refund policy")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -180,7 +180,7 @@ struct AccountV: View {
             }
         label:{
             Text("Returns & Refunds")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -193,7 +193,7 @@ struct AccountV: View {
             }
         label:{
             Text("Shippings & Delivery")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -206,23 +206,23 @@ struct AccountV: View {
             }
         label:{
             Text("Order Cancellation")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: policy_font_size))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
         }
             
         }
-        .padding()
-        
+        .padding([.leading],leadingSpace_account)
+
     }
     
     
     
     var followUs : some View{
         VStack(alignment: .leading){
-            Text("FikFis")
-                .font(.custom_font(.medium,size: 26))
+            Text("Follow us")
+                .font(.custom_font(.medium,size: header_font))
                 .underline(true,color: .yellow)
             //            Spacer()
             Button(){
@@ -277,15 +277,17 @@ struct AccountV: View {
             Spacer()
             
         }
-        .padding()
-        
+        .padding([.leading])
+
     }
     
     
     var fikfis_view : some View{
-        VStack(alignment: .leading){
+        let fikfis_view_font: CGFloat = 15
+
+        return VStack(alignment: .leading){
             Text("FikFis")
-                .font(.custom_font(.medium,size: 26))
+                .font(.custom_font(.medium,size: header_font))
                 .underline(true,color: .yellow)
             Spacer()
             Button{
@@ -293,7 +295,7 @@ struct AccountV: View {
             }
         label:{
             Text("About Us")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: fikfis_view_font))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
         }
@@ -305,7 +307,7 @@ struct AccountV: View {
             }
         label:{
             Text("Blog")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: fikfis_view_font))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
         }
@@ -317,7 +319,7 @@ struct AccountV: View {
             }
         label:{
             Text("Contact US")
-                .font(.custom_font(.regular,size: 14))
+                .font(.custom_font(.regular,size: fikfis_view_font))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity,alignment: .leading)
             
@@ -326,50 +328,67 @@ struct AccountV: View {
             Spacer()
     
         }
-        .padding()
-        
+        .padding([.leading],leadingSpace_account)
+
     }
     
     
     
     var channel_view : some View{
-        VStack(alignment: .leading){
-            Text("FikFis")
-                .font(.custom_font(.medium,size: 26))
+        let height : CGFloat = 60
+        return VStack(alignment: .leading){
+            Text("FikFis Channels")
+                .font(.custom_font(.medium,size: header_font))
                 .underline(true,color: .yellow)
-            //            Spacer()
-            Button(){
+            Spacer()
+
+            HStack{
+                Button(action: {}) {
+                    HStack {
+                        Image("apple")
+                            .frame(width: 32,height: 32)
+                        VStack{
+                            Text("Download on the")
+                                .font(.custom_font(.regular,size: 12))
+                            Text("App Store")
+                                .font(.custom_font(.medium,size: 20))
+                        }
+                        
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .frame(width: (UIScreen.screenWidth/2) - 10 ,height: height)
+                }
+                .foregroundColor(.white)
+                .background(Color.black)
+                .cornerRadius(.infinity)
+
                 
+                Button(action: {}) {
+                    HStack {
+                        Image("globe")
+                            .frame(width: 32,height: 32)
+                        VStack{
+
+                            Text("www.fikfis.com")
+                                .font(.custom_font(.regular,size: 12))
+                                .foregroundStyle(Color.white)
+                            Text("Visit Today")
+                                .font(.custom_font(.medium,size: 18))
+
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .frame(width: (UIScreen.screenWidth/2) - 10 ,height: height)
+
+                }
+                .foregroundColor(.white)
+                .background(Color.black)
+                .cornerRadius(.infinity)
             }
-        label:{
-            Image(systemName: "globe")
-            Text("@fikfis")
-                .font(.custom_font(.regular,size: 14))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
         }
-            
-            
-            Button(){
-                
-            }
-        label:{
-            Image(systemName: "apple.logo")
-            Text("@fikfis")
-                .font(.custom_font(.regular,size: 14))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-                .background(content: {
-                    RoundedRectangle(cornerRadius: 26)
-                        .foregroundColor(Color.theme)
-                })
-            
-        }
-            
-            
-            
-        }
+        .padding([.leading,.trailing])
     }
 }
 

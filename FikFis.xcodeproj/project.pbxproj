@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5BC2C77C5EE00FDE73E /* Constant.swift */; };
 		1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CD542C5B988F00EBCCC5 /* Extension.swift */; };
 		1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */; };
 		1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5B2C5BA37700EBCCC5 /* README.txt */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180FA5BC2C77C5EE00FDE73E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1873CD542C5B988F00EBCCC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black 900.ttf"; sourceTree = "<group>"; };
 		1873CD5B2C5BA37700EBCCC5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				1873CD542C5B988F00EBCCC5 /* Extension.swift */,
 				18BB93F12C5F584600B6AAA0 /* Struct.swift */,
 				18BB94092C636E5900B6AAA0 /* Enum.swift */,
+				180FA5BC2C77C5EE00FDE73E /* Constant.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				18BB93F72C60C8EA00B6AAA0 /* CustomNavigation.swift in Sources */,
 				1ABDE8192C763C3900905E98 /* StarRatingView.swift in Sources */,
 				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
+				180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */,
 				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
 				1ABDE81E2C763D6F00905E98 /* FrameView.swift in Sources */,
 				18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */,

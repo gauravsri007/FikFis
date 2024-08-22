@@ -14,7 +14,6 @@ struct SignUpV: View {
     @State private var showingAlert = false
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
-    let leadingSpace : CGFloat = 5
     var body: some View {
         Group{
             LazyVStack(alignment: .leading) {
