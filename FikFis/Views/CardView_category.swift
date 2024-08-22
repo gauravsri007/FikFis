@@ -37,7 +37,7 @@ struct CardView_category: View {
 
                 ]) {
                     ForEach(collection1) { collection in
-                        CollectionView(collec: collection)
+                        CollectionView(item: collection)
                     }
                 }
                 .padding(.top, 6)

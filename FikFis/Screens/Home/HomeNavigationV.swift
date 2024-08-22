@@ -9,35 +9,42 @@ import SwiftUI
 
 struct HomeNavigationV: View {
     var body: some View {
-        HStack(){
-            VStack(alignment: .leading){
-                Text("Welcome FikFis")
-                    .font(.custom_font(.semibold,size: 34))
-                Text("Free Shipping | \(7) Days Return")
-                    .font(.custom_font(.regular,size: 15))
-                    .foregroundColor(.white)
+        VStack(spacing: 0) {
+            Color.themeColor
+                .ignoresSafeArea(.all, edges: .top)
+                .frame(height: 0) // Extend the theme color into the top safe area
+
+            HStack {
+                VStack(alignment: .leading){
+                    Text("Welcome FikFis")
+                        .font(.custom_font(.semibold, size: 34))
+                    Text("Free Shipping | \(7) Days Return")
+                        .font(.custom_font(.regular, size: 15))
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                Button(action: {
+                    // handle tap
+                }) {
+                    Image("bell_navigation")
+                        .renderingMode(.template)
+                        .foregroundStyle(Color.black)
+                        .padding(10)
+                        .background {
+                            Circle()
+                                .foregroundStyle(Color.white)
+                        }
+                }
             }
-            .padding(20)
-            Spacer()
-            Button(action: {
-                // handle tap
-            }) {
-                Image("bell_navigation")
-                    .renderingMode(.template)
-                    .foregroundStyle(Color.black)
-                    .padding(15)
-                    .background {
-                        Circle()
-                            .foregroundStyle(Color.white)
-                    }
-            }
-            .padding(20)
-            
+            .padding(.horizontal, 10)
+            .padding(.bottom, 15)
+            .font(.headline)
+            .frame(height: 80)
         }
-        .font(.headline)
-        .background(Color.yellow.ignoresSafeArea())
+        .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
     }
 }
+
 
 #Preview {
     HomeNavigationV()

@@ -14,7 +14,7 @@ struct TabV: View {
         TabView(selection: $selectedIndex) {
             //---------------------------------------
             NavigationStack() {
-                OffersV()
+                HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
             }
             .tabItem {
                 Text("Home")
@@ -74,15 +74,19 @@ struct TabV: View {
         }
         .tint(.black)
         .onAppear(perform: {
-            //2
+            
+            let appearance = UITabBarAppearance()
+            appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+            appearance.backgroundColor = UIColor.theme.withAlphaComponent(1.0)
+            
+            // Use this appearance when scrolling behind the TabView:
+            UITabBar.appearance().standardAppearance = appearance
+            // Use this appearance when scrolled all the way up:
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+            
             UITabBar.appearance().unselectedItemTintColor = .white
-            //3
-            UITabBarItem.appearance().badgeColor = .systemPink
-            //4
-            UITabBar.appearance().backgroundColor = UIColor.theme            //5
-            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-            //UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
-            //Above API will kind of override other behaviour and bring the default UI for TabView
+            UITabBar.appearance().tintColor = .black // Selected item color
+            UITabBar.appearance().backgroundColor = UIColor.theme // Background color of the TabBar
         })
         
     }
@@ -91,3 +95,4 @@ struct TabV: View {
 #Preview {
     TabV()
 }
+

@@ -46,6 +46,11 @@
 		18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF452C5A99140026E335 /* LoginVM.swift */; };
 		18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF4C2C5AA3D30026E335 /* SplashV.swift */; };
 		18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF522C5B69CB0026E335 /* LoginV.swift */; };
+		1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE8162C763C1300905E98 /* ForwardButton.swift */; };
+		1ABDE8192C763C3900905E98 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE8182C763C3900905E98 /* StarRatingView.swift */; };
+		1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE81B2C763CD200905E98 /* ProductItem.swift */; };
+		1ABDE81E2C763D6F00905E98 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE81D2C763D6F00905E98 /* FrameView.swift */; };
+		1ABDE8202C763E6900905E98 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE81F2C763E6900905E98 /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,11 @@
 		18D4FF452C5A99140026E335 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		18D4FF4C2C5AA3D30026E335 /* SplashV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashV.swift; sourceTree = "<group>"; };
 		18D4FF522C5B69CB0026E335 /* LoginV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginV.swift; sourceTree = "<group>"; };
+		1ABDE8162C763C1300905E98 /* ForwardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardButton.swift; sourceTree = "<group>"; };
+		1ABDE8182C763C3900905E98 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		1ABDE81B2C763CD200905E98 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
+		1ABDE81D2C763D6F00905E98 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		1ABDE81F2C763E6900905E98 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				18BB93F62C60C8EA00B6AAA0 /* CustomNavigation.swift */,
+				1ABDE8162C763C1300905E98 /* ForwardButton.swift */,
+				1ABDE8182C763C3900905E98 /* StarRatingView.swift */,
+				1ABDE81D2C763D6F00905E98 /* FrameView.swift */,
+				1ABDE81F2C763E6900905E98 /* CollectionView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 				18D4FF482C5A993A0026E335 /* Temporary Code */,
 				18D4FF472C5A991C0026E335 /* Password Assistance */,
 				18D4FF402C5A98DC0026E335 /* Login */,
+				1ABDE81A2C763CB600905E98 /* Product */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -324,6 +339,14 @@
 				18D4FF4C2C5AA3D30026E335 /* SplashV.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		1ABDE81A2C763CB600905E98 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				1ABDE81B2C763CD200905E98 /* ProductItem.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,17 +435,21 @@
 				18BB93FF2C61508600B6AAA0 /* OptionsV.swift in Sources */,
 				18ADCEDA2C69038E00E081DD /* Card.swift in Sources */,
 				18BB93F72C60C8EA00B6AAA0 /* CustomNavigation.swift in Sources */,
+				1ABDE8192C763C3900905E98 /* StarRatingView.swift in Sources */,
 				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
 				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
+				1ABDE81E2C763D6F00905E98 /* FrameView.swift in Sources */,
 				18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */,
 				18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */,
 				18BB94102C6619EB00B6AAA0 /* CategoryV.swift in Sources */,
+				1ABDE8202C763E6900905E98 /* CollectionView.swift in Sources */,
 				18BB93EB2C5E218700B6AAA0 /* SignUpVM.swift in Sources */,
 				18BB93EE2C5F551500B6AAA0 /* HomeV.swift in Sources */,
 				18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */,
 				1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */,
 				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
+				1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */,
 				18BB93E72C5E201300B6AAA0 /* CreatePasswordVM.swift in Sources */,
 				18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */,
 				18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */,
@@ -430,6 +457,7 @@
 				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
 				18BB93E32C5E1BD200B6AAA0 /* OtpVM.swift in Sources */,
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
+				1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */,
 				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,
 				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
 				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,

@@ -218,3 +218,22 @@ struct RoundedCorner: Shape {
     }
 }
 
+//--------------------- Custom ViewModifier ------------------------------
+
+//MARK: CardViewModifier
+
+struct CardViewModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+//            .border(Color(uiColor: UIColor.systemGray6), width: 0.5)
+            .background(Color(.systemBackground))
+            .cornerRadius(5)
+            .shadow(radius: 1.5)
+    }
+}
+
+extension View {
+    func cardViewStyle() -> some View {
+        self.modifier(CardViewModifier())
+    }
+}
