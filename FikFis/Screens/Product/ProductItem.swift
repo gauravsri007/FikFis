@@ -11,39 +11,49 @@ struct ProductItem: View {
     let item : Card
     var body: some View {
         VStack(alignment: .leading) {
+            
             Image("\(item.imageUrl)")
                 .resizable()
-                .frame(height: 160)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: appWidth/2.5, height: appWidth/2.5)
                 .cardViewStyle()
+                .cornerRadius(6)
+                .clipped()
+            
             Text(item.title)
-                .font(.subheadline)
+                .font(.custom_font(.medium, size: 14))
                 .multilineTextAlignment(.leading)
                 .lineLimit(3)
+            
             StarRatingView(rating: .constant(3))
-                .frame(width: 120, height: 30)
-            HStack {
-                Text("$105100")
-                    .bold()
-                Text("$105100")
-                    .strikethrough()
-            }
+                .frame(width: 105, height: 15)
+            
+            Text("$105100"+"   ").font(.custom_font(.semiBold, size: 14)) + Text("$105100").foregroundStyle(Color.init(hex: "#727272")).font(.custom_font(.semiBold, size: 14)).strikethrough()
             
             HStack {
                 Text("Save $5")
+                    .font(.custom_font(.semiBold, size: 12))
+                    .bold()
+                    .foregroundStyle(.white)
                     .padding(5)
                     .background {
-                        Color.green.cornerRadius(5)
+                        Color.init(hex: "#719B62").cornerRadius(5)
                     }
-                Text("$105100")
-                    .strikethrough()
+                Text("With coupon")
+                    .font(.custom_font(.semiBold, size: 13))
+                    .bold()
             }
         }
-        .frame(height: 340)
-        .padding(5)
+        .frame(width: appWidth/2.4)
+        .padding(.top, 8)
+        .padding(.bottom, 10)
+        .padding(.horizontal, 5)
         .cardViewStyle()
+        .padding(.top, 2)
+        .padding(.bottom, 12)
     }
 }
 
 #Preview {
-    ProductItem(item: Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "product1"))
+    ProductItem(item: Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "paging1"))
 }

@@ -32,6 +32,8 @@ struct HomeV: View {
                 
                 Spacer().frame(height: 10)
                 
+                searchSection
+                
                 coverImageSection
                 
                 collectionSection
@@ -43,6 +45,29 @@ struct HomeV: View {
                 productItemCollectionSection
                 
             }
+        }
+    }
+    
+    var searchSection: some View {
+        HStack {
+            TextField("Search for product", text: $searchText)
+                .padding(12)
+                .background(Color.init(hex: "#F1F1F1"))
+                .cornerRadius(8)
+                .padding(.leading, 15)
+            
+            Button {
+                
+            } label: {
+                Image(systemName: "magnifyingglass")
+            }
+            .frame(width: 17, height: 17)
+            .foregroundStyle(.black)
+            .padding(15)
+            .background {
+                Color.themeColor.cornerRadius(5)
+            }
+            .padding(.trailing)
         }
     }
     
@@ -74,10 +99,12 @@ struct HomeV: View {
         VStack {
             HStack {
                 Text("Home Appliances Up to 55% off")
+                    .font(.custom_font(.medium, size: 17))
                 Spacer()
                 ForwardButton(size: 2)
             }
-            .padding()
+            .padding(.top)
+            .padding(.horizontal)
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: [
@@ -88,7 +115,7 @@ struct HomeV: View {
                         FrameView(item: collection)
                     }
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, 10)
             }
             
             HStack {
@@ -96,10 +123,10 @@ struct HomeV: View {
                     
                 } label: {
                     Text("Explore Now")
-                        .bold()
+                        .font(.custom_font(.semiBold, size: 12))
                         .foregroundStyle(.black)
                 }
-                .padding(10)
+                .padding(8)
                 .padding(.horizontal)
                 .background {
                     Color.themeColor.cornerRadius(30)
@@ -111,34 +138,34 @@ struct HomeV: View {
             
         }
         .cardViewStyle()
-        .padding()
+        .padding(.horizontal)
     }
     
     var recentViewedSection: some View {
         HStack {
             Text("Recent Viewed")
+                .font(.custom_font(.medium, size: 17))
             Spacer()
             ForwardButton(size: 2)
         }
-        .padding()
+        .padding([.top, .horizontal])
     }
     
     var productItemCollectionSection: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], content: {
+            LazyVGrid(columns: [
+                GridItem(.flexible(), alignment: .top),
+                GridItem(.flexible(), alignment: .top)
+            ], content: {
                 ForEach(collection1) { collection in
                     ProductItem(item: collection)
-                        .padding(10)
                 }
             })
-        }
+        }.padding([.horizontal], 8)
     }
 
 }
 
 #Preview {
-//    VStack {
-        HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
-//        Spacer()
-//    }
+    HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
 }

@@ -154,14 +154,14 @@ extension Font {
     
     public enum FontType: String {
         case medium = "-Medium"
-        case semiboldItalic = "-SemiboldItalic"
-        case semibold = "-Semibold"
+//        case semiboldItalic = "-SemiboldItalic"
+        case semiBold = "-SemiBold"
         case regular = ""
-        case lightItalic = "Light-Italic"
-        case light = "-Light"
+//        case lightItalic = "Light-Italic"
+//        case light = "-Light"
         case italic = "-Italic"
-        case extraBold = "-Extrabold"
-        case boldItalic = "-BoldItalic"
+        case extraBold = "-Black"
+//        case boldItalic = "-BoldItalic"
         case bold = "-Bold"
     }
     

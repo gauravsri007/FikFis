@@ -6,9 +6,10 @@
 //
 
 import Foundation
-
-
+import UIKit
 
 let leadingSpace : CGFloat = 5
 let leadingSpace_account : CGFloat = 25
 
+let appWidth = UIScreen.main.bounds.width
+let appHeight = UIScreen.main.bounds.height

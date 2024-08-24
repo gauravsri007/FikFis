@@ -19,7 +19,6 @@ struct TabV: View {
             .tabItem {
                 Text("Home")
                 Image("home")
-                    .renderingMode(.template)
             }
             .tag(0)
             //---------------------------------------
@@ -30,7 +29,6 @@ struct TabV: View {
             .tabItem {
                 Text("Offer")
                 Image("offer")
-                    .renderingMode(.template)
             }
             .tag(1)
             //---------------------------------------
@@ -41,7 +39,6 @@ struct TabV: View {
             .tabItem {
                 Text("Account")
                 Image("account")
-                    .renderingMode(.template)
             }
 //            .badge("12")
             .tag(2)
@@ -52,8 +49,8 @@ struct TabV: View {
                 
             }
             .tabItem {
+                Text("Category")
                 Image("category")
-                Text("Categoty")
             }
             .tag(3)
 //            .badge("12")
@@ -65,7 +62,6 @@ struct TabV: View {
             .tabItem {
                 Text("Cart")
                 Image("cart")
-                    .renderingMode(.template)
             }
             .badge("12")
             .tag(4)
@@ -75,18 +71,23 @@ struct TabV: View {
         .tint(.black)
         .onAppear(perform: {
             
+            UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.themeColor)
+            //UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+            
             let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
             appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
             appearance.backgroundColor = UIColor.theme.withAlphaComponent(1.0)
-            
-            // Use this appearance when scrolling behind the TabView:
+
+            // Tint colors
+            appearance.stackedLayoutAppearance.normal.iconColor = .white // Unselected icon color
+            appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white] // Unselected text color
+            appearance.stackedLayoutAppearance.selected.iconColor = .black // Selected icon color
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.black] // Selected text color
+
+            // Apply appearances
             UITabBar.appearance().standardAppearance = appearance
-            // Use this appearance when scrolled all the way up:
             UITabBar.appearance().scrollEdgeAppearance = appearance
-            
-            UITabBar.appearance().unselectedItemTintColor = .white
-            UITabBar.appearance().tintColor = .black // Selected item color
-            UITabBar.appearance().backgroundColor = UIColor.theme // Background color of the TabBar
         })
         
     }

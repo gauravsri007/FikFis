@@ -13,14 +13,16 @@ struct FrameView: View {
         VStack(alignment: .leading) {
             Image("\(item.imageUrl)")
                 .resizable()
-                .frame(height: 120)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: appWidth/2.4, height: 120)
+                .border(Color(uiColor: .systemGray3))
                 .cardViewStyle()
             Text(item.title)
-                .font(.subheadline)
+                .font(.custom_font(.regular, size: 14))
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
         }
-        .frame(height: 170)
+        .padding(.bottom, 8)
     }
 }
 #Preview {
