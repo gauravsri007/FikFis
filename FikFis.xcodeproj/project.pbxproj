@@ -49,6 +49,14 @@
 		18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF452C5A99140026E335 /* LoginVM.swift */; };
 		18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF4C2C5AA3D30026E335 /* SplashV.swift */; };
 		18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF522C5B69CB0026E335 /* LoginV.swift */; };
+		1A2A83DC2C7A3ED200D7F5E7 /* MyOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83DB2C7A3ED200D7F5E7 /* MyOrders.swift */; };
+		1A2A83E02C7A444A00D7F5E7 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */; };
+		1A2A83E22C7A45A300D7F5E7 /* ActiveOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E12C7A45A300D7F5E7 /* ActiveOrders.swift */; };
+		1A2A83E42C7A45B500D7F5E7 /* DeliveredOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E32C7A45B500D7F5E7 /* DeliveredOrders.swift */; };
+		1A2A83E62C7A45D200D7F5E7 /* ReturnOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E52C7A45D200D7F5E7 /* ReturnOrder.swift */; };
+		1A2A83E82C7A45E000D7F5E7 /* CancelOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E72C7A45E000D7F5E7 /* CancelOrder.swift */; };
+		1A2A83EA2C7B45FA00D7F5E7 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E92C7B45FA00D7F5E7 /* OrderView.swift */; };
+		1A2A83EC2C7B46E600D7F5E7 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83EB2C7B46E600D7F5E7 /* OrderDetail.swift */; };
 		1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE8162C763C1300905E98 /* ForwardButton.swift */; };
 		1ABDE8192C763C3900905E98 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE8182C763C3900905E98 /* StarRatingView.swift */; };
 		1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDE81B2C763CD200905E98 /* ProductItem.swift */; };
@@ -101,6 +109,13 @@
 		18D4FF452C5A99140026E335 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		18D4FF4C2C5AA3D30026E335 /* SplashV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashV.swift; sourceTree = "<group>"; };
 		18D4FF522C5B69CB0026E335 /* LoginV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginV.swift; sourceTree = "<group>"; };
+		1A2A83DB2C7A3ED200D7F5E7 /* MyOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.swift; sourceTree = "<group>"; };
+		1A2A83E12C7A45A300D7F5E7 /* ActiveOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrders.swift; sourceTree = "<group>"; };
+		1A2A83E32C7A45B500D7F5E7 /* DeliveredOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredOrders.swift; sourceTree = "<group>"; };
+		1A2A83E52C7A45D200D7F5E7 /* ReturnOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnOrder.swift; sourceTree = "<group>"; };
+		1A2A83E72C7A45E000D7F5E7 /* CancelOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrder.swift; sourceTree = "<group>"; };
+		1A2A83E92C7B45FA00D7F5E7 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		1A2A83EB2C7B46E600D7F5E7 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		1ABDE8162C763C1300905E98 /* ForwardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardButton.swift; sourceTree = "<group>"; };
 		1ABDE8182C763C3900905E98 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		1ABDE81B2C763CD200905E98 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
@@ -113,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2A83E02C7A444A00D7F5E7 /* PagerTabStripView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +274,7 @@
 				1873CD562C5B996700EBCCC5 /* Resources */,
 				18D4FF3F2C5A98CD0026E335 /* Utilities */,
 				18D4FF3E2C5A98C20026E335 /* Screens */,
+				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
 				18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */,
 				18D4FF002C5A1F550026E335 /* ContentView.swift */,
 				18D4FF042C5A1F560026E335 /* Preview Content */,
@@ -358,6 +375,20 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		1A2A83DD2C7A3EE200D7F5E7 /* My Orders */ = {
+			isa = PBXGroup;
+			children = (
+				1A2A83DB2C7A3ED200D7F5E7 /* MyOrders.swift */,
+				1A2A83E12C7A45A300D7F5E7 /* ActiveOrders.swift */,
+				1A2A83E32C7A45B500D7F5E7 /* DeliveredOrders.swift */,
+				1A2A83E52C7A45D200D7F5E7 /* ReturnOrder.swift */,
+				1A2A83E72C7A45E000D7F5E7 /* CancelOrder.swift */,
+				1A2A83E92C7B45FA00D7F5E7 /* OrderView.swift */,
+				1A2A83EB2C7B46E600D7F5E7 /* OrderDetail.swift */,
+			);
+			path = "My Orders";
+			sourceTree = "<group>";
+		};
 		1ABDE81A2C763CB600905E98 /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +413,9 @@
 			dependencies = (
 			);
 			name = FikFis;
+			packageProductDependencies = (
+				1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */,
+			);
 			productName = FikFis;
 			productReference = 18D4FEFB2C5A1F550026E335 /* FikFis.app */;
 			productType = "com.apple.product-type.application";
@@ -410,6 +444,9 @@
 				Base,
 			);
 			mainGroup = 18D4FEF22C5A1F550026E335;
+			packageReferences = (
+				1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */,
+			);
 			productRefGroup = 18D4FEFC2C5A1F550026E335 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,8 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2A83E62C7A45D200D7F5E7 /* ReturnOrder.swift in Sources */,
 				18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */,
 				18BB93DF2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift in Sources */,
+				1A2A83E82C7A45E000D7F5E7 /* CancelOrder.swift in Sources */,
 				18BB940A2C636E5900B6AAA0 /* Enum.swift in Sources */,
 				18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */,
 				18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */,
@@ -456,6 +495,7 @@
 				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
 				180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */,
 				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
+				1A2A83EC2C7B46E600D7F5E7 /* OrderDetail.swift in Sources */,
 				1ABDE81E2C763D6F00905E98 /* FrameView.swift in Sources */,
 				180FA5D92C7A2CFE00FDE73E /* App_offersV.swift in Sources */,
 				18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */,
@@ -479,7 +519,11 @@
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
 				1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */,
 				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,
+				1A2A83E22C7A45A300D7F5E7 /* ActiveOrders.swift in Sources */,
 				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
+				1A2A83E42C7A45B500D7F5E7 /* DeliveredOrders.swift in Sources */,
+				1A2A83EA2C7B45FA00D7F5E7 /* OrderView.swift in Sources */,
+				1A2A83DC2C7A3ED200D7F5E7 /* MyOrders.swift in Sources */,
 				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +732,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/PagerTabStripView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */;
+			productName = PagerTabStripView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18D4FEF32C5A1F550026E335 /* Project object */;
 }

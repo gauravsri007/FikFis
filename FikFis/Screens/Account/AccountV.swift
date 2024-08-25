@@ -12,22 +12,24 @@ struct HeaderTab: View {
     @State var size: CGFloat = 20
 
     var body: some View {
-        HStack {
-            Image("\(collection.imageUrl)")
-                .resizable()
-                .cornerRadius(12)
-                .frame(width: size, height: size)
-                .aspectRatio(contentMode: .fit)
-            Text(collection.title)
-                .font(.custom_font(.regular,size: 16))
-                .lineLimit(2)
-                .frame(width: 100, height: 40, alignment: .leading)
-                .multilineTextAlignment(.center)
-
-        }
-        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
-        .cornerRadius(6.0)
-        .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: MyOrders(), label: {
+            HStack {
+                Image("\(collection.imageUrl)")
+                    .resizable()
+                    .cornerRadius(12)
+                    .frame(width: size, height: size)
+                    .aspectRatio(contentMode: .fit)
+                Text(collection.title)
+                    .font(.custom_font(.regular,size: 16))
+                    .lineLimit(2)
+                    .frame(width: 100, height: 40, alignment: .leading)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.black)
+            }
+            .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
+            .cornerRadius(6.0)
+            .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+        })
     }
 }
 
