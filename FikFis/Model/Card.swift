@@ -12,3 +12,16 @@ struct Card: Identifiable {
     var id: Int
     var title,imageUrl : String
 }
+
+struct TermsOfUse: Identifiable {
+    var id: Int
+    var title : String
+}
+
+
+struct AppOfferM: Identifiable {
+
+    var id: Int
+    var termsOfUse : [TermsOfUse]
+    var validity,offerValue : String
+}

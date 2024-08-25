@@ -14,6 +14,7 @@ struct HomeV: View {
     let coverImages: [ImagePagerM]
     var corners: UIRectCorner = .allCorners
     @State var arrCollection1 : [String] = ["Kid shoes","Womens clothes","Mens clothes"]
+    
     @State var collection1 : [Card] = [
         Card(id: 0, title: "Kid shoes", imageUrl: "paging1"),
         Card(id: 1, title: "Womens shoes", imageUrl: "paging1"),
