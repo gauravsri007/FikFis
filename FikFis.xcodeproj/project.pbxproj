@@ -577,7 +577,6 @@
 				18C8FE192C7B381A000BCF6C /* HeaderLabel.swift in Sources */,
 				18C8FE242C7BC5D8000BCF6C /* ReviewsCell.swift in Sources */,
 				18C8FE1D2C7B72C7000BCF6C /* ProductM.swift in Sources */,
-				 (WishList done,Working on Reviews UI)
 				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
 				1A2A83E42C7A45B500D7F5E7 /* DeliveredOrders.swift in Sources */,
 				1A2A83EA2C7B45FA00D7F5E7 /* OrderView.swift in Sources */,
