@@ -24,7 +24,9 @@ struct App_offersV: View {
     
     var body: some View {
         VStack(spacing: 0){
-            collectionSection
+            NavigationHeader()
+            Spacer()
+//            collectionSection
         }
     }
     
