@@ -1,3 +1,4 @@
+// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -314,7 +315,6 @@
 				1873CD562C5B996700EBCCC5 /* Resources */,
 				18D4FF3F2C5A98CD0026E335 /* Utilities */,
 				18D4FF3E2C5A98C20026E335 /* Screens */,
-				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
 				18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */,
 				18D4FF002C5A1F550026E335 /* ContentView.swift */,
 				18D4FF042C5A1F560026E335 /* Preview Content */,
@@ -349,6 +349,7 @@
 				18D4FF472C5A991C0026E335 /* Password Assistance */,
 				18D4FF402C5A98DC0026E335 /* Login */,
 				1ABDE81A2C763CB600905E98 /* Product */,
+				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -567,13 +568,10 @@
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
 				1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */,
 				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,
-
 				1A2A83E22C7A45A300D7F5E7 /* ActiveOrders.swift in Sources */,
-
 				18C8FE192C7B381A000BCF6C /* HeaderLabel.swift in Sources */,
 				18C8FE242C7BC5D8000BCF6C /* ReviewsCell.swift in Sources */,
 				18C8FE1D2C7B72C7000BCF6C /* ProductM.swift in Sources */,
-				 (WishList done,Working on Reviews UI)
 				18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */,
 				1A2A83E42C7A45B500D7F5E7 /* DeliveredOrders.swift in Sources */,
 				1A2A83EA2C7B45FA00D7F5E7 /* OrderView.swift in Sources */,
