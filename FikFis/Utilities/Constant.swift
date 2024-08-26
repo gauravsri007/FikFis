@@ -13,4 +13,3 @@ let leadingSpace_account : CGFloat = 25
 
 let appWidth = UIScreen.main.bounds.width
 let appHeight = UIScreen.main.bounds.height
-let header_font: CGFloat = 30

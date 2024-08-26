@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ForwardButton: View {
-    var imageName : String
+    
     var size: CGFloat = 30.0
     
     var body: some View {
         Button {
             
         } label: {
-            Image(systemName: imageName)
+            Image(systemName: "arrow.forward")
         }
         .frame(width: size, height: size)
         .foregroundStyle(.white)
@@ -28,5 +28,5 @@ struct ForwardButton: View {
 }
 
 #Preview {
-    ForwardButton(imageName: "arrow.forward")
+    ForwardButton()
 }

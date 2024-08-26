@@ -25,9 +25,18 @@ struct NavigationHeader: View {
     @State private var inputText: String = ""
 
     var body: some View {
-        VStack(alignment: .leading,spacing: 0){
+        VStack(alignment: .leading,spacing: 30){
             HStack{
                 Spacer()
+
+//                Button{
+//                    
+//                }label: {
+//                    Image(systemName: "lock")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                    
+//                }
                 .frame(width: 30,height: 30)
                 .frame(maxWidth: .infinity,alignment:.leading)
                 Spacer()
@@ -39,9 +48,14 @@ struct NavigationHeader: View {
                         .padding(.leading,20)
                         .textFieldStyle(.plain)
                         .background(Color.white)
+
+
                 }
+                
                 .cornerRadius(30, corners: .allCorners)
                 Spacer()
+
+                
                 Button(action: {
                     // handle tap
                 }) {
@@ -58,9 +72,11 @@ struct NavigationHeader: View {
             }
             .frame(height: 40)
             .padding()
-            .background(Color.themeColor)
+            .background(Color.themeColor.ignoresSafeArea())
         }
-        .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
+        .cornerRadius(30, corners: [.bottomLeft,.bottomRight])
+
+
     }
 }
 

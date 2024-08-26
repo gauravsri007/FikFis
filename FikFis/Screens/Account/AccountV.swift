@@ -68,6 +68,7 @@ struct AccountV: View {
     @State private var showingAlert = false
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
+    @State var header_font: CGFloat = 30
 
     @State var policies : [Policies] = [Policies(id: 0, title: "FAQ's"),
                                         Policies(id: 1, title: "Terms & Condition"),
@@ -121,9 +122,9 @@ struct AccountV: View {
     var policies_view : some View{
         var policy_font_size: CGFloat = 15
         return VStack(alignment: .leading){
-
-            HeaderLabel(header: "Policies")
-            
+            Text("Policies")
+                .font(.custom_font(.medium,size: header_font))
+                .underline(true,color: .yellow)
             Spacer()
             Button{
                 
@@ -233,9 +234,10 @@ struct AccountV: View {
     
     var followUs : some View{
         VStack(alignment: .leading){
-
-            HeaderLabel(header: "Follow us")
-            
+            Text("Follow us")
+                .font(.custom_font(.medium,size: header_font))
+                .underline(true,color: .yellow)
+            //            Spacer()
             Button(){
                 
             }
@@ -297,9 +299,9 @@ struct AccountV: View {
         let fikfis_view_font: CGFloat = 15
 
         return VStack(alignment: .leading){
- 
-            HeaderLabel(header: "FikFis")
-
+            Text("FikFis")
+                .font(.custom_font(.medium,size: header_font))
+                .underline(true,color: .yellow)
             Spacer()
             Button{
                 
@@ -348,9 +350,9 @@ struct AccountV: View {
     var channel_view : some View{
         let height : CGFloat = 60
         return VStack(alignment: .leading){
-
-            HeaderLabel(header: "FikFis Channels")
-            
+            Text("FikFis Channels")
+                .font(.custom_font(.medium,size: header_font))
+                .underline(true,color: .yellow)
             Spacer()
 
             HStack{
