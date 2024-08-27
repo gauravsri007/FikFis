@@ -102,7 +102,7 @@ struct HomeV: View {
                 Text("Home Appliances Up to 55% off")
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2)
             }
             .padding(.top)
             .padding(.horizontal)
@@ -147,7 +147,7 @@ struct HomeV: View {
             Text("Recent Viewed")
                 .font(.custom_font(.medium, size: 17))
             Spacer()
-            ForwardButton(size: 2)
+            ForwardButton(imageName: "arrow.forward", size: 2)
         }
         .padding([.top, .horizontal])
     }

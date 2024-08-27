@@ -32,7 +32,6 @@ struct CategoryV: View {
     var body: some View {
         VStack {
             NavigationHeader()
-                .searchable(text: $inputText)
                 .background(Color.themeColor.ignoresSafeArea())
             CardView_category()
         }
