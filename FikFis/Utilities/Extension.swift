@@ -146,6 +146,20 @@ extension Color {
             opacity: Double(a) / 255
         )
     }
+    
+    init(hexa: String) {
+        
+        let scanner = Scanner(string: hexa)
+        scanner.scanLocation = 0
+        var rgbValue: UInt64 = 0
+        scanner.scanHexInt64(&rgbValue)
+        
+        let r = (rgbValue & 0xff0000) >> 16
+        let g = (rgbValue & 0xff00) >> 8
+        let b = rgbValue & 0xff
+        
+        self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
+    }
 }
 
 // MARK: - Font
@@ -243,3 +257,6 @@ extension UIScreen{
    static let screenHeight = UIScreen.main.bounds.size.height
    static let screenSize = UIScreen.main.bounds.size
 }
+
+
+
