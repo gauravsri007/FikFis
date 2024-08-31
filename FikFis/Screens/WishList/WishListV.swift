@@ -14,6 +14,7 @@ struct WishListV: View {
 
         VStack(alignment: .leading){
             HeaderLabel(header: "Your Wishlist Waiting...")
+                .frame(width: .infinity)
                 .padding(.leading)
 
             ScrollView(.vertical, showsIndicators: false) {

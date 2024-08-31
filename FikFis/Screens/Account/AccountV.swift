@@ -15,7 +15,11 @@ struct HeaderTab: View {
         NavigationLink(destination: {
             if collection.id == 1 {
                 MyOrders()
-            } else if collection.id == 7 {
+            }
+            else if collection.id == 2{
+                YourAddress()
+            }
+            else if collection.id == 7 {
                 WishListV(arrWishList: [
                     ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
                     ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
@@ -84,7 +88,6 @@ struct AccountV: View {
     var body: some View {
         VStack{
             NavigationHeader()
-                .background(Color.themeColor.ignoresSafeArea())
                 .padding(.bottom)
             ScrollView(.vertical, showsIndicators: false) {
                 Group{
@@ -94,7 +97,8 @@ struct AccountV: View {
                             GridItem(.flexible(), alignment: .top)
                         ]) {
                             ForEach(collection1) { collection in
-                                HeaderTab(collection: collection)                                
+                                HeaderTab(collection: collection)
+                                    
                             }
                         }
                         

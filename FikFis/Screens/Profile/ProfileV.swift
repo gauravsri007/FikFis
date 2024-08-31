@@ -15,10 +15,9 @@ struct ProfileV: View {
     @State private var password: String = ""
     
     var body: some View {
+        NavigationHeader()
         VStack{
-            NavigationHeader()
-                .background(Color.themeColor.ignoresSafeArea())
-
+            
             headerView
             
             contentView

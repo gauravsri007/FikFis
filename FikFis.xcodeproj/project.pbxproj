@@ -56,7 +56,10 @@
 		18C8FE532C7D14A0000BCF6C /* AddAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE522C7D14A0000BCF6C /* AddAddress.swift */; };
 		18C8FE552C7D9911000BCF6C /* OfferV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE542C7D9911000BCF6C /* OfferV.swift */; };
 		18C8FE5E2C7F047D000BCF6C /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE5D2C7F047D000BCF6C /* AddressModel.swift */; };
-		18C8FE602C7F1ACE000BCF6C /* AddressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE5F2C7F1ACE000BCF6C /* AddressRow.swift */; };
+		18C8FE6B2C824D7E000BCF6C /* NoInternetV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE6A2C824D7E000BCF6C /* NoInternetV.swift */; };
+		18C8FE6E2C824F76000BCF6C /* Terms&ConditionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE6D2C824F76000BCF6C /* Terms&ConditionV.swift */; };
+		18C8FE722C825143000BCF6C /* BlogV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE712C825143000BCF6C /* BlogV.swift */; };
+		18C8FE742C825371000BCF6C /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE732C825371000BCF6C /* BlogModel.swift */; };
 		18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */; };
 		18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF002C5A1F550026E335 /* ContentView.swift */; };
 		18D4FF032C5A1F560026E335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D4FF022C5A1F560026E335 /* Assets.xcassets */; };
@@ -130,7 +133,11 @@
 		18C8FE522C7D14A0000BCF6C /* AddAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddress.swift; sourceTree = "<group>"; };
 		18C8FE542C7D9911000BCF6C /* OfferV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferV.swift; sourceTree = "<group>"; };
 		18C8FE5D2C7F047D000BCF6C /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
-		18C8FE5F2C7F1ACE000BCF6C /* AddressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRow.swift; sourceTree = "<group>"; };
+		18C8FE662C81C442000BCF6C /* FikFis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FikFis.entitlements; sourceTree = "<group>"; };
+		18C8FE6A2C824D7E000BCF6C /* NoInternetV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetV.swift; sourceTree = "<group>"; };
+		18C8FE6D2C824F76000BCF6C /* Terms&ConditionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Terms&ConditionV.swift"; sourceTree = "<group>"; };
+		18C8FE712C825143000BCF6C /* BlogV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogV.swift; sourceTree = "<group>"; };
+		18C8FE732C825371000BCF6C /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
 		18D4FEFB2C5A1F550026E335 /* FikFis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FikFis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D4FEFE2C5A1F550026E335 /* FikFisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikFisApp.swift; sourceTree = "<group>"; };
 		18D4FF002C5A1F550026E335 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +211,7 @@
 				18C8FE3D2C7CB53C000BCF6C /* ProductM.swift */,
 				18C8FE3E2C7CB53C000BCF6C /* ProductReviewsM.swift */,
 				18C8FE5D2C7F047D000BCF6C /* AddressModel.swift */,
+				18C8FE732C825371000BCF6C /* BlogModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,9 +324,41 @@
 			children = (
 				18C8FE502C7D1490000BCF6C /* YourAddress.swift */,
 				18C8FE522C7D14A0000BCF6C /* AddAddress.swift */,
-				18C8FE5F2C7F1ACE000BCF6C /* AddressRow.swift */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		18C8FE672C823FE5000BCF6C /* No Internet */ = {
+			isa = PBXGroup;
+			children = (
+				18C8FE6A2C824D7E000BCF6C /* NoInternetV.swift */,
+			);
+			path = "No Internet";
+			sourceTree = "<group>";
+		};
+		18C8FE6C2C824F32000BCF6C /* Terms & Condiition */ = {
+			isa = PBXGroup;
+			children = (
+				18C8FE6D2C824F76000BCF6C /* Terms&ConditionV.swift */,
+			);
+			path = "Terms & Condiition";
+			sourceTree = "<group>";
+		};
+		18C8FE6F2C825124000BCF6C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				18C8FE702C825130000BCF6C /* Blog */,
+				18C8FE6C2C824F32000BCF6C /* Terms & Condiition */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		18C8FE702C825130000BCF6C /* Blog */ = {
+			isa = PBXGroup;
+			children = (
+				18C8FE712C825143000BCF6C /* BlogV.swift */,
+			);
+			path = Blog;
 			sourceTree = "<group>";
 		};
 		18D4FEF22C5A1F550026E335 = {
@@ -340,6 +380,7 @@
 		18D4FEFD2C5A1F550026E335 /* FikFis */ = {
 			isa = PBXGroup;
 			children = (
+				18C8FE662C81C442000BCF6C /* FikFis.entitlements */,
 				18BB93F52C60C8C600B6AAA0 /* Custom Views */,
 				18ADCED82C69035400E081DD /* Model */,
 				18BB940B2C66113500B6AAA0 /* Views */,
@@ -365,6 +406,8 @@
 		18D4FF3E2C5A98C20026E335 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				18C8FE6F2C825124000BCF6C /* Setting */,
+				18C8FE672C823FE5000BCF6C /* No Internet */,
 				18C8FE4F2C7D1476000BCF6C /* Address */,
 				18C8FE4C2C7CD93F000BCF6C /* Profile */,
 				18C8FE472C7CB8B9000BCF6C /* WishList */,
@@ -577,6 +620,7 @@
 				180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */,
 				18C8FE4E2C7CD951000BCF6C /* ProfileV.swift in Sources */,
 				18BB94032C6150A400B6AAA0 /* OffersV.swift in Sources */,
+				18C8FE6E2C824F76000BCF6C /* Terms&ConditionV.swift in Sources */,
 				1A2A83EC2C7B46E600D7F5E7 /* OrderDetail.swift in Sources */,
 				1ABDE81E2C763D6F00905E98 /* FrameView.swift in Sources */,
 				180FA5D92C7A2CFE00FDE73E /* App_offersV.swift in Sources */,
@@ -593,15 +637,17 @@
 				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
 				1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */,
+				18C8FE742C825371000BCF6C /* BlogModel.swift in Sources */,
 				18C8FE3B2C7CB508000BCF6C /* ReviewImages.swift in Sources */,
 				18BB93E72C5E201300B6AAA0 /* CreatePasswordVM.swift in Sources */,
 				18C8FE4A2C7CB8DD000BCF6C /* Product_wishList.swift in Sources */,
 				18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */,
 				18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */,
-				18C8FE602C7F1ACE000BCF6C /* AddressRow.swift in Sources */,
+				18C8FE722C825143000BCF6C /* BlogV.swift in Sources */,
 				18ADCED72C69027400E081DD /* CardView_category.swift in Sources */,
 				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
 				18BB93E32C5E1BD200B6AAA0 /* OtpVM.swift in Sources */,
+				18C8FE6B2C824D7E000BCF6C /* NoInternetV.swift in Sources */,
 				18C8FE402C7CB53C000BCF6C /* ProductReviewsM.swift in Sources */,
 				180FA5DB2C7A2D5F00FDE73E /* App_offerCell.swift in Sources */,
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
@@ -747,10 +793,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
-				DEVELOPMENT_TEAM = MWRK2SX28Q;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FikFis/Info.plist;
@@ -766,6 +815,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,10 +828,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
-				DEVELOPMENT_TEAM = MWRK2SX28Q;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FikFis/Info.plist;
@@ -796,6 +850,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

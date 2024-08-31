@@ -25,22 +25,11 @@ struct NavigationHeader: View {
     @State private var inputText: String = ""
 
     var body: some View {
-        VStack(alignment: .leading,spacing: 30){
+        VStack(spacing: 0) {
+            Color.themeColor
+                .ignoresSafeArea(.all, edges: .top)
+                .frame(height: 0) // Extend the theme color into the top safe area
             HStack{
-                Spacer()
-
-//                Button{
-//                    
-//                }label: {
-//                    Image(systemName: "lock")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                    
-//                }
-                .frame(width: 30,height: 30)
-                .frame(maxWidth: .infinity,alignment:.leading)
-                Spacer()
-
                 VStack(alignment: .leading) {
                     TextField("Enter your name", text: $inputText)
                         .frame(width: 280,height: 44)
@@ -48,7 +37,6 @@ struct NavigationHeader: View {
                         .padding(.leading,20)
                         .textFieldStyle(.plain)
                         .background(Color.white)
-
 
                 }
                 
@@ -68,14 +56,12 @@ struct NavigationHeader: View {
                                 .foregroundStyle(Color.white)
                         }
                 }
-                .padding(.trailing,20)
             }
-            .frame(height: 40)
-            .padding()
-            .background(Color.themeColor.ignoresSafeArea())
+            .padding(.horizontal, 10)
+            .font(.headline)
+            .frame(height: 80)
         }
-        .cornerRadius(30, corners: [.bottomLeft,.bottomRight])
-
+        .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
 
     }
 }

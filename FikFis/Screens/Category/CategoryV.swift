@@ -32,7 +32,7 @@ struct CategoryV: View {
     var body: some View {
         VStack {
             NavigationHeader()
-                .background(Color.themeColor.ignoresSafeArea())
+            
             CardView_category()
         }
     }

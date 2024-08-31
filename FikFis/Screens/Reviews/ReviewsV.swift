@@ -13,7 +13,6 @@ struct ReviewsV: View {
     
     var body: some View {
         NavigationHeader()
-            .background(Color.themeColor.ignoresSafeArea())
 
         ScrollView(.vertical, showsIndicators: false) {
                 ForEach(arrReviews) { reviews in
