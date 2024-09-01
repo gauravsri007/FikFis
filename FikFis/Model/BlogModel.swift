@@ -35,3 +35,26 @@ extension Blog {
         ]
     }
 }
+
+
+struct BlogDetails: Identifiable {
+    let id = UUID()
+    let date: String
+    let description: String
+    let imageURL: String
+    let header: String
+    let subHeader: String
+    let subDescription: String
+    let arrImagesQuotes: [String]
+    let arrReviews : [Review]
+
+}
+
+
+extension BlogDetails{
+    static func value()->BlogDetails{
+        BlogDetails(date: "06 July 2023", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of", imageURL: "blog", header: "What is Lorem Ipsum?",subHeader: "",subDescription: "",arrImagesQuotes: ["product","product","product"],arrReviews: [Review(profile: "product", userName: "DEmo", description: "jswjfkhakshfk"),Review(profile: "product", userName: "DEmo", description: "jswjfkhakshfk")])
+    }
+}
+
+

@@ -260,3 +260,9 @@ extension UIScreen{
 
 
 
+// view extension for better modifier access
+extension View {
+    func cardBackground(bgColor:Color) -> some View {
+        modifier(CardBackground())
+    }
+}

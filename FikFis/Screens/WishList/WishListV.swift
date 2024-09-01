@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WishListV: View {
-    var arrWishList : [ProductM]
+    var arrWishList = ProductM.all()
     var body: some View {
         NavigationHeader()
 
@@ -31,9 +31,5 @@ struct WishListV: View {
 }
 
 #Preview {
-    WishListV(arrWishList: [
-        ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-        ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-        ProductM(id: 2, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-        ProductM(id: 3, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35")])
+    WishListV()
 }

@@ -12,6 +12,7 @@ struct TitleNavBarItem: View {
     let title: String
 
     var body: some View {
+        
         VStack {
             Text(title)
                 .font(.custom_font(.regular, size: 18))
@@ -26,6 +27,8 @@ struct TitleNavBarItem: View {
 
 struct MyOrders: View {
     var body: some View {
+        NavigationHeader()
+
         VStack(alignment: .leading) {
             Text("Your Orders")
                 .font(.custom_font(.medium, size: 30))

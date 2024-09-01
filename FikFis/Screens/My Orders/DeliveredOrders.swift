@@ -19,6 +19,8 @@ struct DeliveredOrders: View {
     ]
     
     var body: some View {
+//        NavigationHeader()
+
         ScrollView(.vertical, showsIndicators: false) {
             Spacer().frame(height: 5)
             ForEach(orders) { order in
