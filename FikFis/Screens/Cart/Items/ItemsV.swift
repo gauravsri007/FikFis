@@ -78,7 +78,7 @@ struct ItemsV: View {
 }
 
 #Preview {
-    ItemsV(orderSummary:OrderSummaryModel(items_total: 2000, items_discount: 100, delivery: 10, tax: 10) )
+    ItemsV(orderSummary:OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0) )
 }
 
 

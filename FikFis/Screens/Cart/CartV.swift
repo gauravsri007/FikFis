@@ -26,18 +26,18 @@ struct CartV: View {
                     .pagerTabItem(tag: 0) {
                         TitleNavBarItem(title: "Items")
                     }
-                DeliveredOrders()
-                    .pagerTabItem(tag: 1) {
-                        TitleNavBarItem(title: "Shipping")
-                    }
-                ReturnOrder()
-                    .pagerTabItem(tag: 2) {
-                        TitleNavBarItem(title: "Payment")
-                    }
-                ConfirmationV()
-                    .pagerTabItem(tag: 3) {
-                        TitleNavBarItem(title: "Confirmation")
-                    }
+//                DeliveredOrders()
+//                    .pagerTabItem(tag: 1) {
+//                        TitleNavBarItem(title: "Shipping")
+//                    }
+//                ReturnOrder()
+//                    .pagerTabItem(tag: 2) {
+//                        TitleNavBarItem(title: "Payment")
+//                    }
+//                ConfirmationV()
+//                    .pagerTabItem(tag: 3) {
+//                        TitleNavBarItem(title: "Confirmation")
+//                    }
             }
             .pagerTabStripViewStyle(.scrollableBarButton(
                 padding: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),

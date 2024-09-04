@@ -12,6 +12,7 @@
 		180FA5DB2C7A2D5F00FDE73E /* App_offerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5DA2C7A2D5F00FDE73E /* App_offerCell.swift */; };
 		1862DFE12C84CDF100608425 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE02C84CDF100608425 /* CardViewModifier.swift */; };
 		1862DFE32C84D18A00608425 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE22C84D18A00608425 /* SwiftUIView.swift */; };
+		186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D5E022C878AF500D5CCBC /* NavigationDemo.swift */; };
 		1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CD542C5B988F00EBCCC5 /* Extension.swift */; };
 		1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */; };
 		1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5B2C5BA37700EBCCC5 /* README.txt */; };
@@ -98,6 +99,7 @@
 		180FA5DA2C7A2D5F00FDE73E /* App_offerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_offerCell.swift; sourceTree = "<group>"; };
 		1862DFE02C84CDF100608425 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 		1862DFE22C84D18A00608425 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		186D5E022C878AF500D5CCBC /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 		1873CD542C5B988F00EBCCC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black 900.ttf"; sourceTree = "<group>"; };
 		1873CD5B2C5BA37700EBCCC5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				18D4FF402C5A98DC0026E335 /* Login */,
 				1ABDE81A2C763CB600905E98 /* Product */,
 				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
+				186D5E022C878AF500D5CCBC /* NavigationDemo.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */,
 				1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */,
 				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
+				186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
 				1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */,
 				18C8FE742C825371000BCF6C /* BlogModel.swift in Sources */,
@@ -850,7 +854,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
@@ -872,7 +876,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -885,7 +889,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
@@ -907,7 +911,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

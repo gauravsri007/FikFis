@@ -10,41 +10,53 @@ import SwiftUI
 struct HeaderTab: View {
     let collection : Card
     @State var size: CGFloat = 20
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        NavigationLink(destination: {
-            if collection.id == 1 {
-                MyOrders()
+        if collection.id == 8 {
+            Button {
+                dismiss()
+            } label: {
+                labelView
             }
-            else if collection.id == 2{
-                YourAddress()
-            }
-            else if collection.id == 7 {
-                WishListV(arrWishList: [
-                    ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                    ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                    ProductM(id: 2, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                    ProductM(id: 3, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35")])
-            }
-        },
-            label: {
-            HStack {
-                Image("\(collection.imageUrl)")
-                    .resizable()
-                    .cornerRadius(12)
-                    .frame(width: size, height: size)
-                    .aspectRatio(contentMode: .fit)
-                Text(collection.title)
-                    .font(.custom_font(.regular,size: 16))
-                    .lineLimit(2)
-                    .frame(width: 100, height: 40, alignment: .leading)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(.black)
-            }
-            .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
-            .cornerRadius(6.0)
-            .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-        })
+        } else {
+            NavigationLink(destination: {
+                if collection.id == 1 {
+                    MyOrders()
+                }
+                else if collection.id == 2{
+                    YourAddress()
+                }
+                else if collection.id == 7 {
+                    WishListV(arrWishList: [
+                        ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                        ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                        ProductM(id: 2, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                        ProductM(id: 3, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35")])
+                }
+            }, label: {
+                labelView
+            })
+        }
+    }
+    
+    var labelView: some View {
+        HStack {
+            Image("\(collection.imageUrl)")
+                .resizable()
+                .cornerRadius(12)
+                .frame(width: size, height: size)
+                .aspectRatio(contentMode: .fit)
+            Text(collection.title)
+                .font(.custom_font(.regular,size: 16))
+                .lineLimit(2)
+                .frame(width: 100, height: 40, alignment: .leading)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.black)
+        }
+        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
+        .cornerRadius(6.0)
+        .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
     }
 }
 
@@ -98,7 +110,6 @@ struct AccountV: View {
                         ]) {
                             ForEach(collection1) { collection in
                                 HeaderTab(collection: collection)
-                                    
                             }
                         }
                         

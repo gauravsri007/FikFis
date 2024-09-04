@@ -120,6 +120,7 @@ struct CardView: View {
 
         }
         .frame(width: appWidth - 20, height: 383)
+//        .cardViewStyle()
         .cardBackground(bgColor: Color.yellow)
 
     }

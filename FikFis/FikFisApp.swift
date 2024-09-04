@@ -12,9 +12,10 @@ import SwiftUI
 struct FikFisApp: App {
     var body: some Scene {
         WindowGroup {
-//            SignUpV()
+            LoginV()
 //            HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
-            TabV()
+//            TabV()
+//            NavigationDemo()
         }
     }
 }
