@@ -31,7 +31,7 @@ struct NavigationHeader: View {
                 .frame(height: 0) // Extend the theme color into the top safe area
             HStack{
                 VStack(alignment: .leading) {
-                    TextField("Enter your name", text: $inputText)
+                    TextField("Search for product ", text: $inputText)
                         .frame(width: 280,height: 44)
                         .frame(maxWidth: .infinity,alignment:.center)
                         .padding(.leading,20)

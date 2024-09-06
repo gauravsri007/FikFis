@@ -20,7 +20,7 @@ struct LoginV: View {
     let leadingSpace : CGFloat = 5
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             LazyVStack(alignment: .leading) {
                 Group(){
                     LazyVStack(alignment: .leading) {
@@ -71,31 +71,29 @@ struct LoginV: View {
                         HStack{
                             Button{
                                 
+                            } label: {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(.black)
                             }
-                        label: {
-                            Image(systemName: "checkmark.circle")
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 16,height: 16)
-                        .alert(isPresented: $showingAlert) {
-                            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                        }
+                            .frame(width: 16,height: 16)
+                            .alert(isPresented: $showingAlert) {
+                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                            }
                             Text("Remember me")
                                 .font(.custom_font(.regular,size: 12))
                             
                             Spacer()
                             Button{
                                 
+                            } label: {
+                                Text("Forgot Password")
+                                    .font(.custom_font(.regular,size: 12))
+                                    .foregroundColor(.black)
+                                
                             }
-                        label: {
-                            Text("Forgot Password")
-                                .font(.custom_font(.regular,size: 12))
-                                .foregroundColor(.black)
-                            
-                        }
-                        .alert(isPresented: $showingAlert) {
-                            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                        }
+                            .alert(isPresented: $showingAlert) {
+                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                            }
                         }//HStack
                     }
                     .padding([.leading],leadingSpace)
@@ -103,29 +101,25 @@ struct LoginV: View {
                 }
                 .padding()
                 
-                NavigationLink(destination: TabV().toolbarRole(.editor)) {
-                    
-                    Button{
-                        self.isLogin = true
-                    } label:{
-                        Text("Submit")
-                            .foregroundColor(.black)
-                            .bold()
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(content: {
-                                RoundedRectangle(cornerRadius: 26)
-                                    .foregroundColor(Color.theme)
-                            })
-                    }
-                    .fullScreenCover(isPresented: $isLogin, content: {
-                        TabV()
-                    })
-                    .foregroundColor(.themeColor)
-                    .padding()
-                    .alert(isPresented: $showingAlert) {
-                        Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                    }
+                Button{
+                    self.isLogin = true
+                } label:{
+                    Text("Submit")
+                        .foregroundColor(.black)
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(content: {
+                            RoundedRectangle(cornerRadius: 26)
+                                .foregroundColor(Color.theme)
+                        })
+                }
+                .fullScreenCover(isPresented: $isLogin, content: {
+                    TabV()
+                })
+                .padding()
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
                 }
                 
                 Group{
@@ -133,26 +127,20 @@ struct LoginV: View {
                         Text("Don't Have An Account ?")
                         NavigationLink(destination: SignUpV()) {
                             
-//                            Button{
-//                                isSignup = true
-//                            } label: {
-                                Text("Sign Up")
-                                    .font(.custom_font(.medium,size: 15))
-                                    .foregroundColor(.black)
-                                
-//                            }
-                            .alert(isPresented: $showingAlert) {
-                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                            }
+                            Text("Sign Up")
+                                .font(.custom_font(.medium,size: 15))
+                                .foregroundColor(.black)
+                            
+                                .alert(isPresented: $showingAlert) {
+                                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                                }
                         }
                     }
                 }
                 .padding()
                 
-                
-            }
+            }.padding()
         }
-        .padding()
     }
     
 }

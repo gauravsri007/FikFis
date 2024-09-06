@@ -56,15 +56,15 @@ struct TabV: View {
 //            .badge("12")
             //---------------------------------------
 
-//            NavigationStack() {
-//                CartV()
-//            }
-//            .tabItem {
-//                Text("Cart")
-//                Image("cart")
-//            }
-////            .badge("12")
-//            .tag(4)
+            NavigationStack {
+                CartV()
+            }
+            .tabItem {
+                Text("Cart")
+                Image("cart")
+            }
+            .badge("12")
+            .tag(4)
             //---------------------------------------
 
         }

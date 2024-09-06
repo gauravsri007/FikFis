@@ -11,7 +11,7 @@ struct HeaderTab: View {
     let collection : Card
     @State var size: CGFloat = 20
     @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         if collection.id == 8 {
             Button {
@@ -44,26 +44,25 @@ struct HeaderTab: View {
         HStack {
             Image("\(collection.imageUrl)")
                 .resizable()
-                .cornerRadius(12)
                 .frame(width: size, height: size)
                 .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.black)
             Text(collection.title)
                 .font(.custom_font(.regular,size: 16))
                 .lineLimit(2)
-                .frame(width: 100, height: 40, alignment: .leading)
+                .frame(height: 50)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.black)
         }
-        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50, alignment: .top)
-        .cornerRadius(6.0)
-        .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50)
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(.gray, lineWidth: 1)
+        )
+        .clipShape(
+            RoundedRectangle(cornerRadius: 6)
+        )
     }
-}
-
-
-struct Policies: Identifiable {
-    var id: Int
-    var title : String
 }
 
 struct AccountV: View {
@@ -85,17 +84,30 @@ struct AccountV: View {
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
     @State var header_font: CGFloat = 30
-
-    @State var policies : [Policies] = [Policies(id: 0, title: "FAQ's"),
-                                        Policies(id: 1, title: "Terms & Condition"),
-                                        Policies(id: 2, title: "Privacy Policy"),
-                                        Policies(id: 3, title: "Disclaimer"),
-                                        Policies(id: 4, title: "Refund policy"),
-                                        Policies(id: 5, title: "Returns & Refunds"),
-                                        Policies(id: 6, title: "Shippings & Delivery"),
-                                        Policies(id: 7, title: "Order Cancellation")
+    
+    @State var policies : [CommonModel] = [CommonModel(id: 0, title: "FAQ's"),
+                                           CommonModel(id: 1, title: "Terms & Condition"),
+                                           CommonModel(id: 2, title: "Privacy Policy"),
+                                           CommonModel(id: 3, title: "Disclaimer"),
+                                           CommonModel(id: 4, title: "Refund policy"),
+                                           CommonModel(id: 5, title: "Returns & Refunds"),
+                                           CommonModel(id: 6, title: "Shippings & Delivery"),
+                                           CommonModel(id: 7, title: "Order Cancellation")
     ]
     
+    var followUs: [CommonModel] = [CommonModel(id: 0, title: "@fikfis", image: "youtube_followUs"),
+                                   CommonModel(id: 1, title: "@fikfis", image: "twitter_followUs"),
+                                   CommonModel(id: 2, title: "@fikfis", image: "instagram_followUs"),
+                                   CommonModel(id: 3, title: "@fikfis", image: "facebook_followUs")]
+    
+    var aboutUs: [CommonModel] = [CommonModel(id: 0, title: "About Us"),
+                                  CommonModel(id: 1, title: "Blog"),
+                                  CommonModel(id: 2, title: "Contact Us")
+    ]
+    
+    var appStore: [CommonModel] = [CommonModel(id: 0, title: "Download on the", desc: "App Store", image: "apple"),
+                                   CommonModel(id: 1, title: "www.fikfis.com", desc: "Visit Today", image: "globe")
+    ]
     
     var body: some View {
         VStack{
@@ -117,306 +129,135 @@ struct AccountV: View {
                     }
                 }
                 
-                HStack{
-                    policies_view
+                Group {
+                    HStack(alignment: .top){
+                        policies_View
+                        
+                        followUs_View
+                    }
                     
-                    followUs
+                    fikfis_view
+                    
+                    channel_view
                     
                 }
-                
-                fikfis_view
-                
-                channel_view
-                
             }
         }
     }
     
-    
-    
-    var policies_view : some View{
-        var policy_font_size: CGFloat = 15
-        return VStack(alignment: .leading){
-            Text("Policies")
-                .font(.custom_font(.medium,size: header_font))
-                .underline(true,color: .yellow)
-            Spacer()
-            Button{
+    var policies_View : some View{
+        return HStack {
+            VStack(alignment: .leading){
+                HeaderLabel(header: "Policies")
                 
+                ForEach(policies, id: \.id) { policy in
+                    policiesLabel(text: policy.title, action: {
+                        print(policy.title)
+                    })
+                }.padding(.leading, 20)
             }
-        label:{
-            Text("FAQ's")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-        }
-            
             Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Terms & Condition")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
         }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Privacy Policy")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Disclaimer")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Refund policy")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Returns & Refunds")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Shippings & Delivery")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Order Cancellation")
-                .font(.custom_font(.regular,size: policy_font_size))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-        }
-        .padding([.leading],leadingSpace_account)
-
     }
     
+    @ViewBuilder
+    func policiesLabel(text: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(text)
+                .font(.custom_font(.regular, size: 15))
+                .foregroundColor(.black)
+                .padding(.vertical, 1)
+        }
+    }
     
+    var followUs_View : some View{
+        HStack {
+            VStack(alignment: .leading){
+                HeaderLabel(header: "Follow us")
+                
+                ForEach(followUs, id: \.id) { follow in
+                    followUsLabel(text: follow.title, image: follow.image, action: {
+                        print(follow.title)
+                    })
+                }
+            }
+            Spacer()
+        }
+    }
     
-    var followUs : some View{
-        VStack(alignment: .leading){
-            Text("Follow us")
-                .font(.custom_font(.medium,size: header_font))
-                .underline(true,color: .yellow)
-            //            Spacer()
-            Button(){
-                
+    @ViewBuilder
+    func followUsLabel(text: String, image: String?, action: @escaping () -> Void) -> some View {
+        Button(){
+            
+        } label:{
+            if let image = image {
+                Image(image).cornerRadius(5)
             }
-        label:{
-            Image("youtube_followUs")
-            Text("@fikfis")
+            Text(text)
                 .font(.custom_font(.regular,size: 14))
                 .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            
-            Button(){
-                
-            }
-        label:{
-            Image("twitter_followUs")
-            Text("@fikfis")
-                .font(.custom_font(.regular,size: 14))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            Button(){
-                
-            }
-        label:{
-            Image("instagram_followUs")
-            Spacer()
-            Text("@fikfis")
-                .font(.custom_font(.regular,size: 14))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            Button(){
-                
-            }
-        label:{
-            Image("facebook_followUs")
-            Spacer()
-            
-            Text("@fikfis")
-                .font(.custom_font(.regular,size: 14))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            Spacer()
-            
-        }
-        .padding([.leading])
-
+        }.padding(.leading, 20)
     }
     
     
     var fikfis_view : some View{
-        let fikfis_view_font: CGFloat = 15
-
-        return VStack(alignment: .leading){
-            Text("FikFis")
-                .font(.custom_font(.medium,size: header_font))
-                .underline(true,color: .yellow)
-            Spacer()
-            Button{
-                
+        return HStack {
+            VStack(alignment: .leading){
+                HeaderLabel(header: "FikFis")
+                ForEach(aboutUs, id: \.id) { policy in
+                    policiesLabel(text: policy.title, action: {
+                        print(policy.title)
+                    })
+                }.padding(.leading, 20)
             }
-        label:{
-            Text("About Us")
-                .font(.custom_font(.regular,size: fikfis_view_font))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-        }
-            
             Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Blog")
-                .font(.custom_font(.regular,size: fikfis_view_font))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
         }
-            
-            Spacer()
-            
-            Button{
-                
-            }
-        label:{
-            Text("Contact US")
-                .font(.custom_font(.regular,size: fikfis_view_font))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity,alignment: .leading)
-            
-        }
-            
-            Spacer()
-    
-        }
-        .padding([.leading],leadingSpace_account)
-
     }
     
-    
-    
     var channel_view : some View{
-        let height : CGFloat = 60
-        return VStack(alignment: .leading){
-            Text("FikFis Channels")
-                .font(.custom_font(.medium,size: header_font))
-                .underline(true,color: .yellow)
-            Spacer()
-
-            HStack{
-                Button(action: {}) {
-                    HStack {
-                        Image("apple")
-                            .frame(width: 32,height: 32)
-                        VStack{
-                            Text("Download on the")
-                                .font(.custom_font(.regular,size: 12))
-                            Text("App Store")
-                                .font(.custom_font(.medium,size: 20))
-                        }
-                        
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                    .frame(width: (UIScreen.screenWidth/2) - 10 ,height: height)
+        VStack(alignment: .leading){
+            HeaderLabel(header: "FikFis Channels").padding(.leading, -10)
+            HStack {
+                ForEach(appStore, id: \.id) { button in
+                    appStoreButton(text: button.title, desc: button.desc, image: button.image, action: {
+                        print(button.title, "clicked")
+                    })
                 }
-                .foregroundColor(.white)
-                .background(Color.black)
-                .cornerRadius(.infinity)
-
-                
-                Button(action: {}) {
-                    HStack {
-                        Image("globe")
-                            .frame(width: 32,height: 32)
-                        VStack{
-
-                            Text("www.fikfis.com")
-                                .font(.custom_font(.regular,size: 12))
-                                .foregroundStyle(Color.white)
-                            Text("Visit Today")
-                                .font(.custom_font(.medium,size: 18))
-
-                        }
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                    .frame(width: (UIScreen.screenWidth/2) - 10 ,height: height)
-
-                }
-                .foregroundColor(.white)
-                .background(Color.black)
-                .cornerRadius(.infinity)
             }
         }
-        .padding([.leading,.trailing])
+    }
+    
+    @ViewBuilder
+    func appStoreButton(text: String, desc: String?, image: String?, action: @escaping () -> Void) -> some View {
+        Button(){
+            
+        } label:{
+            HStack {
+                if let image = image {
+                    Image(image)
+                        .frame(width: 32,height: 32)
+                }
+                VStack(alignment: .leading){
+                    Text(text)
+                        .font(.custom_font(.regular,size: 12))
+                        .foregroundStyle(Color.white)
+                        .lineLimit(1)
+                    if let desc = desc {
+                        Text(desc)
+                            .font(.custom_font(.medium,size: 18))
+                            .foregroundStyle(Color.white)
+                            .lineLimit(1)
+                    }
+                }
+            }
+            .frame(width: (appWidth/2)-50)
+            .padding(.horizontal)
+            .padding(.vertical, 12)
+            .background(content: {
+                RoundedRectangle(cornerRadius: 80).foregroundStyle(.black)
+            })
+            .padding(.bottom)
+        }
     }
 }
 

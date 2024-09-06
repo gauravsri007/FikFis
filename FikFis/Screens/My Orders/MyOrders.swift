@@ -27,9 +27,10 @@ struct TitleNavBarItem: View {
 
 struct MyOrders: View {
     var body: some View {
-        NavigationHeader()
-
         VStack(alignment: .leading) {
+            
+            NavigationHeader()
+            
             Text("Your Orders")
                 .font(.custom_font(.medium, size: 30))
                 .padding()
