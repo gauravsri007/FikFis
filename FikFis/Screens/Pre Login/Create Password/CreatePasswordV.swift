@@ -1,5 +1,5 @@
 //
-//  OtpV.swift
+//  CreatePasswordV.swift
 //  FikFis
 //
 //  Created by apple on 03/08/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OtpV: View {
+struct CreatePasswordV: View {
     
     @State private var phoneNumber_orEmail: String = ""
     @State private var password: String = ""
@@ -15,28 +15,30 @@ struct OtpV: View {
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
     let leadingSpace : CGFloat = 5
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         
         Group{
         LazyVStack(alignment: .leading) {
             Group(){
+                LazyVStack(alignment: .leading) {
                     
-                    Text("Temporary Code (OTP)")
-                        .font(.custom_font(.medium,size: 26
-                                          ))
+                    Text("Create Password")
+                        .font(.custom_font(.medium,size: 26))
                         .underline(true,color: .yellow)
-                    Text("Just send a text message with a temporary code.")
+                    Spacer()
+                    Text("Your password must be a minimum of 6 characters long.")
                         .font(.custom_font(.medium,size: 20))
-
+                }
+                    .padding([.leading],leadingSpace)
 
             }
             .padding()
-            .padding([.leading],leadingSpace)
-
             Group(){
                 LazyVStack(alignment: .leading){
                     Group {                     //----------------------------------------------------------------------
-                        Text("temporary code (OTP)")
+                        Text("New Password")
                             .font(.custom_font(.regular,size: 16))
                         
                         
@@ -53,23 +55,33 @@ struct OtpV: View {
                         Spacer()
                             .padding(.bottom)
                         //----------------------------------------------------------------------
+                        Text("Confirm Password")
+                            .font(.custom_font(.regular,size: 16))
+                        
+                        TextField("xxxxxxxxxxx", text: $phoneNumber_orEmail)
+                            .placeholder(when: phoneNumber_orEmail.isEmpty) {
+                            }
+                        
+                            .padding()
+                        
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color.gray, lineWidth: 1))
                         //----------------------------------------------------------------------
                     }
                     Spacer()
-
                 }
+                .padding([.leading],leadingSpace)
+
             }
             .padding()
-            Button{
-                
-            }
-        label:{
+            NavigationLink(destination: LoginV()){
             Text("Submit")
                 .foregroundColor(.black)
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(content: {
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 24)
                         .foregroundColor(Color.theme)
                 })
         }
@@ -78,34 +90,7 @@ struct OtpV: View {
         .alert(isPresented: $showingAlert) {
             Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
         }
-        
-        //----------------------------------------------------------------------
-            Group{
-                HStack{
-                    Spacer()
-                    Text("Need help?")
-                        .font(.custom_font(.regular,size: 15))
-                    
-                    Button{
-                        
-                    }
-                label: {
-                    Text("support@fikfis.uk")
-                        .font(.custom_font(.regular,size: 15))
-                        .foregroundColor(.black)
-                    
-                }
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                }
-                Spacer()
-
-                }
-
-
-            }
             
-//            .frame(width: 100,height: 100)
         }
             
         Spacer()
@@ -115,5 +100,5 @@ struct OtpV: View {
 }
 
 #Preview {
-    OtpV()
+    CreatePasswordV()
 }

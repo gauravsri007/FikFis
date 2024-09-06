@@ -23,7 +23,7 @@ struct SearchBar2: UIViewRepresentable {
 
 struct NavigationHeader: View {
     @State private var inputText: String = ""
-
+    
     var body: some View {
         VStack(spacing: 0) {
             Color.themeColor
@@ -34,15 +34,15 @@ struct NavigationHeader: View {
                     TextField("Search for product ", text: $inputText)
                         .frame(width: 280,height: 44)
                         .frame(maxWidth: .infinity,alignment:.center)
-                        .padding(.leading,20)
+                        .padding(.leading,10)
                         .textFieldStyle(.plain)
                         .background(Color.white)
-
+                    
                 }
                 
                 .cornerRadius(30, corners: .allCorners)
                 Spacer()
-
+                
                 
                 Button(action: {
                     // handle tap
@@ -62,7 +62,7 @@ struct NavigationHeader: View {
             .frame(height: 80)
         }
         .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
-
+        
     }
 }
 

@@ -20,7 +20,6 @@ fileprivate func SubmitButton() -> some View {
             .cornerRadius(25)
     }
     .padding(.horizontal, 10)
-//    .padding(.vertical, 10)
 }
 
 

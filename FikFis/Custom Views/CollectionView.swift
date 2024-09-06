@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CollectionView: View {
     let item : Card
-    @State var size: CGFloat = 90
+    @State var size: CGFloat = 82
     var body: some View {
         VStack {
             Image("\(item.imageUrl)")
@@ -24,7 +24,7 @@ struct CollectionView: View {
                 .lineLimit(2)
                 .frame(width: size, height: 60, alignment: .top)
         }
-        .frame(width: size, height: size+60)
+        .frame(width: size, height: size + 60)
     }
 }
 

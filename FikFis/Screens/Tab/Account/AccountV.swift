@@ -7,65 +7,10 @@
 
 import SwiftUI
 
-struct HeaderTab: View {
-    let collection : Card
-    @State var size: CGFloat = 20
+struct AccountV: View {
+    
     @Environment(\.dismiss) var dismiss
     
-    var body: some View {
-        if collection.id == 8 {
-            Button {
-                dismiss()
-            } label: {
-                labelView
-            }
-        } else {
-            NavigationLink(destination: {
-                if collection.id == 1 {
-                    MyOrders()
-                }
-                else if collection.id == 2{
-                    YourAddress()
-                }
-                else if collection.id == 7 {
-                    WishListV(arrWishList: [
-                        ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                        ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                        ProductM(id: 2, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
-                        ProductM(id: 3, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35")])
-                }
-            }, label: {
-                labelView
-            })
-        }
-    }
-    
-    var labelView: some View {
-        HStack {
-            Image("\(collection.imageUrl)")
-                .resizable()
-                .frame(width: size, height: size)
-                .aspectRatio(contentMode: .fit)
-                .foregroundStyle(.black)
-            Text(collection.title)
-                .font(.custom_font(.regular,size: 16))
-                .lineLimit(2)
-                .frame(height: 50)
-                .multilineTextAlignment(.center)
-                .foregroundStyle(.black)
-        }
-        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50)
-        .overlay(
-            RoundedRectangle(cornerRadius: 6)
-                .stroke(.gray, lineWidth: 1)
-        )
-        .clipShape(
-            RoundedRectangle(cornerRadius: 6)
-        )
-    }
-}
-
-struct AccountV: View {
     @State private var inputText: String = ""
     
     @State var collection1 : [Card] = [
@@ -121,7 +66,7 @@ struct AccountV: View {
                             GridItem(.flexible(), alignment: .top)
                         ]) {
                             ForEach(collection1) { collection in
-                                HeaderTab(collection: collection)
+                                headerTab(collection: collection)
                             }
                         }
                         
@@ -129,20 +74,71 @@ struct AccountV: View {
                     }
                 }
                 
-                Group {
-                    HStack(alignment: .top){
-                        policies_View
-                        
-                        followUs_View
-                    }
+                HStack(alignment: .top){
+                    policies_View
                     
-                    fikfis_view
-                    
-                    channel_view
-                    
+                    followUs_View
                 }
+                
+                fikfis_view
+                
+                channel_view
             }
         }
+    }
+    
+    func headerTab(collection: Card) -> some View {
+        VStack {
+            if collection.id == 8 {
+                Button {
+                    dismiss()
+                } label: {
+                    labelView(collection: collection)
+                }
+            } else {
+                NavigationLink(destination: {
+                    if collection.id == 1 {
+                        MyOrders()
+                    }
+                    else if collection.id == 2{
+                        YourAddress()
+                    }
+                    else if collection.id == 7 {
+                        WishListV(arrWishList: [
+                            ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                            ProductM(id: 1, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                            ProductM(id: 2, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
+                            ProductM(id: 3, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35")])
+                    }
+                }, label: {
+                    labelView(collection: collection)
+                })
+            }
+        }
+    }
+    
+    func labelView(collection: Card) -> some View {
+        HStack {
+            Image("\(collection.imageUrl)")
+                .resizable()
+                .frame(width: 20, height: 20)
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.black)
+            Text(collection.title)
+                .font(.custom_font(.regular,size: 16))
+                .lineLimit(2)
+                .frame(height: 50)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.black)
+        }
+        .frame(width: (UIScreen.screenWidth / 2) - 20, height: 50)
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(.gray, lineWidth: 1)
+        )
+        .clipShape(
+            RoundedRectangle(cornerRadius: 6)
+        )
     }
     
     var policies_View : some View{

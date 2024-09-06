@@ -18,7 +18,6 @@ struct LoginV: View {
     @State private var isSignup: Bool = false
     
     let leadingSpace : CGFloat = 5
-    
     var body: some View {
         NavigationStack {
             LazyVStack(alignment: .leading) {
@@ -83,17 +82,15 @@ struct LoginV: View {
                                 .font(.custom_font(.regular,size: 12))
                             
                             Spacer()
-                            Button{
-                                
-                            } label: {
-                                Text("Forgot Password")
-                                    .font(.custom_font(.regular,size: 12))
-                                    .foregroundColor(.black)
-                                
-                            }
-                            .alert(isPresented: $showingAlert) {
-                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                            }
+                            NavigationLink(destination: PasswordAssistanceV()){
+                                    Text("Forgot Password")
+                                        .font(.custom_font(.regular,size: 12))
+                                        .foregroundColor(.black)
+                                    
+                                }
+                                .alert(isPresented: $showingAlert) {
+                                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                                }
                         }//HStack
                     }
                     .padding([.leading],leadingSpace)

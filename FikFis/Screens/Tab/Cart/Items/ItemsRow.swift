@@ -21,7 +21,6 @@ struct ItemsRow: View {
         .frame(width: UIScreen.screenWidth - 20,height: 165)
         .border(Color.init(hex: "D1D1D1"),width: 1)
         .background(Color.clear.cornerRadius(6))
-        
     }
     
     var upperView : some View{
@@ -36,6 +35,7 @@ struct ItemsRow: View {
                 Text(product.productName)
                 StarRatingView(rating: .constant(3))
                     .frame(width: 105, height: 15)
+                
                 HStack{
                     Text(product.productPrice)
                         .font(.custom_font(.regular,size: 17))
@@ -61,34 +61,41 @@ struct ItemsRow: View {
         return
         VStack(alignment: .leading){
             HStack{
-                HStack{
-                    Button{
+                ZStack{
+                    RoundedRectangle(cornerRadius: 15)
+
+                        .fill(.clear)
+                        .frame(width: 100,height: height)
+                        .cornerRadius(10)
+                        .border(Color.init(hex: "D1D1D1"))
+
+                    HStack{
                         
+                        Button{
+                            
+                        }label:{
+                            Image(systemName: "plus")
+                                .foregroundStyle(Color.black)
+                            
+                        }
+                        Text("1")
+                            .foregroundStyle(Color.black)
+                        Button{
+                            
+                        }label:{
+                            Image(systemName: "minus")
+                                .foregroundStyle(Color.black)
+                            
+                        }
                     }
-                label:{
-                    Image(systemName: "plus")
-                        .foregroundStyle(Color.black)
                     
                 }
-                    Text("1")
-                        .foregroundStyle(Color.black)
-                    Button{
-                        
-                    }
-                label:{
-                    Image(systemName: "minus")
-                        .foregroundStyle(Color.black)
-                    
-                }
-                    
-                }
-                .frame(width: 100,height: height)
-                .border(Color.init(hex: "D1D1D1"))
-                .background(content: {
-                    RoundedRectangle(cornerRadius: 26)
-                        .foregroundColor(Color.clear)
-                })
+//                .background(content: {
+//                    RoundedRectangle(cornerRadius: 26)
+//                        .foregroundColor(Color.clear)
+//                })
                 
+
                 Spacer()
                 
                 Button {
@@ -116,6 +123,7 @@ struct ItemsRow: View {
                 .clipShape(Circle())
                 .padding([.trailing],10)
             }
+
         }
         .padding([.leading],10)
     }

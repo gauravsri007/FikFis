@@ -24,7 +24,7 @@ struct TabV: View {
             //---------------------------------------
 
             NavigationStack() {
-                OffersV()
+                App_offersV()
             }
             .tabItem {
                 Text("Offer")
