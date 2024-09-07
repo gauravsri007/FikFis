@@ -18,7 +18,6 @@ struct SignUpV: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        
         LazyVStack(alignment: .leading) {
             Group(){
                 LazyVStack(alignment: .leading) {
@@ -70,23 +69,23 @@ struct SignUpV: View {
                 }
             }
             .padding()
-
+            
             NavigationLink(destination: OtpV()){
-            Text("Continue")
-                .font(.custom_font(.medium,size: 20))
-                .foregroundColor(.black)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(content: {
-                    RoundedRectangle(cornerRadius: 26)
-                        .foregroundColor(Color.theme)
-                })
-        }
-        .foregroundColor(.themeColor)
-        .padding()
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-        }
+                Text("Continue")
+                    .font(.custom_font(.medium,size: 20))
+                    .foregroundColor(.black)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(content: {
+                        RoundedRectangle(cornerRadius: 26)
+                            .foregroundColor(Color.theme)
+                    })
+            }
+            .foregroundColor(.themeColor)
+            .padding()
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+            }
             
             Group{
                 LazyVStack(alignment: .leading){

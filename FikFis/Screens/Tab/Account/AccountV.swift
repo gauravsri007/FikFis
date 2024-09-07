@@ -56,7 +56,7 @@ struct AccountV: View {
     
     var body: some View {
         VStack{
-            NavigationHeader()
+            NavigationHeader(isBellIconHidden: false)
                 .padding(.bottom)
             ScrollView(.vertical, showsIndicators: false) {
                 Group{
@@ -97,7 +97,10 @@ struct AccountV: View {
                 }
             } else {
                 NavigationLink(destination: {
-                    if collection.id == 1 {
+                    if collection.id == 0 {
+                        ProfileV()
+                    }
+                    else if collection.id == 1 {
                         MyOrders()
                     }
                     else if collection.id == 2{

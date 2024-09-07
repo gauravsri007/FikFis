@@ -31,8 +31,8 @@ struct CategoryV: View {
 
     var body: some View {
         VStack {
-            NavigationHeader()
-            
+            NavigationHeader(isBellIconHidden: false)
+
             CardView_category()
         }
     }

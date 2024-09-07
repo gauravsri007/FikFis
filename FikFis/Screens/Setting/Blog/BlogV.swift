@@ -13,7 +13,7 @@ struct BlogV: View {
 
     var body: some View {
         
-        NavigationHeader()
+        NavigationHeader(isBellIconHidden: false)
 
         NavigationView {
             ZStack{

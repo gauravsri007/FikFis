@@ -23,9 +23,7 @@ struct HomeNavigationV: View {
                         .foregroundColor(.white)
                 }
                 Spacer()
-                Button(action: {
-                    // handle tap
-                }) {
+                NavigationLink(destination: NotificationV()){
                     Image("bell_navigation")
                         .renderingMode(.template)
                         .foregroundStyle(Color.black)

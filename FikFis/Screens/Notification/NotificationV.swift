@@ -12,12 +12,11 @@ struct NotificationV: View {
 
     
     var body: some View {
-        NavigationHeader()
+        NavigationHeader(isBellIconHidden: false)
 
         VStack(alignment: .leading){
             
             HeaderLabel(header: "Notification")
-            
             ScrollView{
                 VStack(alignment: .leading){
                     ListView

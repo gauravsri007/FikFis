@@ -10,7 +10,7 @@ import SwiftUI
 struct WishListV: View {
     var arrWishList = ProductM.all()
     var body: some View {
-        NavigationHeader()
+        NavigationHeader(isBellIconHidden: false)
 
         VStack(alignment: .leading){
             HeaderLabel(header: "Your Wishlist Waiting...")

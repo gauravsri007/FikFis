@@ -15,7 +15,7 @@ struct Terms_ConditionV: View {
 
     var body: some View {
         
-        NavigationHeader()
+        NavigationHeader(isBellIconHidden: false)
         HeaderLabel(header: header)
 
         WebView()

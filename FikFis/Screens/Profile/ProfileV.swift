@@ -15,22 +15,24 @@ struct ProfileV: View {
     @State private var password: String = ""
     
     var body: some View {
-        NavigationHeader()
-        VStack{
-            
-            headerView
-            
-            contentView
-                .padding()
-            
-            RoundedButton(showingAlert: false, alertTitle: "", alertMessage: "", btnTitle: "SAVE CHANGES", btnHeight: 50, btnWidth: UIScreen.screenWidth - 30, font: .custom_font(.medium,size: 20))
+        NavigationHeader(isBellIconHidden: false)
+        ScrollView{
+            VStack{
+                headerView
+                
+                contentView
+                    .padding()
+                
+                RoundedButton(showingAlert: false, alertTitle: "", alertMessage: "", btnTitle: "SAVE CHANGES", btnHeight: 50, btnWidth: UIScreen.screenWidth - 30, font: .custom_font(.medium,size: 20))
+            }
         }
     }
     
     var contentView:some View{
-        VStack(alignment: .leading) {
+        var textViewHeight : CGFloat = 45
+        return VStack(alignment: .leading) {
             Text("Your Orders")
-                .font(.custom_font(.medium, size: 30))
+                .font(.custom_font(.medium, size: 28))
             Rectangle()
                 .foregroundStyle(Color.themeColor)
                 .frame(width: 100, height: 5)
@@ -44,7 +46,7 @@ struct ProfileV: View {
                     .placeholder(when: phoneNumber_orEmail.isEmpty){
                     }
                     .padding()
-                    .frame(width: UIScreen.screenWidth - 90)
+                    .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.gray, lineWidth: 1))
@@ -60,7 +62,7 @@ struct ProfileV: View {
                     .placeholder(when: phoneNumber_orEmail.isEmpty){
                     }
                     .padding()
-                    .frame(width: UIScreen.screenWidth - 90)
+                    .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.gray, lineWidth: 1))
@@ -75,7 +77,7 @@ struct ProfileV: View {
                 .placeholder(when: phoneNumber_orEmail.isEmpty){
                 }
                 .padding()
-                .frame(width: UIScreen.screenWidth - 90)
+                .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color.gray, lineWidth: 1))
@@ -89,7 +91,7 @@ struct ProfileV: View {
                 .placeholder(when: phoneNumber_orEmail.isEmpty){
                 }
                 .padding()
-                .frame(width: UIScreen.screenWidth - 90)
+                .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color.gray, lineWidth: 1))
@@ -142,7 +144,6 @@ struct ProfileV: View {
                     .font(.custom_font(.medium,size: 20))
 
             }
-            .background(Color.yellow)
             Spacer()
         }
     }

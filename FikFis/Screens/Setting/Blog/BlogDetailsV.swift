@@ -13,8 +13,8 @@ struct BlogDetailsV: View {
 
     var body: some View {
             
-                NavigationHeader()
-        
+        NavigationHeader(isBellIconHidden: false)
+
                 VStack(alignment: .leading){
                     Image(blogDetails.imageURL)
                         .resizable()

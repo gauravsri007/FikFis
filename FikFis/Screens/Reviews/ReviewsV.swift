@@ -12,7 +12,7 @@ struct ReviewsV: View {
     var arrReviewImages : [String]
     
     var body: some View {
-        NavigationHeader()
+        NavigationHeader(isBellIconHidden: false)
 
         ScrollView(.vertical, showsIndicators: false) {
                 ForEach(arrReviews) { reviews in

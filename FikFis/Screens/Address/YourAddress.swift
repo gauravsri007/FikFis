@@ -13,8 +13,8 @@ struct YourAddress: View {
 
     
     var body: some View {
-        NavigationHeader()
-        
+        NavigationHeader(isBellIconHidden: false)
+
         VStack(alignment: .leading) {
             HeaderLabel(header: "Your Address")
                 .padding(.leading)

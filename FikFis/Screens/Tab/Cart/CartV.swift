@@ -12,8 +12,8 @@ struct CartV: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationHeader()
-            
+            NavigationHeader(isBellIconHidden: false)
+
             HeaderLabel(header: "Your Carts").frame(height: 60)
             
             PagerTabStripView() {

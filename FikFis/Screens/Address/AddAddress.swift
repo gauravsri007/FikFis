@@ -21,8 +21,8 @@ struct AddAddress: View {
     let textFeildWidth:CGFloat = appWidth - 24
     
     var body: some View {
-        NavigationHeader()
-        
+        NavigationHeader(isBellIconHidden: false)
+
         VStack(alignment: .leading){
             
             ScrollView{

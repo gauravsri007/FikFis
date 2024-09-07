@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5BC2C77C5EE00FDE73E /* Constant.swift */; };
 		180FA5D92C7A2CFE00FDE73E /* App_offersV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */; };
-		180FA5DB2C7A2D5F00FDE73E /* App_offerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5DA2C7A2D5F00FDE73E /* App_offerCell.swift */; };
 		1862DFE12C84CDF100608425 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE02C84CDF100608425 /* CardViewModifier.swift */; };
 		1862DFE32C84D18A00608425 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE22C84D18A00608425 /* SwiftUIView.swift */; };
 		186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D5E022C878AF500D5CCBC /* NavigationDemo.swift */; };
+		186FB1E72C8CC67D00565820 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB1E62C8CC67D00565820 /* OfferRow.swift */; };
 		1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CD542C5B988F00EBCCC5 /* Extension.swift */; };
 		1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */; };
 		1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5B2C5BA37700EBCCC5 /* README.txt */; };
@@ -102,10 +102,10 @@
 /* Begin PBXFileReference section */
 		180FA5BC2C77C5EE00FDE73E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_offersV.swift; sourceTree = "<group>"; };
-		180FA5DA2C7A2D5F00FDE73E /* App_offerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_offerCell.swift; sourceTree = "<group>"; };
 		1862DFE02C84CDF100608425 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 		1862DFE22C84D18A00608425 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		186D5E022C878AF500D5CCBC /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
+		186FB1E62C8CC67D00565820 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
 		1873CD542C5B988F00EBCCC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black 900.ttf"; sourceTree = "<group>"; };
 		1873CD5B2C5BA37700EBCCC5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -211,6 +211,7 @@
 			children = (
 				18C8FE542C7D9911000BCF6C /* OfferV.swift */,
 				180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */,
+				186FB1E62C8CC67D00565820 /* OfferRow.swift */,
 			);
 			path = "App Offers";
 			sourceTree = "<group>";
@@ -219,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				18ADCED22C67F1D100E081DD /* TabV.swift */,
+				180FA5D52C7A2CAF00FDE73E /* App Offers */,
 				18BB940E2C6619C700B6AAA0 /* Category */,
 				18BB93F82C61503D00B6AAA0 /* Offers */,
 				18BB93EC2C5F54DD00B6AAA0 /* Home */,
@@ -363,7 +365,6 @@
 			children = (
 				18BB940C2C66116000B6AAA0 /* NavigationHeader.swift */,
 				18ADCED62C69027400E081DD /* CardView_category.swift */,
-				180FA5DA2C7A2D5F00FDE73E /* App_offerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -510,7 +511,6 @@
 				18C8FE4C2C7CD93F000BCF6C /* Profile */,
 				18C8FE472C7CB8B9000BCF6C /* WishList */,
 				18C8FE362C7CB4FA000BCF6C /* Reviews */,
-				180FA5D52C7A2CAF00FDE73E /* App Offers */,
 				18BB93FA2C61505A00B6AAA0 /* Options */,
 				18D4FF4B2C5AA32B0026E335 /* Splash */,
 				1ABDE81A2C763CB600905E98 /* Product */,
@@ -741,6 +741,7 @@
 				18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */,
 				1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */,
 				18BB93E92C5E217500B6AAA0 /* SignUpV.swift in Sources */,
+				186FB1E72C8CC67D00565820 /* OfferRow.swift in Sources */,
 				186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
 				1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */,
@@ -759,7 +760,6 @@
 				18C8FE6B2C824D7E000BCF6C /* NoInternetV.swift in Sources */,
 				18C8FE402C7CB53C000BCF6C /* ProductReviewsM.swift in Sources */,
 				1AE630952C8AC874004594AA /* TabBarAccessor.swift in Sources */,
-				180FA5DB2C7A2D5F00FDE73E /* App_offerCell.swift in Sources */,
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
 				1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */,
 				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,

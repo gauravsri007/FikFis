@@ -29,8 +29,8 @@ struct MyOrders: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            NavigationHeader()
-            
+            NavigationHeader(isBellIconHidden: false)
+
             Text("Your Orders")
                 .font(.custom_font(.medium, size: 30))
                 .padding()
