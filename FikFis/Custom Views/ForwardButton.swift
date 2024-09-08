@@ -12,18 +12,17 @@ struct ForwardButton: View {
     var size: CGFloat = 30.0
     
     var body: some View {
-        Button {
-            
-        } label: {
+        
+        NavigationLink(destination: ProductListingV()){
             Image(systemName: imageName)
+                .frame(width: size, height: size)
+                .foregroundStyle(.white)
+                .padding()
+                .background {
+                    Color.themeColor
+                }
+                .clipShape(Circle())
         }
-        .frame(width: size, height: size)
-        .foregroundStyle(.white)
-        .padding()
-        .background {
-            Color.themeColor
-        }
-        .clipShape(Circle())
     }
 }
 

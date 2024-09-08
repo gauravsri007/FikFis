@@ -15,15 +15,20 @@ struct ProductItem: View {
             Image("\(item.imageUrl)")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: appWidth/2.5, height: appWidth/2.5)
+                .frame(width: (appWidth/2) - 30, height: (appWidth/2) - 30)
                 .cardViewStyle()
                 .cornerRadius(6)
                 .clipped()
             
             Text(item.title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(width: (appWidth/2) - 30, height: 50)
                 .font(.custom_font(.medium, size: 14))
                 .multilineTextAlignment(.leading)
                 .lineLimit(3)
+                .padding([.leading],0)
+//                .background(Color.yellow)
+
             
             StarRatingView(rating: .constant(3))
                 .frame(width: 105, height: 15)
@@ -55,5 +60,5 @@ struct ProductItem: View {
 }
 
 #Preview {
-    ProductItem(item: Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "paging1"))
+    ProductItem(item: Card(id: 2, title: "Mens shoes", imageUrl: "product1"))
 }

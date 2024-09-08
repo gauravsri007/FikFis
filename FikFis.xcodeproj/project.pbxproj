@@ -13,6 +13,7 @@
 		1862DFE32C84D18A00608425 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE22C84D18A00608425 /* SwiftUIView.swift */; };
 		186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D5E022C878AF500D5CCBC /* NavigationDemo.swift */; };
 		186FB1E72C8CC67D00565820 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB1E62C8CC67D00565820 /* OfferRow.swift */; };
+		186FB1EA2C8D721100565820 /* ProductListingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB1E92C8D721100565820 /* ProductListingV.swift */; };
 		1873CD552C5B988F00EBCCC5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CD542C5B988F00EBCCC5 /* Extension.swift */; };
 		1873CD6C2C5BA37700EBCCC5 /* Poppins Black 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */; };
 		1873CD6E2C5BA37700EBCCC5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1873CD5B2C5BA37700EBCCC5 /* README.txt */; };
@@ -106,6 +107,7 @@
 		1862DFE22C84D18A00608425 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		186D5E022C878AF500D5CCBC /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 		186FB1E62C8CC67D00565820 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
+		186FB1E92C8D721100565820 /* ProductListingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingV.swift; sourceTree = "<group>"; };
 		1873CD542C5B988F00EBCCC5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1873CD592C5BA37700EBCCC5 /* Poppins Black 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black 900.ttf"; sourceTree = "<group>"; };
 		1873CD5B2C5BA37700EBCCC5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -250,6 +252,14 @@
 			path = ViewModifier;
 			sourceTree = "<group>";
 		};
+		186FB1E82C8D71EC00565820 /* Product Listing */ = {
+			isa = PBXGroup;
+			children = (
+				186FB1E92C8D721100565820 /* ProductListingV.swift */,
+			);
+			path = "Product Listing";
+			sourceTree = "<group>";
+		};
 		1873CD562C5B996700EBCCC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +373,7 @@
 		18BB940B2C66113500B6AAA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1ABDE81A2C763CB600905E98 /* Product Item */,
 				18BB940C2C66116000B6AAA0 /* NavigationHeader.swift */,
 				18ADCED62C69027400E081DD /* CardView_category.swift */,
 			);
@@ -502,6 +513,7 @@
 		18D4FF3E2C5A98C20026E335 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				186FB1E82C8D71EC00565820 /* Product Listing */,
 				187DF6A32C8AD299003148A4 /* Notification */,
 				1828AFB52C8A25E00092D87B /* Pre Login */,
 				1828AFB42C8A17F60092D87B /* Tab */,
@@ -513,7 +525,6 @@
 				18C8FE362C7CB4FA000BCF6C /* Reviews */,
 				18BB93FA2C61505A00B6AAA0 /* Options */,
 				18D4FF4B2C5AA32B0026E335 /* Splash */,
-				1ABDE81A2C763CB600905E98 /* Product */,
 				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
 				186D5E022C878AF500D5CCBC /* NavigationDemo.swift */,
 			);
@@ -599,12 +610,12 @@
 			path = "My Orders";
 			sourceTree = "<group>";
 		};
-		1ABDE81A2C763CB600905E98 /* Product */ = {
+		1ABDE81A2C763CB600905E98 /* Product Item */ = {
 			isa = PBXGroup;
 			children = (
 				1ABDE81B2C763CD200905E98 /* ProductItem.swift */,
 			);
-			path = Product;
+			path = "Product Item";
 			sourceTree = "<group>";
 		};
 		1AE630912C8AC828004594AA /* View Representable */ = {
@@ -711,6 +722,7 @@
 				18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */,
 				18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */,
 				18C8FE422C7CB7F1000BCF6C /* HeaderLabel.swift in Sources */,
+				186FB1EA2C8D721100565820 /* ProductListingV.swift in Sources */,
 				18BB93E52C5E200300B6AAA0 /* CreatePasswordV.swift in Sources */,
 				18BB93FF2C61508600B6AAA0 /* OptionsV.swift in Sources */,
 				18C8FE782C83A7E9000BCF6C /* BlogDetailsV.swift in Sources */,

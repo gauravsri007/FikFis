@@ -12,17 +12,7 @@ struct HomeV: View {
     @State private var searchText = ""
     @State private var searchIsActive = false
     let coverImages: [ImagePagerM]
-    var corners: UIRectCorner = .allCorners
-    @State var arrCollection1 : [String] = ["Kid shoes","Womens clothes","Mens clothes"]
-    
-    @State var collection1 : [Card] = [
-        Card(id: 0, title: "Kid shoes", imageUrl: "paging1"),
-        Card(id: 1, title: "Womens shoes", imageUrl: "paging1"),
-        Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "paging1"),
-        Card(id: 3, title: "Kid clothes", imageUrl: "paging1"),
-        Card(id: 4, title: "Min. 40% off | Washing machines", imageUrl: "paging1"),
-        Card(id: 5, title: "Mens clothes", imageUrl: "paging1")
-    ]
+    @State var collection1 = Card.all()
 
     var body: some View {
         VStack(spacing: 0){
