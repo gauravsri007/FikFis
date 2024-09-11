@@ -26,42 +26,40 @@ struct NavigationHeader: View {
     @State private var isNavigation: Bool = false
     @State var isBellIconHidden : Bool
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                Color.themeColor
-                    .ignoresSafeArea(.all, edges: .top)
-                    .frame(height: 0) // Extend the theme color into the top safe area
-                HStack{
-                    VStack(alignment: .leading) {
-                        TextField("Search for product ", text: $inputText)
-                            .frame(width: 280,height: 44)
-                            .frame(maxWidth: .infinity,alignment:.center)
-                            .padding(.leading,10)
-                            .textFieldStyle(.plain)
-                            .background(Color.white)
-                        
-                    }
-                    .cornerRadius(30, corners: .allCorners)
-                    Spacer()
-                    if !isBellIconHidden{
-                        NavigationLink(destination: NotificationV()){
-                            Image("bell_navigation")
-                                .renderingMode(.template)
-                                .foregroundStyle(Color.black)
-                                .padding(15)
-                                .background {
-                                    Circle()
-                                        .foregroundStyle(Color.white)
-                                }
-                        }
+        VStack(spacing: 0) {
+            Color.themeColor
+                .ignoresSafeArea(.all, edges: .top)
+                .frame(height: 0) // Extend the theme color into the top safe area
+            HStack{
+                VStack(alignment: .leading) {
+                    TextField("Search for product ", text: $inputText)
+                        .frame(width: 280,height: 44)
+                        .frame(maxWidth: .infinity,alignment:.center)
+                        .padding(.leading,10)
+                        .textFieldStyle(.plain)
+                        .background(Color.white)
+                    
+                }
+                .cornerRadius(30, corners: .allCorners)
+                Spacer()
+                if !isBellIconHidden{
+                    NavigationLink(destination: NotificationV()){
+                        Image("bell_navigation")
+                            .renderingMode(.template)
+                            .foregroundStyle(Color.black)
+                            .padding(15)
+                            .background {
+                                Circle()
+                                    .foregroundStyle(Color.white)
+                            }
                     }
                 }
-                .padding(.horizontal, 10)
-                .font(.headline)
-                .frame(height: 80)
             }
-            .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
+            .padding(.horizontal, 10)
+            .font(.headline)
+            .frame(height: 80)
         }
+        .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
     }
 }
 

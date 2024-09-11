@@ -31,6 +31,8 @@ struct HomeV: View {
                 
                 appliancesSection
                 
+                imageSection
+                
                 recentViewedSection
                 
                 productItemCollectionSection
@@ -72,6 +74,14 @@ struct HomeV: View {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         .frame(height: 200)
+    }
+    
+    var imageSection: some View {
+        Image("paging1")
+            .resizable()
+            .padding(.horizontal)
+            .padding(.top)
+            .frame(height: 200)
     }
     
     var collectionSection: some View {

@@ -28,11 +28,13 @@ struct OfferRow: View {
             
         }
         .frame(width: UIScreen.screenWidth - 20,height: 196)
-        .border(Color.gray)
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.gray, lineWidth: 1))
     }
     
     var header :some View{
-        var button_height : CGFloat = 40
+        let button_height : CGFloat = 40
         return HStack{
             Text("SAVE 100")
                 .font(.custom_font(.semiBold, size: 20))

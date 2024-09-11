@@ -11,6 +11,7 @@ struct ItemsRow: View {
     @State var size: CGFloat = 100
     var product:ProductM
     var productCount : Int
+    @State var quantity = 1
     var body: some View {
         VStack(alignment: .leading){
             upperView
@@ -19,22 +20,26 @@ struct ItemsRow: View {
             lowerView
         }
         .frame(width: UIScreen.screenWidth - 20,height: 165)
-        .border(Color.init(hex: "D1D1D1"),width: 1)
-        .background(Color.clear.cornerRadius(6))
+        .background(RoundedRectangle(cornerRadius: 6).stroke(lineWidth: 1).foregroundStyle(Color.init(hex: "D1D1D1")))
     }
     
     var upperView : some View{
-        HStack{
+        HStack(alignment: .top) {
             Image("\(product.imageUrl)")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: size, height: size)
                 .clipped()
-                .cornerRadius(12)
+                .cornerRadius(5)
             VStack(alignment: .leading){
                 Text(product.productName)
-                StarRatingView(rating: .constant(3))
-                    .frame(width: 105, height: 15)
+                    .lineLimit(2)
+                    .frame(height: size-50)
+                HStack {
+                    Text("3.0")
+                    StarRatingView(rating: .constant(3))
+                        .frame(width: 105, height: 15)
+                }.frame(height: 14)
                 
                 HStack{
                     Text(product.productPrice)
@@ -42,60 +47,51 @@ struct ItemsRow: View {
                     Text("£3899")
                         .foregroundStyle(Color.gray)
                         .font(.custom_font(.regular,size: 17))
+                        .strikethrough()
                     Text(product.ProductDiscount)
                         .foregroundStyle(Color.white)
                         .font(.custom_font(.semiBold,size: 14))
-                        .background(Color.init(hex: "DD3333"))
-                        .padding([.all],10)
+                        .padding(.vertical, 3)
+                        .padding(.horizontal, 7)
+                        .background(Color.init(hex: "DD3333").cornerRadius(5))
                 }
-                
-            }
-            .padding([.bottom])
-                
+            }.padding(.top, -4)
         }
+        .frame(height: size)
     }
     
-    
     var lowerView : some View{
-        var height : CGFloat = 30
-        return
-        VStack(alignment: .leading){
+        let height : CGFloat = 30
+        return VStack(alignment: .leading){
             HStack{
-                ZStack{
-                    RoundedRectangle(cornerRadius: 15)
-
-                        .fill(.clear)
-                        .frame(width: 100,height: height)
-                        .cornerRadius(10)
-                        .border(Color.init(hex: "D1D1D1"))
-
-                    HStack{
-                        
-                        Button{
-                            
-                        }label:{
-                            Image(systemName: "plus")
-                                .foregroundStyle(Color.black)
-                            
+//                Stepper("\(quantity)", value: $quantity, in: 1...50)
+//                    .fixedSize()
+                HStack{
+                    Button{
+                        if quantity < 100 {
+                            quantity += 1
                         }
-                        Text("1")
+                    } label:{
+                        Image(systemName: "plus")
                             .foregroundStyle(Color.black)
-                        Button{
-                            
-                        }label:{
-                            Image(systemName: "minus")
-                                .foregroundStyle(Color.black)
-                            
-                        }
+                        
                     }
-                    
+                    Text("\(quantity)")
+                        .foregroundStyle(Color.black)
+                    Button{
+                        if quantity > 0 {
+                            quantity -= 1
+                        }
+                    } label:{
+                        Image(systemName: "minus")
+                            .foregroundStyle(Color.black)
+                        
+                    }
                 }
-//                .background(content: {
-//                    RoundedRectangle(cornerRadius: 26)
-//                        .foregroundColor(Color.clear)
-//                })
+                .padding(.vertical, 5)
+                .padding(.horizontal)
+                .background(RoundedRectangle(cornerRadius: 5).stroke(lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/).foregroundStyle(Color.init(hex: "D1D1D1")))
                 
-
                 Spacer()
                 
                 Button {
@@ -123,7 +119,7 @@ struct ItemsRow: View {
                 .clipShape(Circle())
                 .padding([.trailing],10)
             }
-
+            
         }
         .padding([.leading],10)
     }
