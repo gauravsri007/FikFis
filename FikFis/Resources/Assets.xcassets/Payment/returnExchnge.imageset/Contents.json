@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "filled outline.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "filled outline@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "filled outline@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

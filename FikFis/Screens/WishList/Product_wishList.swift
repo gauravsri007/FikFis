@@ -65,8 +65,7 @@ struct Product_wishList: View {
                 HStack{
                     Button{
                         
-                    }
-                label:{
+                    }label:{
                     Image(systemName: "plus")
                         .foregroundStyle(Color.black)
                     
@@ -75,8 +74,7 @@ struct Product_wishList: View {
                         .foregroundStyle(Color.black)
                     Button{
                         
-                    }
-                label:{
+                    }label:{
                     Image(systemName: "minus")
                         .foregroundStyle(Color.black)
                     

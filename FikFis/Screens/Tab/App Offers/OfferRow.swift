@@ -27,7 +27,7 @@ struct OfferRow: View {
                 .padding([.bottom],10)
             
         }
-        .frame(width: UIScreen.screenWidth - 20,height: 196)
+        .frame(width: UIScreen.screenWidth - 20,height: 204)
         .border(Color.gray)
     }
     
@@ -37,25 +37,25 @@ struct OfferRow: View {
             Text("SAVE 100")
                 .font(.custom_font(.semiBold, size: 20))
             Spacer()
-            Button{
-                
-            }
-            label:{
-            Image("copy")
-                    .resizable()
-                    .padding(10)
-                    .cornerRadius(5)
-                    .aspectRatio(contentMode: .fit)
-                    .background {
-                        Circle()
-                            .foregroundStyle(Color.themeColor)
-                    }
-                    .frame(width: button_height,height: button_height)
+            ZStack{
+                Button{
                     
-
+                }label:{
+                    Image("copy")
+                        .resizable()
+                        .padding(10)
+                        .cornerRadius(5)
+                        .aspectRatio(contentMode: .fit)
+                        .background {
+                            Circle()
+                                .foregroundStyle(Color.themeColor)
+                        }
+                        .frame(width: button_height,height: button_height)
+                    
+                    
+                }
+                .padding([.top,.trailing],10)
             }
-            .padding([.top,.trailing],10)
-            
         }
         .padding(.leading)
     }
@@ -78,12 +78,16 @@ struct OfferRow: View {
                     HStack{
                         Text(".")
                         Text(terms.title)
+                            .font(.custom_font(.medium,size: 14))
+                        
                     }
                 }
             }
+            .scrollDisabled(true)
             
         }
         .padding(.leading)
+//        .background(Color.yellow)
     }
     
     

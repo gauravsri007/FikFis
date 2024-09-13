@@ -18,7 +18,6 @@ struct ProductListingV: View {
         VStack(alignment: .leading ){
             productItemCollectionSection
         }
-        Spacer()
     }
     
     var productItemCollectionSection: some View {

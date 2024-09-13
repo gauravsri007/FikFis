@@ -15,6 +15,7 @@ let leadingSpace_account : CGFloat = 25
 let appWidth = UIScreen.main.bounds.width
 let appHeight = UIScreen.main.bounds.height
 let header_font: CGFloat = 30
+let arrImages_static = ["product1","product2","product3","product1","product2","product3"]
 
 struct AppColor {
     static let primaryBlack = Color.init(hexa: "1F1F1F")

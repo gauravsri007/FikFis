@@ -10,6 +10,14 @@ import SwiftUI
 struct ProductItem: View {
     let item : Card
     var body: some View {
+        NavigationLink(destination:             ProductDetailV(coverImages: [
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} ),
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} ),
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} ),
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} ),
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} ),
+            ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} )],
+                       product: CommonModel(id: 0, title: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage, 8GB RAM, 12GB RAM)", image: "",rating: "3.5",discount:"47", reviewCount: 150),arrProductImages: arrImages_static)){
         VStack(alignment: .leading) {
             
             Image("\(item.imageUrl)")
@@ -56,6 +64,8 @@ struct ProductItem: View {
         .cardViewStyle()
         .padding(.top, 2)
         .padding(.bottom, 12)
+//        .onTapGesture {
+        }
     }
 }
 

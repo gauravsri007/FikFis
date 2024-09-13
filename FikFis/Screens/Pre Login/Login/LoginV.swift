@@ -138,6 +138,7 @@ struct LoginV: View {
                 
             }.padding()
         }
+        .navigationBarHidden(true)
     }
     
 }

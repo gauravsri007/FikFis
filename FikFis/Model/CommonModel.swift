@@ -12,4 +12,10 @@ struct CommonModel: Identifiable {
     var title : String
     var desc: String?
     var image: String?
+    var rating: String?
+    var price: Int?
+    var discountedPrice: Int?
+    var discount: String?
+    var reviewCount: Int?
+
 }
