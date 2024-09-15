@@ -16,24 +16,21 @@ struct LoginV: View {
     @State private var alertMessage: String = ""
     @State private var isLogin: Bool = false
     @State private var isSignup: Bool = false
-    
+
     let leadingSpace : CGFloat = 5
     var body: some View {
         NavigationStack {
             LazyVStack(alignment: .leading) {
-                Group(){
-                    LazyVStack(alignment: .leading) {
-                        Text("Login")
-                            .font(.custom_font(.medium,size: 26))
-                            .underline(true,color: .yellow)
-                        Spacer()
-                        Text("Get access to your Orders, Wishlist, and Recommendations.")
-                            .font(.custom_font(.medium,size: 20))
-                    }
-                    .padding([.leading],leadingSpace)
+                LazyVStack(alignment: .leading) {
+                    Text("Login")
+                        .font(.custom_font(.medium,size: 24))
+                        .underline(true,color: .yellow)
+                    Spacer()
+                    Text("Get access to your Orders, Wishlist, and Recommendations.")
+                        .font(.custom_font(.medium,size: 18))
                 }
-                .padding()
-                Group(){
+                .padding([.horizontal,.bottom])
+
                     LazyVStack(alignment: .leading){
                         Group {                     //----------------------------------------------------------------------
                             Text("Email or mobile phone number")
@@ -49,7 +46,7 @@ struct LoginV: View {
                                     RoundedRectangle(cornerRadius: 30)
                                         .stroke(Color.gray, lineWidth: 1))
                             //----------------------------------------------------------------------
-                            Spacer()
+//                            Spacer()
                                 .padding(.bottom)
                             //----------------------------------------------------------------------
                             Text("Password")
@@ -68,35 +65,33 @@ struct LoginV: View {
                         }
                         Spacer()
                         HStack{
-                            Button{
-                                
-                            } label: {
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundColor(.black)
-                            }
-                            .frame(width: 16,height: 16)
-                            .alert(isPresented: $showingAlert) {
-                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                            }
-                            Text("Remember me")
-                                .font(.custom_font(.regular,size: 12))
+                            //                            Button{
+                            //
+                            //                            } label: {
+                            //                                Image(systemName: "checkmark.circle")
+                            //                                    .foregroundColor(.black)
+                            //                            }
+                            //                            .frame(width: 16,height: 16)
+                            //                            .alert(isPresented: $showingAlert) {
+                            //                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                            //                            }
+                            //                            Text("Remember me")
+                            //                                .font(.custom_font(.regular,size: 12))
                             
                             Spacer()
                             NavigationLink(destination: PasswordAssistanceV()){
-                                    Text("Forgot Password")
-                                        .font(.custom_font(.regular,size: 12))
-                                        .foregroundColor(.black)
-                                    
-                                }
-                                .alert(isPresented: $showingAlert) {
-                                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                                }
+                                Text("Forgot Password")
+                                    .font(.custom_font(.regular,size: 12))
+                                    .foregroundColor(.black)
+                                
+                            }
+                            .alert(isPresented: $showingAlert) {
+                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                            }
                         }//HStack
                     }
-                    .padding([.leading],leadingSpace)
-                    
-                }
-                .padding()
+                    .padding([.horizontal,.top])
+
                 
                 Button{
                     self.isLogin = true
@@ -107,7 +102,7 @@ struct LoginV: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(content: {
-                            RoundedRectangle(cornerRadius: 26)
+                            RoundedRectangle(cornerRadius: buttonCornerRadius)
                                 .foregroundColor(Color.theme)
                         })
                 }
@@ -119,24 +114,26 @@ struct LoginV: View {
                     Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
                 }
                 
-                Group{
-                    HStack(alignment:.center){
-                        Text("Don't Have An Account ?")
-                        NavigationLink(destination: SignUpV()) {
-                            
-                            Text("Sign Up")
-                                .font(.custom_font(.medium,size: 15))
-                                .foregroundColor(.black)
-                            
-                                .alert(isPresented: $showingAlert) {
-                                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                                }
-                        }
+                HStack(alignment:.center){
+                    Spacer()
+
+                    Text("Don't Have An Account ?")
+                    NavigationLink(destination: SignUpV()) {
+                        Text("Sign Up")
+                            .font(.custom_font(.medium,size: 15))
+                            .foregroundColor(.black)
+                        
+                            .alert(isPresented: $showingAlert) {
+                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                            }
                     }
+                    
+                    Spacer()
                 }
-                .padding()
-                
-            }.padding()
+                Spacer()
+            }
+            Spacer()
+
         }
         .navigationBarHidden(true)
     }

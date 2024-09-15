@@ -73,17 +73,19 @@ struct OfferRow: View {
         return VStack(alignment: .leading){
             Text("Terms of use")
                 .font(.custom_font(.medium, size: 15))
-            ScrollView{
+//            ScrollView{
                 ForEach(termsList){ terms in
                     HStack{
                         Text(".")
+                            .padding([.bottom])
+
                         Text(terms.title)
                             .font(.custom_font(.medium,size: 14))
                         
                     }
                 }
-            }
-            .scrollDisabled(true)
+//            }
+//            .scrollDisabled(true)
             
         }
         .padding(.leading)

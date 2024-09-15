@@ -11,118 +11,92 @@ struct CardView: View {
     var orderSummary_card = OrderSummaryModel.value()
     var bgColor : Color
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25)
-                .fill(bgColor)
-
+        VStack(alignment: .leading) {
+            Text("Order Summary")
+                .font(.custom_font(.medium,size: 24))
+                .foregroundStyle(.black)
+                .padding(.top)
             VStack(alignment: .leading) {
-                Text("Order Summary")
-                    .font(.custom_font(.medium,size: 30))
-                    .foregroundStyle(.black)
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(Color.white)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .shadow(color: Color.init(hex: "dddddd"), radius: 2, x: 1, y: 1)
- 
-                    VStack(alignment: .leading) {
-                        HStack{
-                            Text("Item(s) total:")
-                                .font(.custom_font(.medium,size: 16))
-                                .foregroundStyle(.black)
-                            Spacer()
-                            
-                            Text("£\(orderSummary_card.items_total)")
-                        
-                        }
-                        
-                        HStack{
-                            Text("Item(s) discount:")
-                                .font(.custom_font(.medium,size: 16))
-                                .foregroundStyle(.black)
-                            Spacer()
-                            
-                            Text("£\(orderSummary_card.items_total)")
-                        }
-                        HStack{
-                            Text("Delivery:")
-                                .font(.custom_font(.medium,size: 16))
-                                .foregroundStyle(.black)
-                            Spacer()
-                            
-                            Text("£\(orderSummary_card.items_total)")
-                        }
-
-                        HStack{
-                            Text("Tax:")
-                                .font(.custom_font(.medium,size: 16))
-                                .foregroundStyle(.black)
-                            Spacer()
-                            
-                            Text("£\(orderSummary_card.items_total)")
-                        }
+                HStack{
+                    Text("Item(s) total:")
+                        .font(.custom_font(.medium,size: 16))
+                        .foregroundStyle(.black)
+                    Spacer()
                     
-                        Divider()
-
-                        HStack{
-                            Text("Total")
-                                .font(.custom_font(.medium,size: 16))
-                                .foregroundStyle(.black)
-                            Spacer()
-                            
-                            Text("£\(orderSummary_card.items_total)")
-                        }
-
-
-            
-                    }
-                    .padding(20)
-                    .multilineTextAlignment(.center)
-                    
- 
-
+                    Text("£\(orderSummary_card.items_total)")
                 }
-                .frame(width: appWidth - 40, height: 206)
-//                .cardBackground(bgColor: Color.yellow)
                 
-                ZStack{
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .shadow(color: Color.init(hex: "dddddd"), radius: 2, x: 0.8, y: 0.8)
-                    HStack{
-                        Group{
-                            Text("Apply promo code")
-                                .font(.custom_font(.medium,size: 14))
-                                .foregroundStyle(Color.init(hexa: "CBCBCB"))
-                                .padding()
-
-                            
-                            Spacer()
-                            
-                            Text("Apply")
-                                .frame(width: 75,height: 50)
-                                .background(Color.themeColor)
-                                .cornerRadius(10, corners: .allCorners)
-                        }
-                        
-                    }
-                    .frame(width: appWidth - 40,height: 50)
+                HStack{
+                    Text("Item(s) discount:")
+                        .font(.custom_font(.medium,size: 16))
+                        .foregroundStyle(.black)
+                    Spacer()
+                    
+                    Text("£\(orderSummary_card.items_total)")
                 }
-
-
+                HStack{
+                    Text("Delivery:")
+                        .font(.custom_font(.medium,size: 16))
+                        .foregroundStyle(.black)
+                    Spacer()
+                    
+                    Text("£\(orderSummary_card.items_total)")
+                }
+                
+                HStack{
+                    Text("Tax:")
+                        .font(.custom_font(.medium,size: 16))
+                        .foregroundStyle(.black)
+                    Spacer()
+                    
+                    Text("£\(orderSummary_card.items_total)")
+                }
+                
+                Divider()
+                
+                HStack{
+                    Text("Total")
+                        .font(.custom_font(.medium,size: 16))
+                        .foregroundStyle(.black)
+                    Spacer()
+                    
+                    Text("£\(orderSummary_card.items_total)")
+                }
             }
-            .padding(20)
             .multilineTextAlignment(.center)
-
+            .frame(width: appWidth - 80,height: 150)
+            .padding([.horizontal,.vertical],10)
+            .background(Color.white.cornerRadius(10, corners: .allCorners))
+            .padding(10)
+            .cardViewStyle()
+            
+            Spacer()
+            
+            HStack{
+                Text("Apply promo code")
+                    .font(.custom_font(.medium,size: 14))
+                    .foregroundStyle(Color.init(hexa: "CBCBCB"))
+                    .padding()
+                
+                
+                Spacer()
+                
+                Text("Apply")
+                    .frame(width: 75,height: 40)
+                    .background(Color.themeColor)
+                    .cornerRadius(buttonCornerRadius, corners: .allCorners)
+                    .padding(5)
+                
+            }
+            .frame(width: appWidth - 40,height: 50)
+            .background(Color.white.cornerRadius(buttonCornerRadius, corners: .allCorners))
+            .padding(.bottom)
+            
         }
-        .frame(width: appWidth - 20, height: 383)
-//        .cardViewStyle()
-        .cardBackground(bgColor: Color.yellow)
-
+        .multilineTextAlignment(.center)
+        .frame(width: appWidth - 20,height: 360)
+        .background(Color.init(hex: "EAEAEA"))
+        
     }
 
 
@@ -137,7 +111,6 @@ struct CardView: View {
 struct OrderSummaryModel: Identifiable {
     var id = UUID()
     var items_total,items_discount,delivery,tax : Double
-    
     }
 
 extension OrderSummaryModel{

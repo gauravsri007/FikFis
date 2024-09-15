@@ -23,11 +23,11 @@ struct PasswordAssistanceV: View {
                 Group(){
                     LazyVStack(alignment: .leading) {
                         Text("Password Assistance")
-                            .font(.custom_font(.medium,size: 26))
+                            .font(.custom_font(.medium,size: 24))
                             .underline(true,color: .yellow)
                         Spacer()
                         Text("No problem! Just enter your email or mobile number, and we’ll send you a text message with a temporary code.")
-                            .font(.custom_font(.medium,size: 20))
+                            .font(.custom_font(.medium,size: 18))
                     }
                     .padding([.leading],leadingSpace)
                     
@@ -70,7 +70,7 @@ struct PasswordAssistanceV: View {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(content: {
-                                RoundedRectangle(cornerRadius: 20)
+                                RoundedRectangle(cornerRadius: buttonCornerRadius)
                                     .foregroundColor(Color.theme)
                             })
                     }

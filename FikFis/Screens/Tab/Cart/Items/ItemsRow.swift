@@ -42,11 +42,14 @@ struct ItemsRow: View {
                     Text("£3899")
                         .foregroundStyle(Color.gray)
                         .font(.custom_font(.regular,size: 17))
-                    Text(product.ProductDiscount)
-                        .foregroundStyle(Color.white)
-                        .font(.custom_font(.semiBold,size: 14))
-                        .background(Color.init(hex: "DD3333"))
-                        .padding([.all],10)
+                    Text("\(product.ProductDiscount) % off")
+                        .font(.custom_font(.semiBold, size: 12))
+                        .bold()
+                        .foregroundStyle(.white)
+                        .padding(5)
+                        .background {
+                            Color.init(hex: "DD3333").cornerRadius(5)
+                        }
                 }
                 
             }

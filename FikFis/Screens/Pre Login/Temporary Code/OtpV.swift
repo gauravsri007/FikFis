@@ -19,55 +19,43 @@ struct OtpV: View {
         
         Group{
             LazyVStack(alignment: .leading) {
-                Group(){
-                    
+                LazyVStack(alignment: .leading){
                     Text("Temporary Code (OTP)")
-                        .font(.custom_font(.medium,size: 26
+                        .font(.custom_font(.medium,size: 24
                                           ))
                         .underline(true,color: .yellow)
+                        .padding([.bottom],5)
+
                     Text("Just send a text message with a temporary code.")
-                        .font(.custom_font(.medium,size: 20))
-                    
-                    
+                        .font(.custom_font(.medium,size: 18))
                 }
-                .padding()
-                .padding([.leading],leadingSpace)
-                
-                Group(){
-                    LazyVStack(alignment: .leading){
-                        Group {                     //----------------------------------------------------------------------
-                            Text("temporary code (OTP)")
-                                .font(.custom_font(.regular,size: 16))
-                            
-                            
-                            TextField("Email or mobile phone number", text: $phoneNumber_orEmail)
-                                .placeholder(when: phoneNumber_orEmail.isEmpty){
-                                }
-                            
-                                .padding()
-                            
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color.gray, lineWidth: 1))
-                            //----------------------------------------------------------------------
-                            Spacer()
-                                .padding(.bottom)
-                            //----------------------------------------------------------------------
-                            //----------------------------------------------------------------------
-                        }
+                .padding([.horizontal,.bottom])
+
+                LazyVStack(alignment: .leading){
+                    Group {
+                        Text("temporary code (OTP)")
+                            .font(.custom_font(.regular,size: 16))
+                        TextField("Email or mobile phone number", text: $phoneNumber_orEmail)
+                            .placeholder(when: phoneNumber_orEmail.isEmpty){
+                            }
+                            .padding()
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color.gray, lineWidth: 1))
                         Spacer()
-                        
                     }
+                    
                 }
-                .padding()
-                
+                .padding([.horizontal,.top])
+
+
                 NavigationLink(destination: CreatePasswordV()){
                     Text("Submit")
                         .foregroundColor(.black)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(content: {
-                            RoundedRectangle(cornerRadius: 20)
+                            RoundedRectangle(cornerRadius: buttonCornerRadius)
                                 .foregroundColor(Color.theme)
                         })
                 }
@@ -78,34 +66,27 @@ struct OtpV: View {
                 }
                 
                 //----------------------------------------------------------------------
-                Group{
-                    HStack{
-                        Spacer()
-                        Text("Need help?")
-                            .font(.custom_font(.regular,size: 15))
-                        
-                        Button{
-                            
-                        }
-                    label: {
-                        Text("support@fikfis.uk")
-                            .font(.custom_font(.regular,size: 15))
-                            .foregroundColor(.black)
-                        
-                    }
-                    .alert(isPresented: $showingAlert) {
-                        Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                    }
-                        Spacer()
-                        
-                    }
+                HStack{
+                    Spacer()
+                    Text("Need help?")
+                        .font(.custom_font(.regular,size: 15))
                     
+                    Button{
+                        
+                    }
+                label: {
+                    Text("support@fikfis.uk")
+                        .font(.custom_font(.regular,size: 15))
+                        .foregroundColor(.black)
                     
                 }
-                
-                //            .frame(width: 100,height: 100)
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
+                }
+                    Spacer()
+                }
+                Spacer()
             }
-            
             Spacer()
         }//LazyStack
     }

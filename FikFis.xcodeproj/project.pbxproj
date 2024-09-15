@@ -30,6 +30,7 @@
 		187DF6A52C8AD2D0003148A4 /* NotificationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187DF6A42C8AD2D0003148A4 /* NotificationV.swift */; };
 		187DF6A72C8AD301003148A4 /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187DF6A62C8AD301003148A4 /* NotificationRow.swift */; };
 		187DF6A92C8AD3E7003148A4 /* NoticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187DF6A82C8AD3E7003148A4 /* NoticationModel.swift */; };
+		1894F0F32C96DB95006A0D85 /* FikFisCommitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894F0F22C96DB95006A0D85 /* FikFisCommitment.swift */; };
 		18ADCED32C67F1D100E081DD /* TabV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED22C67F1D100E081DD /* TabV.swift */; };
 		18ADCED52C68962800E081DD /* HomeNavigationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED42C68962800E081DD /* HomeNavigationV.swift */; };
 		18ADCED72C69027400E081DD /* CardView_category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED62C69027400E081DD /* CardView_category.swift */; };
@@ -66,7 +67,6 @@
 		18C8FE4E2C7CD951000BCF6C /* ProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE4D2C7CD951000BCF6C /* ProfileV.swift */; };
 		18C8FE512C7D1490000BCF6C /* YourAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE502C7D1490000BCF6C /* YourAddress.swift */; };
 		18C8FE532C7D14A0000BCF6C /* AddAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE522C7D14A0000BCF6C /* AddAddress.swift */; };
-		18C8FE552C7D9911000BCF6C /* OfferV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE542C7D9911000BCF6C /* OfferV.swift */; };
 		18C8FE5E2C7F047D000BCF6C /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE5D2C7F047D000BCF6C /* AddressModel.swift */; };
 		18C8FE6B2C824D7E000BCF6C /* NoInternetV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE6A2C824D7E000BCF6C /* NoInternetV.swift */; };
 		18C8FE6E2C824F76000BCF6C /* Terms&ConditionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8FE6D2C824F76000BCF6C /* Terms&ConditionV.swift */; };
@@ -130,6 +130,7 @@
 		187DF6A42C8AD2D0003148A4 /* NotificationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationV.swift; sourceTree = "<group>"; };
 		187DF6A62C8AD301003148A4 /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
 		187DF6A82C8AD3E7003148A4 /* NoticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticationModel.swift; sourceTree = "<group>"; };
+		1894F0F22C96DB95006A0D85 /* FikFisCommitment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikFisCommitment.swift; sourceTree = "<group>"; };
 		18ADCED22C67F1D100E081DD /* TabV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabV.swift; sourceTree = "<group>"; };
 		18ADCED42C68962800E081DD /* HomeNavigationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationV.swift; sourceTree = "<group>"; };
 		18ADCED62C69027400E081DD /* CardView_category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView_category.swift; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		18C8FE4D2C7CD951000BCF6C /* ProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileV.swift; sourceTree = "<group>"; };
 		18C8FE502C7D1490000BCF6C /* YourAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAddress.swift; sourceTree = "<group>"; };
 		18C8FE522C7D14A0000BCF6C /* AddAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddress.swift; sourceTree = "<group>"; };
-		18C8FE542C7D9911000BCF6C /* OfferV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferV.swift; sourceTree = "<group>"; };
 		18C8FE5D2C7F047D000BCF6C /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		18C8FE662C81C442000BCF6C /* FikFis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FikFis.entitlements; sourceTree = "<group>"; };
 		18C8FE6A2C824D7E000BCF6C /* NoInternetV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetV.swift; sourceTree = "<group>"; };
@@ -221,7 +221,6 @@
 		180FA5D52C7A2CAF00FDE73E /* App Offers */ = {
 			isa = PBXGroup;
 			children = (
-				18C8FE542C7D9911000BCF6C /* OfferV.swift */,
 				180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */,
 				186FB1E62C8CC67D00565820 /* OfferRow.swift */,
 			);
@@ -362,6 +361,7 @@
 				18C8FE432C7CB802000BCF6C /* RoundedButton.swift */,
 				1ABDE81D2C763D6F00905E98 /* FrameView.swift */,
 				1ABDE81F2C763E6900905E98 /* CollectionView.swift */,
+				1894F0F22C96DB95006A0D85 /* FikFisCommitment.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -748,7 +748,6 @@
 				18C8FE5E2C7F047D000BCF6C /* AddressModel.swift in Sources */,
 				1A2A83E82C7A45E000D7F5E7 /* CancelOrder.swift in Sources */,
 				18C8FE4B2C7CB8DD000BCF6C /* WishListV.swift in Sources */,
-				18C8FE552C7D9911000BCF6C /* OfferV.swift in Sources */,
 				18BB940A2C636E5900B6AAA0 /* Enum.swift in Sources */,
 				18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */,
 				18BB93F02C5F557900B6AAA0 /* HomeVM.swift in Sources */,
@@ -824,6 +823,7 @@
 				1A2A83DC2C7A3ED200D7F5E7 /* MyOrders.swift in Sources */,
 				1AE630932C8AC84D004594AA /* NavBarAccessor.swift in Sources */,
 				18C8FE512C7D1490000BCF6C /* YourAddress.swift in Sources */,
+				1894F0F32C96DB95006A0D85 /* FikFisCommitment.swift in Sources */,
 				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,
 				18C8FE442C7CB802000BCF6C /* RoundedButton.swift in Sources */,
 				187DF6A72C8AD301003148A4 /* NotificationRow.swift in Sources */,
@@ -960,7 +960,7 @@
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;
@@ -995,7 +995,7 @@
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;

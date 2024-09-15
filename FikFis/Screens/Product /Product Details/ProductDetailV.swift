@@ -98,9 +98,7 @@ struct ProductDetailV: View {
                     .font(.custom_font(.semiBold, size: 15))
                     .foregroundStyle(Color.init(hex: "4C4C4C"))
             }
-            
             HStack {
-                
                 Text("$105100"+"   ").font(.custom_font(.semiBold, size: 14)) + Text("$105100").foregroundStyle(Color.init(hex: "#727272")).font(.custom_font(.semiBold, size: 14)).strikethrough()
                 
                 Text("\(product.discount ?? "")% Off")
