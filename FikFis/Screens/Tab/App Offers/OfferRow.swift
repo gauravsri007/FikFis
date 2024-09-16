@@ -27,7 +27,7 @@ struct OfferRow: View {
                 .padding([.bottom],10)
             
         }
-        .frame(width: UIScreen.screenWidth - 20,height: 196)
+        .frame(width: UIScreen.screenWidth - 20,height: 204)
         .overlay(
             RoundedRectangle(cornerRadius: 5)
                 .stroke(Color.gray, lineWidth: 1))
@@ -39,25 +39,25 @@ struct OfferRow: View {
             Text("SAVE 100")
                 .font(.custom_font(.semiBold, size: 20))
             Spacer()
-            Button{
-                
-            }
-            label:{
-            Image("copy")
-                    .resizable()
-                    .padding(10)
-                    .cornerRadius(5)
-                    .aspectRatio(contentMode: .fit)
-                    .background {
-                        Circle()
-                            .foregroundStyle(Color.themeColor)
-                    }
-                    .frame(width: button_height,height: button_height)
+            ZStack{
+                Button{
                     
-
+                }label:{
+                    Image("copy")
+                        .resizable()
+                        .padding(10)
+                        .cornerRadius(5)
+                        .aspectRatio(contentMode: .fit)
+                        .background {
+                            Circle()
+                                .foregroundStyle(Color.themeColor)
+                        }
+                        .frame(width: button_height,height: button_height)
+                    
+                    
+                }
+                .padding([.top,.trailing],10)
             }
-            .padding([.top,.trailing],10)
-            
         }
         .padding(.leading)
     }
@@ -75,17 +75,23 @@ struct OfferRow: View {
         return VStack(alignment: .leading){
             Text("Terms of use")
                 .font(.custom_font(.medium, size: 15))
-            ScrollView{
+//            ScrollView{
                 ForEach(termsList){ terms in
                     HStack{
                         Text(".")
+                            .padding([.bottom])
+
                         Text(terms.title)
+                            .font(.custom_font(.medium,size: 14))
+                        
                     }
                 }
-            }
+//            }
+//            .scrollDisabled(true)
             
         }
         .padding(.leading)
+//        .background(Color.yellow)
     }
     
     

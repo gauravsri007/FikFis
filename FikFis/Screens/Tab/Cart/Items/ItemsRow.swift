@@ -47,13 +47,14 @@ struct ItemsRow: View {
                     Text("£3899")
                         .foregroundStyle(Color.gray)
                         .font(.custom_font(.regular,size: 17))
-                        .strikethrough()
-                    Text(product.ProductDiscount)
-                        .foregroundStyle(Color.white)
-                        .font(.custom_font(.semiBold,size: 14))
-                        .padding(.vertical, 3)
-                        .padding(.horizontal, 7)
-                        .background(Color.init(hex: "DD3333").cornerRadius(5))
+                    Text("\(product.ProductDiscount) % off")
+                        .font(.custom_font(.semiBold, size: 12))
+                        .bold()
+                        .foregroundStyle(.white)
+                        .padding(5)
+                        .background {
+                            Color.init(hex: "DD3333").cornerRadius(5)
+                        }
                 }
             }.padding(.top, -4)
         }

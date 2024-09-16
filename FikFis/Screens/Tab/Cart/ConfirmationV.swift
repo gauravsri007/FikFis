@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ConfirmationV: View {
     var orderNumber = "#SC124535"
-    
+    @Environment(\.dismiss) var dismiss
+
     fileprivate func SubmitButton() -> some View {
-        Button(action: {
-            
-        }) {
-            Text("CONTINUE SHOPPING")
+        Button{
+            dismiss()
+        }label: {
+                  Text("CONTINUE SHOPPING")
                 .font(.custom_font(.medium,size: 20))
                 .foregroundColor(.black)
                 .frame(height: 50)

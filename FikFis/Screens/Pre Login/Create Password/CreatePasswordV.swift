@@ -25,11 +25,11 @@ struct CreatePasswordV: View {
                 LazyVStack(alignment: .leading) {
                     
                     Text("Create Password")
-                        .font(.custom_font(.medium,size: 26))
+                        .font(.custom_font(.medium,size: 24))
                         .underline(true,color: .yellow)
                     Spacer()
                     Text("Your password must be a minimum of 6 characters long.")
-                        .font(.custom_font(.medium,size: 20))
+                        .font(.custom_font(.medium,size: 18))
                 }
                     .padding([.leading],leadingSpace)
 
@@ -52,7 +52,6 @@ struct CreatePasswordV: View {
                                 RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.gray, lineWidth: 1))
                         //----------------------------------------------------------------------
-                        Spacer()
                             .padding(.bottom)
                         //----------------------------------------------------------------------
                         Text("Confirm Password")
@@ -67,7 +66,7 @@ struct CreatePasswordV: View {
                             .overlay(
                                 RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.gray, lineWidth: 1))
-                        //----------------------------------------------------------------------
+  
                     }
                     Spacer()
                 }
@@ -81,7 +80,7 @@ struct CreatePasswordV: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(content: {
-                    RoundedRectangle(cornerRadius: 24)
+                    RoundedRectangle(cornerRadius: buttonCornerRadius)
                         .foregroundColor(Color.theme)
                 })
         }

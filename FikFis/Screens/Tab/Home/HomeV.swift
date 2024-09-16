@@ -13,6 +13,9 @@ struct HomeV: View {
     @State private var searchIsActive = false
     let coverImages: [ImagePagerM]
     @State var collection1 = Card.all()
+    @State var arrAppliance = Card.row2()
+    @State var arrRecentViewRow = Card.row()
+
 
     var body: some View {
         VStack(spacing: 0){
@@ -28,18 +31,32 @@ struct HomeV: View {
                 coverImageSection
                 
                 collectionSection
-                
-                appliancesSection
+
+                appliancesSection_2Rows(header: "Under 10$ Quality Product")
                 
                 imageSection
                 
-                recentViewedSection
+                recentViewedRow(header: "Recent Viewed")
                 
-                productItemCollectionSection
+                recentViewedRow(header: "Women Fashion start at $5")
+
+                appliancesSection_2Rows(header: "Mens Fashion")
                 
+//                recentViewedSection
+//                appliancesSection
+//                productItemCollectionSection
             }
         }
     }
+    
+//    var imageSection: some View {
+//        Image("paging1")
+//            .resizable()
+//            .frame(height: 160)
+//            .padding(.horizontal)
+//            .aspectRatio(contentMode: .fill)
+//    }
+    
     
     var searchSection: some View {
         HStack {
@@ -70,10 +87,42 @@ struct HomeV: View {
                 Image(uiImage: item.image ?? UIImage())
                     .resizable()
                     .padding(.horizontal)
+                    .aspectRatio(contentMode: .fill)
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .frame(height: 200)
+        .frame(height: 160)
+    }
+    
+    
+    func appliancesSection_2Rows(header : String)-> some View {
+        VStack {
+            HStack {
+//                Text("Under 10$ Quality Product")
+                Text(header)
+
+                    .font(.custom_font(.medium, size: 17))
+                Spacer()
+                ForwardButton(imageName: "arrow.forward", size: 2)
+            }
+            .padding(.top)
+            .padding(.horizontal)
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: [
+                    GridItem(.flexible(), alignment: .top),
+                    GridItem(.flexible(), alignment: .top)
+                ]) {
+                    ForEach(arrAppliance) { collection in
+                        FrameView(item: collection)
+                    }
+                }
+                .padding(.horizontal, 10)
+            }
+                        
+        }
+        .cardViewStyle()
+        .padding(.horizontal)
     }
     
     var imageSection: some View {
@@ -92,8 +141,9 @@ struct HomeV: View {
                 }
             }
             .padding(.top, 6)
-            .padding(.horizontal)
         }
+        .padding(.horizontal)
+
     }
     
     var appliancesSection: some View {
@@ -152,6 +202,29 @@ struct HomeV: View {
         .padding([.top, .horizontal])
     }
     
+    func recentViewedRow(header:String)-> some View {
+        VStack{
+            HStack {
+                Text(header)
+                    .font(.custom_font(.medium, size: 17))
+                Spacer()
+                ForwardButton(imageName: "arrow.forward", size: 2)
+            }
+            .padding([.top, .horizontal])
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: [
+                    GridItem(.flexible(), alignment: .top),
+                    GridItem(.flexible(), alignment: .top)
+                ], content: {
+                    ForEach(arrRecentViewRow) { collection in
+                        ProductItem(item: collection)
+                    }
+                })
+            }.padding([.horizontal], 8)
+        }
+    }
+    
     var productItemCollectionSection: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: [
@@ -168,5 +241,8 @@ struct HomeV: View {
 }
 
 #Preview {
-    HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
+    HomeV(coverImages: [
+        ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),
+        ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} ),
+        ImagePagerM(image: UIImage(named: "product3"), title: "1", titleColor: .red, action: {} )])
 }

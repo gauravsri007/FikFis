@@ -79,5 +79,5 @@ struct ReviewsCell: View {
 }
 
 #Preview {
-    ReviewsCell(arrImages: ["product","product","product","product","product","product","product","product"], productReview: ProductReviewsM(id: 0, productRating: 2, productName: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", orderNumber: "33435333R", imageUrl: "product", review: "Aku cobain produk ini masih jaman sekolah, karna gak tau apa produk yg bagus. Dan alhamdulillah ini ", reviewImages: ["product","product","product","product","product","product","product","product"]), productCount: 1)
+    ReviewsCell(arrImages: arrImages_static, productReview: ProductReviewsM(id: 0, productRating: 2, productName: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", orderNumber: "33435333R", imageUrl: "product", review: "Aku cobain produk ini masih jaman sekolah, karna gak tau apa produk yg bagus. Dan alhamdulillah ini ", reviewImages: arrImages_static), productCount: 1)
 }

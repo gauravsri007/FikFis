@@ -17,7 +17,7 @@ struct HomeNavigationV: View {
             HStack {
                 VStack(alignment: .leading){
                     Text("Welcome FikFis")
-                        .font(.custom_font(.semiBold, size: 34))
+                        .font(.custom_font(.semiBold, size: 32))
                     Text("Free Shipping | \(7) Days Return")
                         .font(.custom_font(.medium, size: 15))
                         .foregroundColor(.white)
