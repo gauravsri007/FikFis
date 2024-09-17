@@ -13,7 +13,6 @@ struct HomeNavigationV: View {
             Color.themeColor
                 .ignoresSafeArea(.all, edges: .top)
                 .frame(height: 0) // Extend the theme color into the top safe area
-
             HStack {
                 VStack(alignment: .leading){
                     Text("Welcome FikFis")

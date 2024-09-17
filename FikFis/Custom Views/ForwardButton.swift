@@ -12,7 +12,6 @@ struct ForwardButton: View {
     var size: CGFloat = 30.0
     
     var body: some View {
-        
         NavigationLink(destination: ProductListingV()){
             Image(systemName: imageName)
                 .frame(width: size, height: size)

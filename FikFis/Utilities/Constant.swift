@@ -18,6 +18,14 @@ let header_font: CGFloat = 30
 let arrImages_static = ["product1","product2","product3","product1","product2","product3"]
 let buttonCornerRadius:CGFloat = 25
 
+let arrPrice = ["Under $100","Under $200","Under $300","Under $100","Under $100","Under $100"]
+let arrBrand = ["Samsung","Apple","OnePlus","Motorola"]
+let arrRating = ["1 Star","2 Star","3 Star"]
+let arrCategory = ["Men's","Women's","Children","Adult"]
+let arrColor = ["Red","White","Black","Green","Yellow","Purple","Cyan"]
+let arrSize = ["S","M","L","XL","XLL"]
+
+
 struct AppColor {
     static let primaryBlack = Color.init(hexa: "1F1F1F")
     static let secondaryBlack = Color.init(hexa: "464B5F")

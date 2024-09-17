@@ -22,8 +22,10 @@ fileprivate func ContinueButton() -> some View {
 
 struct PaymentV: View {
     var orderSummary_card = OrderSummaryModel.value()
-
+    var paymentMode : String?
     var arrCartList = ProductM.all()
+//    @State var isCOD : Bool = false
+    
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
@@ -43,19 +45,51 @@ struct PaymentV: View {
         .scrollIndicators(.hidden)
     }
     
-    
     var payOnline:some View{
-        HStack{
+        VStack(alignment: .leading){
+            
             Button{
-                
+//                if !isCOD{
+//                    isCOD.toggle()
+//                }
             }label:{
-                Image(systemName: "circle.circle.fill")
-                    .foregroundColor(.themeColor)
+                
+//                if isCOD{
+                    Image(systemName: "circle.circle.fill")
+                        .foregroundColor(.themeColor)
+//                }
+//                else{
+//                    Image(systemName: "circle")
+//                        .foregroundColor(.themeColor)
+//                }
+                
+                Text("Cash on delivery")
+                    .font(.custom_font(.medium,size: 16))
+                    .foregroundStyle(Color.black)
             }
-            Text("Pay online")
-                .font(.custom_font(.regular,size: 16))
+//            .padding(.bottom)
+            
+//            Button{
+//                if isCOD{
+//                    isCOD.toggle()
+//                }
+//            }label:{
+//                
+//                if isCOD{
+//                    Image(systemName: "circle")
+//                        .foregroundColor(.themeColor)
+//                }
+//                else{
+//                    Image(systemName: "circle.circle.fill")
+//                        .foregroundColor(.themeColor)
+//                }
+//                Text("Pay online")
+//                    .font(.custom_font(.medium,size: 16))
+//                    .foregroundStyle(Color.black)
+//                
+//            }
         }
-        .padding(.vertical)
+        .padding([.horizontal,.vertical])
     }
     
     var orderSummarySection: some View{

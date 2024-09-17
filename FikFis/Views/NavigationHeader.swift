@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchBar2: UIViewRepresentable {
     @Binding var text: String
+    
     func makeUIView(context: Context) -> UISearchBar {
         let searchbar = UISearchBar(frame: .zero)
         return searchbar
@@ -65,7 +66,51 @@ struct NavigationHeader: View {
     }
 }
 
+
+
+struct NavigationHeader_filter: View {
+    @State private var inputText: String = ""
+    @State private var isNavigation: Bool = false
+    @State var navHeader : String
+    @State var isRightBarItemHidden : Bool
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 0) {
+                Color.themeColor
+                    .ignoresSafeArea(.all, edges: .top)
+                    .frame(height: 0) // Extend the theme color into the top safe area
+                HStack{
+                    Spacer()
+
+                    Text(navHeader)
+                        .font(.custom_font(.medium, size: 18))
+                        .padding(.leading)
+                    Spacer()
+                    
+                    if !isRightBarItemHidden{
+                        NavigationLink(destination: FilterTab()){
+                            Image(systemName:"line.3.horizontal.decrease.circle")
+                                .resizable()
+                                .frame(width: 30,height: 30)
+                                .foregroundStyle(Color.black)
+                                .padding(15)
+                            
+                        }
+                    }
+                    
+                }
+                .padding(.horizontal, 10)
+                .font(.headline)
+                .frame(height: 60)
+            }
+            .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
+        }
+    }
+}
+
 #Preview {
-    NavigationHeader(isBellIconHidden: false)
+    NavigationHeader_filter(navHeader: "Filter",isRightBarItemHidden: false)
+//    NavigationHeader(isBellIconHidden: false)
 }
 

@@ -11,6 +11,7 @@ struct CollectionView: View {
     let item : Card
     @State var size: CGFloat = 82
     var body: some View {
+        NavigationLink(destination: ProductCategoryList()){
         VStack {
             Image("\(item.imageUrl)")
                 .resizable()
@@ -25,6 +26,7 @@ struct CollectionView: View {
                 .frame(width: size, height: 60, alignment: .top)
         }
         .frame(width: size, height: size + 60)
+                       }
     }
 }
 

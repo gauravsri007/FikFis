@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StarRatingView: View {
     @Binding var rating: Int
-    var maximumRating = 5
+    var maximumRating = 4
     var color: Color = .themeColor
 
     var body: some View {

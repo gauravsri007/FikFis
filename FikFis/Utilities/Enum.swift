@@ -31,3 +31,10 @@ enum Tab : String,CaseIterable{
     }
 
 }
+
+enum PaymentMode : String,CaseIterable{
+    case cashOnDeliverr = "cashOnDeliverr"
+    case online = "online"
+    
+}
+
