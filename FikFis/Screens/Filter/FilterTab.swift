@@ -10,20 +10,44 @@ import SwiftUI
 struct FilterTab: View {
     
     @State var tabIndex = 0
-    let lightGrayColor = Color.init(hex: "F6F6F6")
+    let lightGrayColor = Color.init(hex: "F9F9F9")
     var body: some View {
        
         VStack(alignment: .leading){
             NavigationHeader_filter(navHeader: "Filter", isRightBarItemHidden: true)
             
             filterTab
+            
+            applyButtonSection
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .toolbar(.hidden, for: .tabBar)
+    }
+    
+    var applyButtonSection : some View{
+        Button{
+            
+        }label: {
+            Text("")
+                .frame(height: 65)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .background(Color.themeColor)
+                .cornerRadius(0)
+        }
+        .padding(.horizontal, 0)
+        .overlay(
+            Text("Apply")
+                .font(.custom_font(.medium,size: 16))
+                .foregroundColor(.black)
+                .padding(.top, -10)
+        )
+
+                
     }
     
     var filterTab : some View{
         GeometryReader { proxy in
             ScrollView {
-                
                 HStack(spacing: 0) {
                     Section {
                         TabView(selection: $tabIndex) {

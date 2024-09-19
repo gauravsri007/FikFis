@@ -23,6 +23,7 @@ struct ProductCategoryList: View {
             
             productItemCollectionSection
         }
+        .toolbar(.hidden, for: .tabBar)
     }
     
     var itemTab: some View {

@@ -59,8 +59,7 @@ struct ProductDetailV: View {
             }
         }
         .padding([.horizontal],10)
-
-
+        .toolbar(.hidden, for: .tabBar)
     }
     
     var textSection: some View {

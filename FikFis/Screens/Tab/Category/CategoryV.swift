@@ -34,6 +34,7 @@ struct CategoryV: View {
             NavigationHeader(isBellIconHidden: false)
             CardView_category()
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 
