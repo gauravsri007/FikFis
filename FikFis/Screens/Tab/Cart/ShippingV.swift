@@ -24,8 +24,11 @@ struct ShippingV: View {
     var orderSummary : OrderSummaryModel
     var arrCartList = ProductM.all()
     var body: some View {
-        ScrollView{
+        ScrollView(showsIndicators: false){
             VStack(alignment: .leading){
+                
+                shippingDetails
+                
                 ListView
                 Spacer()
                 
@@ -40,11 +43,24 @@ struct ShippingV: View {
             }
         }
         .padding()
-        .scrollIndicators(.hidden)
 
     }
     
-    
+    var shippingDetails: some View {
+        HStack {
+            Text("Shipping to")
+            Spacer()
+            Button {
+                
+            } label: {
+                Text("Change")
+                    .padding(7)
+                    .background(content: {
+                        RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 1)
+                    })
+            }
+        }
+    }
     
     var orderSummarySection : some View{
         VStack(alignment: .leading) {

@@ -20,6 +20,7 @@ struct OrderView: View {
                 .frame(width: 80, height: 80)
                 .border(Color(uiColor: .systemGray3))
                 .cardViewStyle()
+                .cornerRadius(10)
             
             VStack(alignment: .leading) {
                 Text(item.title).font(.custom_font(.regular, size: 15)).lineLimit(2)

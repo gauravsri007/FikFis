@@ -101,7 +101,7 @@ struct ItemsV: View {
                 }
             }
             .multilineTextAlignment(.center)
-            .frame(width: appWidth - 80,height: 150,alignment: .center)
+            .frame(height: 150,alignment: .center)
             .padding([.horizontal,.vertical],10)
             .background(Color.white.cornerRadius(10, corners: .allCorners))
             .padding(10)
@@ -117,17 +117,18 @@ struct ItemsV: View {
                 Spacer()
                 Text("Apply")
                     .frame(width: 75,height: 40)
+                    .foregroundStyle(.white)
                     .background(Color.themeColor)
                     .cornerRadius(buttonCornerRadius, corners: .allCorners)
                     .padding(5)
             }
-            .frame(width: appWidth - 40,height: 50)
+            .frame(height: 50)
             .background(Color.white.cornerRadius(buttonCornerRadius, corners: .allCorners))
             .padding(.bottom)
             
-            VStack{
-                HStack{
-//                    Spacer()
+            HStack {
+                Spacer()
+                VStack(alignment: .trailing){
                     NavigationLink(destination: App_offersV()){
                         Text("View Offers")
                             .foregroundStyle(Color.init(hex: "008224"))
@@ -141,14 +142,13 @@ struct ItemsV: View {
                             .clipShape(Circle())
                     }
                 }
-                .padding([.bottom,.trailing])
-            }
+            }.padding(.bottom)
 
         }
+        .padding(.horizontal)
         .multilineTextAlignment(.center)
-        .frame(width: appWidth - 20,height: 400)
+        .frame(height: 400)
         .background(Color.init(hex: "EAEAEA").cornerRadius(8, corners: .allCorners))
-        .padding(.bottom)
     }
 
     var ListView:some View{

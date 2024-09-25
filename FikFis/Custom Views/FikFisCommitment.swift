@@ -108,5 +108,5 @@ var availableOffer:some View{
     }
     .frame(width: appWidth - 20,height: 240,alignment: .leading)
     .background(Color.init(hex: "F6F6F6").cornerRadius(5, corners: .allCorners))
-    .padding(.bottom)
+    .padding(.bottom, 100)
 }
