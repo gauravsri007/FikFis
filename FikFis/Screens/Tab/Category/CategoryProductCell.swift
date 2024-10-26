@@ -101,9 +101,6 @@ struct CategoryProductCell: View {
                 .padding(.bottom, 10)
                 .padding(.horizontal, 5)
                 .cardViewStyle()
-                //        .padding(.top, 2)
-                //        .padding(.bottom, 12)
-                //        .onTapGesture {
             }
         }
     }

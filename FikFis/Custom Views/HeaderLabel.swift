@@ -10,25 +10,24 @@ import SwiftUI
 
 struct HeaderLabel: View {
     @State var header:String
-    
+    @State var font:CGFloat = 20
+
     var body: some View {
-//        Text(header)
-//            .font(.custom_font(.medium,size: header_font))
-//            .underline(true,color: .yellow)
         VStack(alignment: .leading) {
             Text(header)
                 .font(.custom_font(.medium,size: header_font))
-            .padding()
-            
-            Rectangle()
-                .foregroundStyle(Color.themeColor)
-                .frame(width: 100, height: 5)
-                .padding(.leading)
-                .padding(.top, -20)
+                .overlay(
+                    Rectangle()
+                        .fill(Color.theme)
+                        .frame(height: 4)
+                        .offset(y:  10)
+                    , alignment: .bottom
+                )
         }
+        .padding(.bottom)
     }
 }
 
 #Preview {
-    HeaderLabel(header: "Demo")
+    HeaderLabel(header: "Demo sdfsfsdfsfsf")
 }

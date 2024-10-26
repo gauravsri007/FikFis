@@ -30,15 +30,10 @@ struct MyOrders: View {
         VStack(alignment: .leading) {
             
             NavigationHeader(isBellIconHidden: false)
-
-            Text("Your Orders")
-                .font(.custom_font(.medium, size: 30))
-                .padding()
-            Rectangle()
-                .foregroundStyle(Color.themeColor)
-                .frame(width: 100, height: 5)
+            
+            HeaderLabel(header: "Your Orders")
                 .padding(.leading)
-                .padding(.top, -20)
+
             PagerTabStripView() {
                 ActiveOrders()
                     .pagerTabItem(tag: 0) {

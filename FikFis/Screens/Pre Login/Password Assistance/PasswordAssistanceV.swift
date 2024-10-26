@@ -22,9 +22,8 @@ struct PasswordAssistanceV: View {
             LazyVStack(alignment: .leading) {
                 Group(){
                     LazyVStack(alignment: .leading) {
-                        Text("Password Assistance")
-                            .font(.custom_font(.medium,size: 24))
-                            .underline(true,color: .yellow)
+                        HeaderLabel(header: "Password Assistance")
+
                         Spacer()
                         Text("No problem! Just enter your email or mobile number, and we’ll send you a text message with a temporary code.")
                             .font(.custom_font(.medium,size: 18))

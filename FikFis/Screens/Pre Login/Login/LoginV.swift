@@ -22,9 +22,7 @@ struct LoginV: View {
         NavigationStack {
             LazyVStack(alignment: .leading) {
                 LazyVStack(alignment: .leading) {
-                    Text("Login")
-                        .font(.custom_font(.medium,size: 24))
-                        .underline(true,color: .yellow)
+                    HeaderLabel(header: "Login")
                     Spacer()
                     Text("Get access to your Orders, Wishlist, and Recommendations.")
                         .font(.custom_font(.medium,size: 18))
@@ -65,19 +63,7 @@ struct LoginV: View {
                         }
                         Spacer()
                         HStack{
-                            //                            Button{
-                            //
-                            //                            } label: {
-                            //                                Image(systemName: "checkmark.circle")
-                            //                                    .foregroundColor(.black)
-                            //                            }
-                            //                            .frame(width: 16,height: 16)
-                            //                            .alert(isPresented: $showingAlert) {
-                            //                                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
-                            //                            }
-                            //                            Text("Remember me")
-                            //                                .font(.custom_font(.regular,size: 12))
-                            
+
                             Spacer()
                             NavigationLink(destination: PasswordAssistanceV()){
                                 Text("Forgot Password")

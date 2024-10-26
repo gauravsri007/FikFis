@@ -31,13 +31,6 @@ struct ProfileV: View {
     var contentView:some View{
         var textViewHeight : CGFloat = 45
         return VStack(alignment: .leading) {
-            Text("Your Orders")
-                .font(.custom_font(.medium, size: 28))
-            Rectangle()
-                .foregroundStyle(Color.themeColor)
-                .frame(width: 100, height: 5)
-//                .padding(.leading)
-                .padding(.top, -20)
             
             Text("Full Name")
                 .font(.custom_font(.medium, size: 18))

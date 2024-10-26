@@ -28,7 +28,6 @@ struct AddAddress: View {
             ScrollView{
                 HeaderLabel(header: "Add Addresses")
                 
-                
                 allContent
                 
                 RoundedButton(showingAlert: false, alertTitle: "", alertMessage: "", btnTitle: "SAVE ADDRESS", btnHeight: 50, btnWidth: UIScreen.screenWidth - 30, font: .custom_font(.medium,size: 20))

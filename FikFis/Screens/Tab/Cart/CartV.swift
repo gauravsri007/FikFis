@@ -13,7 +13,9 @@ struct CartV: View {
     var body: some View {
         VStack(alignment: .leading) {
 //            NavigationHeader(isBellIconHidden: false)
-            HeaderLabel(header: "Your Carts").frame(height: 60)
+            HeaderLabel(header: "Your Carts",font: header_font)
+                .padding(.leading)
+            
             PagerTabStripView() {
                 ItemsV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))
                     .pagerTabItem(tag: 0) {

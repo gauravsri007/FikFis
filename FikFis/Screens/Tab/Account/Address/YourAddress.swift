@@ -18,20 +18,19 @@ struct YourAddress: View {
         VStack(alignment: .leading) {
             HeaderLabel(header: "Your Address")
                 .padding(.leading)
-            
+                .font(.custom_font(.bold,size: header_font))
             
             ZStack{
                 addressCollection
                 
                 NavigationLink(destination: AddAddress(), isActive: $isButtonActive) {
-                    
                     Button(action: {
                         self.isButtonActive = true
                     })
                     {
                         Image(systemName: "plus")
                     }
-//                    .frame(width: 50, height: 50)
+                    .frame(width: 50, height: 50)
                     .foregroundStyle(.white)
                     .background {
                         Color.themeColor

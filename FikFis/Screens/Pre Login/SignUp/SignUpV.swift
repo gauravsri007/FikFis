@@ -20,9 +20,8 @@ struct SignUpV: View {
     var body: some View {
         LazyVStack(alignment: .leading) {
             LazyVStack(alignment: .leading) {
-                Text("Sign Up")
-                    .font(.custom_font(.medium,size: 24))
-                    .underline(true,color: .yellow)
+                HeaderLabel(header: "Sign Up")
+
                 Spacer()
                 Text("Sign up with your mobile number to get started")
                     .font(.custom_font(.medium,size: 18))

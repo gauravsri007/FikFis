@@ -30,4 +30,20 @@ extension ProducCategoryModel{
             ProducCategoryModel(name: "Kid shoes", imageUrl: "product1",discount: "3899",price: "399", isFavorite: false),
         ]
     }
+    
+    static func row() -> [ProducCategoryModel] {
+        return [
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: false),
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: true),
+        ]
+    }
+    
+    static func row2() -> [ProducCategoryModel] {
+        return [
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: false),
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: false),
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: true),
+            ProducCategoryModel(name: "POCO M6 5G (Orion Blue, 8GB RAM, 256GB Storage)", imageUrl: "product1",discount: "3899",price: "399", isFavorite: false),
+        ]
+    }
 }

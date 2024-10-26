@@ -23,10 +23,8 @@ struct CreatePasswordV: View {
         LazyVStack(alignment: .leading) {
             Group(){
                 LazyVStack(alignment: .leading) {
-                    
-                    Text("Create Password")
-                        .font(.custom_font(.medium,size: 24))
-                        .underline(true,color: .yellow)
+                    HeaderLabel(header: "Create Password")
+
                     Spacer()
                     Text("Your password must be a minimum of 6 characters long.")
                         .font(.custom_font(.medium,size: 18))

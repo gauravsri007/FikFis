@@ -10,6 +10,8 @@ import SwiftUI
 struct CollectionView: View {
     let item : Card
     @State var size: CGFloat = 82
+    @State var header : String
+
     var body: some View {
         NavigationLink(destination: ProductCategoryList()){
         VStack {
@@ -20,7 +22,7 @@ struct CollectionView: View {
                 .clipped()
                 .cornerRadius(12)
             Text(item.title)
-                .font(.custom_font(.medium, size: 16))
+                .font(.custom_font(.medium, size: 12))
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .frame(width: size, height: 60, alignment: .top)
@@ -31,5 +33,5 @@ struct CollectionView: View {
 }
 
 #Preview {
-    CollectionView(item: Card(id: 2, title: "Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes Mens shoes", imageUrl: "product1"))
+    CollectionView(item: Card(id: 2, title: "Mens shoes", imageUrl: "product1"), header: "main")
 }

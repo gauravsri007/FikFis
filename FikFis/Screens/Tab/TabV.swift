@@ -45,7 +45,7 @@ struct TabV: View {
             //---------------------------------------
 
             NavigationStack() {
-                CategoryV()
+                CategoryV(header: "Main Category")
                 
             }
             .tabItem {

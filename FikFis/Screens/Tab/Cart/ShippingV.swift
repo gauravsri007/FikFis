@@ -23,9 +23,12 @@ fileprivate func ContinueButton() -> some View {
 struct ShippingV: View {
     var orderSummary : OrderSummaryModel
     var arrCartList = ProductM.all()
+    @State var presentAddressView : Bool = false
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
+                headerSection
+                
                 ListView
                 Spacer()
                 
@@ -45,6 +48,33 @@ struct ShippingV: View {
     }
     
     
+    var headerSection : some View{
+        VStack(alignment: .leading) {
+            Text("Shipping to")
+                .font(.custom_font(.medium,size: 24))
+                .foregroundStyle(.black)
+                .padding([.top])
+            HStack{
+                Spacer()
+                Button{
+                    presentAddressView.toggle()
+                }label: {
+                    Text("Add Address")
+                }
+                .font(.custom_font(.regular,size: 14))
+                .frame(width: appWidth / 3, height: 40,alignment: .center)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                .foregroundColor(.black)
+                .fullScreenCover(isPresented: $presentAddressView, content: {
+                    AddressV(presentView: $presentAddressView).background(Color.clear)
+                })
+                Spacer()
+            }
+        }
+    }
     
     var orderSummarySection : some View{
         VStack(alignment: .leading) {

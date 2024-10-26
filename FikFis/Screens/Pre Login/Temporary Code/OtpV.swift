@@ -20,11 +20,7 @@ struct OtpV: View {
         Group{
             LazyVStack(alignment: .leading) {
                 LazyVStack(alignment: .leading){
-                    Text("Temporary Code (OTP)")
-                        .font(.custom_font(.medium,size: 24
-                                          ))
-                        .underline(true,color: .yellow)
-                        .padding([.bottom],5)
+                    HeaderLabel(header: "Temporary Code (OTP)")
 
                     Text("Just send a text message with a temporary code.")
                         .font(.custom_font(.medium,size: 18))

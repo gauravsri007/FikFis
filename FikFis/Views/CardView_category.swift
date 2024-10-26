@@ -9,12 +9,8 @@ import SwiftUI
 
 struct CardView_category: View {
     var collection1 = Card.all()
-    
     var body: some View {
         VStack(alignment: .leading) {
-
-            HeaderLabel(header: "Main Category")
-
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: [
                     GridItem(.flexible(), alignment: .top),
@@ -24,7 +20,7 @@ struct CardView_category: View {
 
                 ]) {
                     ForEach(collection1) { collection in
-                        CollectionView(item: collection)
+                        CollectionView(item: collection, header: collection.title)
                     }
                 }
 //                .padding(.top, 6)

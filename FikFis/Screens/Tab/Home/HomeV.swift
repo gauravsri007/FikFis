@@ -14,7 +14,7 @@ struct HomeV: View {
     let coverImages: [ImagePagerM]
     @State var collection1 = Card.all()
     @State var arrAppliance = Card.row2()
-    @State var arrRecentViewRow = Card.row()
+    @State var arrRecentViewRow = ProducCategoryModel.row()
 
 
     var body: some View {
@@ -129,7 +129,7 @@ struct HomeV: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack() {
                 ForEach(collection1) { collection in
-                    CollectionView(item: collection)
+                    CollectionView(item: collection, header: collection.title)
                 }
             }
             .padding(.top, 6)
@@ -210,7 +210,7 @@ struct HomeV: View {
                     GridItem(.flexible(), alignment: .top)
                 ], content: {
                     ForEach(arrRecentViewRow) { collection in
-                        ProductItem(item: collection)
+                        CategoryProductCell(item: collection)
                     }
                 })
             }.padding([.horizontal], 8)

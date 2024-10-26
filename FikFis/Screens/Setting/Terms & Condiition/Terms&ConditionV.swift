@@ -14,11 +14,13 @@ struct Terms_ConditionV: View {
     @State var content : String = ""
 
     var body: some View {
-        
         NavigationHeader(isBellIconHidden: false)
-        HeaderLabel(header: header)
 
-        WebView()
+        VStack(alignment: .leading){
+            HeaderLabel(header: header)
+            WebView()
+        }
+        .padding(.leading)
 
     }
 }

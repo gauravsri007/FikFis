@@ -106,6 +106,14 @@ struct AccountV: View {
                     else if collection.id == 2{
                         YourAddress()
                     }
+                    else if collection.id == 3{
+                        ReviewsV(arrReviews: [ProductReviewsM(id: 0, productRating: 3, productName: "rfwer", orderNumber: "3252352352", imageUrl: "product", review: "ewrwewetwet", reviewImages: arrImages_static),
+                                              ProductReviewsM(id: 1, productRating: 3, productName: "rfwer", orderNumber: "3252352352", imageUrl: "product", review: "ewrwewetwet", reviewImages: arrImages_static),
+                                              ProductReviewsM(id: 2, productRating: 3, productName: "rfwer", orderNumber: "3252352352", imageUrl: "product", review: "ewrwewetwet", reviewImages: arrImages_static)], arrReviewImages: arrImages_static)
+                    }
+                    else if collection.id == 4{
+                        SupportV()
+                    }
                     else if collection.id == 7 {
                         WishListV(arrWishList: [
                             ProductM(id: 0, productRating: 3, productName: "aa", productPrice: "123", imageUrl: "product", ProductDiscount: "35"),
@@ -148,6 +156,7 @@ struct AccountV: View {
         return HStack {
             VStack(alignment: .leading){
                 HeaderLabel(header: "Policies")
+                    .padding(.leading)
                 
                 ForEach(policies, id: \.id) { policy in
                     policiesLabel(text: policy.title, action: {
@@ -209,6 +218,7 @@ struct AccountV: View {
                     })
                 }.padding(.leading, 20)
             }
+            .padding(.leading)
             Spacer()
         }
     }
@@ -224,6 +234,8 @@ struct AccountV: View {
                 }
             }
         }
+        .padding(.leading)
+
     }
     
     @ViewBuilder

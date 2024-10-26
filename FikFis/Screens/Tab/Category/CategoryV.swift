@@ -27,17 +27,23 @@ struct CategoryCell: View {
 struct CategoryV: View {
 
     @State private var inputText: String = ""
-
+    @State var header : String
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             NavigationHeader(isBellIconHidden: false)
+            
+            HeaderLabel(header: header)
+                .padding([.horizontal,.bottom])
+
+
             CardView_category()
         }
-        .toolbar(.hidden, for: .tabBar)
+        .toolbar(.visible, for: .tabBar)
     }
+
 }
 
 #Preview {
-    CategoryV()
+    CategoryV(header: "main")
 }
