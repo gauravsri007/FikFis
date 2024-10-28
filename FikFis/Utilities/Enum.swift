@@ -38,3 +38,10 @@ enum PaymentMode : String,CaseIterable{
     
 }
 
+enum HTTPMethod: String {
+    case GET
+    case POST
+    case PUT
+    case DELETE
+    case PATCH
+}

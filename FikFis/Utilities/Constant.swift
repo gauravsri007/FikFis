@@ -40,3 +40,7 @@ struct AppColor {
     static let themeColor_yellow = Color.init(hexa: "FBB540")
 
 }
+
+let baseURL = "https://gateway.fikfis.co.uk/"
+
+

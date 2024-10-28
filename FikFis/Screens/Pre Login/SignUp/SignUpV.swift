@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUpV: View {
     
+    @StateObject private var viewModel = SignUpVM()
+    
     @State private var phoneNumber_orEmail: String = ""
     @State private var password: String = ""
     @State private var showingAlert = false
@@ -16,6 +18,8 @@ struct SignUpV: View {
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
     @Environment(\.dismiss) var dismiss
+    
+    @State private var navigateToOTPScreen: Bool = false
     
     var body: some View {
         LazyVStack(alignment: .leading) {
@@ -64,8 +68,17 @@ struct SignUpV: View {
             }
             .padding(.bottom)
 
-
-            NavigationLink(destination: OtpV()){
+            Button(action: {
+                self.viewModel.registerUserOTP(username: phoneNumber_orEmail) { result in
+                    switch result {
+                    case .success(let response):
+                        self.navigateToOTPScreen.toggle()
+                        print("Success: \(String(describing: response.message))")
+                    case .failure(let error):
+                        print("Failed with error: \(error.localizedDescription)")
+                    }
+                }
+            }, label: {
                 Text("Continue")
                     .foregroundColor(.black)
                     .bold()
@@ -75,11 +88,14 @@ struct SignUpV: View {
                         RoundedRectangle(cornerRadius: buttonCornerRadius)
                             .foregroundColor(Color.theme)
                     })
-            }
+            })
             .padding(.bottom)
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
             }
+            .navigationDestination(isPresented: $navigateToOTPScreen, destination: {
+                OtpV()
+            })
             
             LazyVStack(alignment: .leading){
                 Text("By continuing, you agree to FikFis Terms of Use and Privacy Policy.")
