@@ -103,7 +103,7 @@ struct HomeV: View {
 
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(imageName: "arrow.forward", size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
             }
             .padding(.top)
             .padding(.horizontal)
@@ -144,7 +144,7 @@ struct HomeV: View {
                 Text("Home Appliances Up to 55% off")
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(imageName: "arrow.forward", size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
             }
             .padding(.top)
             .padding(.horizontal)
@@ -189,7 +189,7 @@ struct HomeV: View {
             Text("Recent Viewed")
                 .font(.custom_font(.medium, size: 17))
             Spacer()
-            ForwardButton(imageName: "arrow.forward", size: 2)
+            ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
         }
         .padding([.top, .horizontal])
     }
@@ -200,7 +200,7 @@ struct HomeV: View {
                 Text(header)
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(imageName: "arrow.forward", size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
             }
             .padding([.top, .horizontal])
             

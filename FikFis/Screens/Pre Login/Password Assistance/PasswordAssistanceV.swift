@@ -42,7 +42,8 @@ struct PasswordAssistanceV: View {
                             TextField("Email or mobile phone number", text: $phoneNumber_orEmail)
                                 .placeholder(when: phoneNumber_orEmail.isEmpty){
                                 }
-                            
+                                .frame(height:textFieldHeight)
+
                                 .padding()
                             
                                 .overlay(
@@ -68,10 +69,8 @@ struct PasswordAssistanceV: View {
                             .foregroundColor(.black)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(content: {
-                                RoundedRectangle(cornerRadius: buttonCornerRadius)
-                                    .foregroundColor(Color.theme)
-                            })
+                            .background(Color.theme)
+                            .cornerRadius(buttonCornerRadius, corners: .allCorners)
                     }
                     .foregroundColor(.themeColor)
                     .padding()

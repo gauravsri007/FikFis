@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180164242CD16F6300BAA646 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180164232CD16F6300BAA646 /* ApiManager.swift */; };
+		1801642B2CD7FE2B00BAA646 /* XLPagerTabStrip in Frameworks */ = {isa = PBXBuildFile; productRef = 1801642A2CD7FE2B00BAA646 /* XLPagerTabStrip */; };
+		180164722CD8990700BAA646 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 180164712CD8990700BAA646 /* PagerTabStripView */; };
+		180164742CD8995700BAA646 /* PagerTabDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180164732CD8995700BAA646 /* PagerTabDemo.swift */; };
+		180164E12CD8F7FA00BAA646 /* ChangePasswordV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180164E02CD8F7FA00BAA646 /* ChangePasswordV.swift */; };
 		180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5BC2C77C5EE00FDE73E /* Constant.swift */; };
 		180FA5D92C7A2CFE00FDE73E /* App_offersV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */; };
 		1862DFE12C84CDF100608425 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE02C84CDF100608425 /* CardViewModifier.swift */; };
@@ -93,8 +98,9 @@
 		18D4FF462C5A99140026E335 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF452C5A99140026E335 /* LoginVM.swift */; };
 		18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF4C2C5AA3D30026E335 /* SplashV.swift */; };
 		18D4FF532C5B69CB0026E335 /* LoginV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D4FF522C5B69CB0026E335 /* LoginV.swift */; };
+		18DAF9E22CCCDA6900CD8753 /* SupportV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF9E12CCCDA6900CD8753 /* SupportV.swift */; };
+		18F0D61C2CA42E1E00FC411E /* AddressV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0D61B2CA42E1E00FC411E /* AddressV.swift */; };
 		1A2A83DC2C7A3ED200D7F5E7 /* MyOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83DB2C7A3ED200D7F5E7 /* MyOrders.swift */; };
-		1A2A83E02C7A444A00D7F5E7 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */; };
 		1A2A83E22C7A45A300D7F5E7 /* ActiveOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E12C7A45A300D7F5E7 /* ActiveOrders.swift */; };
 		1A2A83E42C7A45B500D7F5E7 /* DeliveredOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E32C7A45B500D7F5E7 /* DeliveredOrders.swift */; };
 		1A2A83E62C7A45D200D7F5E7 /* ReturnOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A83E52C7A45D200D7F5E7 /* ReturnOrder.swift */; };
@@ -113,6 +119,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180164232CD16F6300BAA646 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		180164732CD8995700BAA646 /* PagerTabDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabDemo.swift; sourceTree = "<group>"; };
+		180164E02CD8F7FA00BAA646 /* ChangePasswordV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordV.swift; sourceTree = "<group>"; };
 		180FA5BC2C77C5EE00FDE73E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_offersV.swift; sourceTree = "<group>"; };
 		1862DFE02C84CDF100608425 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
@@ -202,6 +211,8 @@
 		18D4FF452C5A99140026E335 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		18D4FF4C2C5AA3D30026E335 /* SplashV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashV.swift; sourceTree = "<group>"; };
 		18D4FF522C5B69CB0026E335 /* LoginV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginV.swift; sourceTree = "<group>"; };
+		18DAF9E12CCCDA6900CD8753 /* SupportV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportV.swift; sourceTree = "<group>"; };
+		18F0D61B2CA42E1E00FC411E /* AddressV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressV.swift; sourceTree = "<group>"; };
 		1A2A83DB2C7A3ED200D7F5E7 /* MyOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrders.swift; sourceTree = "<group>"; };
 		1A2A83E12C7A45A300D7F5E7 /* ActiveOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrders.swift; sourceTree = "<group>"; };
 		1A2A83E32C7A45B500D7F5E7 /* DeliveredOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredOrders.swift; sourceTree = "<group>"; };
@@ -225,13 +236,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2A83E02C7A444A00D7F5E7 /* PagerTabStripView in Frameworks */,
+				180164722CD8990700BAA646 /* PagerTabStripView in Frameworks */,
+				1801642B2CD7FE2B00BAA646 /* XLPagerTabStrip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180164222CD16F4A00BAA646 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				180164232CD16F6300BAA646 /* ApiManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		180FA5D52C7A2CAF00FDE73E /* App Offers */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +429,12 @@
 		18BB93F92C61505000B6AAA0 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				18DAF9DE2CCCD9D600CD8753 /* Support */,
+				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
+				18C8FE472C7CB8B9000BCF6C /* WishList */,
+				18C8FE4C2C7CD93F000BCF6C /* Profile */,
+				18C8FE4F2C7D1476000BCF6C /* Address */,
+				18C8FE362C7CB4FA000BCF6C /* Reviews */,
 				18BB94002C61509500B6AAA0 /* AccountV.swift */,
 			);
 			path = Account;
@@ -476,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				18C8FE4D2C7CD951000BCF6C /* ProfileV.swift */,
+				180164E02CD8F7FA00BAA646 /* ChangePasswordV.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -485,6 +512,7 @@
 			children = (
 				18C8FE502C7D1490000BCF6C /* YourAddress.swift */,
 				18C8FE522C7D14A0000BCF6C /* AddAddress.swift */,
+				18F0D61B2CA42E1E00FC411E /* AddressV.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -535,6 +563,7 @@
 		18D4FEF22C5A1F550026E335 = {
 			isa = PBXGroup;
 			children = (
+				180164222CD16F4A00BAA646 /* Service */,
 				18D4FEFD2C5A1F550026E335 /* FikFis */,
 				18D4FEFC2C5A1F550026E335 /* Products */,
 			);
@@ -587,14 +616,10 @@
 				1828AFB42C8A17F60092D87B /* Tab */,
 				18C8FE6F2C825124000BCF6C /* Setting */,
 				18C8FE672C823FE5000BCF6C /* No Internet */,
-				18C8FE4F2C7D1476000BCF6C /* Address */,
-				18C8FE4C2C7CD93F000BCF6C /* Profile */,
-				18C8FE472C7CB8B9000BCF6C /* WishList */,
-				18C8FE362C7CB4FA000BCF6C /* Reviews */,
 				18BB93FA2C61505A00B6AAA0 /* Options */,
 				18D4FF4B2C5AA32B0026E335 /* Splash */,
-				1A2A83DD2C7A3EE200D7F5E7 /* My Orders */,
 				186D5E022C878AF500D5CCBC /* NavigationDemo.swift */,
+				180164732CD8995700BAA646 /* PagerTabDemo.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -664,6 +689,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		18DAF9DE2CCCD9D600CD8753 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18DAF9E12CCCDA6900CD8753 /* SupportV.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		1A2A83DD2C7A3EE200D7F5E7 /* My Orders */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,7 +753,8 @@
 			);
 			name = FikFis;
 			packageProductDependencies = (
-				1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */,
+				1801642A2CD7FE2B00BAA646 /* XLPagerTabStrip */,
+				180164712CD8990700BAA646 /* PagerTabStripView */,
 			);
 			productName = FikFis;
 			productReference = 18D4FEFB2C5A1F550026E335 /* FikFis.app */;
@@ -751,7 +785,8 @@
 			);
 			mainGroup = 18D4FEF22C5A1F550026E335;
 			packageReferences = (
-				1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */,
+				180164292CD7FE2B00BAA646 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */,
+				180164702CD8990700BAA646 /* XCRemoteSwiftPackageReference "PagerTabStripView" */,
 			);
 			productRefGroup = 18D4FEFC2C5A1F550026E335 /* Products */;
 			projectDirPath = "";
@@ -811,6 +846,7 @@
 				18C8FE802C84A688000BCF6C /* ShippingV.swift in Sources */,
 				186FB1F22C90B1F200565820 /* ProductDescriptionV.swift in Sources */,
 				18BB93F22C5F584600B6AAA0 /* Struct.swift in Sources */,
+				180164742CD8995700BAA646 /* PagerTabDemo.swift in Sources */,
 				180FA5BD2C77C5EE00FDE73E /* Constant.swift in Sources */,
 				1862DFE12C84CDF100608425 /* CardViewModifier.swift in Sources */,
 				18C8FE4E2C7CD951000BCF6C /* ProfileV.swift in Sources */,
@@ -829,6 +865,7 @@
 				18BB94102C6619EB00B6AAA0 /* CategoryV.swift in Sources */,
 				1ABDE8202C763E6900905E98 /* CollectionView.swift in Sources */,
 				18C8FE872C84C57B000BCF6C /* ItemsRow.swift in Sources */,
+				18F0D61C2CA42E1E00FC411E /* AddressV.swift in Sources */,
 				18BB93EB2C5E218700B6AAA0 /* SignUpVM.swift in Sources */,
 				1894F0FC2C9961D5006A0D85 /* BaseViewModel.swift in Sources */,
 				18BB93EE2C5F551500B6AAA0 /* HomeV.swift in Sources */,
@@ -838,6 +875,7 @@
 				186FB1E72C8CC67D00565820 /* OfferRow.swift in Sources */,
 				186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */,
 				18BB94012C61509500B6AAA0 /* AccountV.swift in Sources */,
+				180164242CD16F6300BAA646 /* ApiManager.swift in Sources */,
 				1ABDE81C2C763CD200905E98 /* ProductItem.swift in Sources */,
 				18C8FE742C825371000BCF6C /* BlogModel.swift in Sources */,
 				18C8FE3B2C7CB508000BCF6C /* ReviewImages.swift in Sources */,
@@ -846,9 +884,11 @@
 				18C8FE4A2C7CB8DD000BCF6C /* Product_wishList.swift in Sources */,
 				18BB93FD2C61507600B6AAA0 /* CartV.swift in Sources */,
 				186FB1ED2C8D7C5700565820 /* ProductDetailV.swift in Sources */,
+				18DAF9E22CCCDA6900CD8753 /* SupportV.swift in Sources */,
 				18D4FF4D2C5AA3D30026E335 /* SplashV.swift in Sources */,
 				1AE630972C8AD872004594AA /* CommonModel.swift in Sources */,
 				18C8FE722C825143000BCF6C /* BlogV.swift in Sources */,
+				180164E12CD8F7FA00BAA646 /* ChangePasswordV.swift in Sources */,
 				18ADCED72C69027400E081DD /* CardView_category.swift in Sources */,
 				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
 				186FB1F42C90B21700565820 /* AdditionalInformationV.swift in Sources */,
@@ -1010,9 +1050,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;
@@ -1024,6 +1064,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1032,7 +1073,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1045,9 +1086,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5JM85AW85F;
@@ -1059,6 +1100,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1067,7 +1109,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1098,7 +1140,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */ = {
+		180164292CD7FE2B00BAA646 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/XLPagerTabStrip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		180164702CD8990700BAA646 /* XCRemoteSwiftPackageReference "PagerTabStripView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xmartlabs/PagerTabStripView";
 			requirement = {
@@ -1109,9 +1159,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1A2A83DF2C7A444A00D7F5E7 /* PagerTabStripView */ = {
+		1801642A2CD7FE2B00BAA646 /* XLPagerTabStrip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1A2A83DE2C7A444A00D7F5E7 /* XCRemoteSwiftPackageReference "PagerTabStripView" */;
+			package = 180164292CD7FE2B00BAA646 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */;
+			productName = XLPagerTabStrip;
+		};
+		180164712CD8990700BAA646 /* PagerTabStripView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 180164702CD8990700BAA646 /* XCRemoteSwiftPackageReference "PagerTabStripView" */;
 			productName = PagerTabStripView;
 		};
 /* End XCSwiftPackageProductDependency section */

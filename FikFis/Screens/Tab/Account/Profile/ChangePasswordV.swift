@@ -1,13 +1,13 @@
 //
-//  CreatePasswordV.swift
+//  ChangePasswordV.swift
 //  FikFis
 //
-//  Created by apple on 03/08/24.
+//  Created by apple on 04/11/24.
 //
 
 import SwiftUI
 
-struct CreatePasswordV: View {
+struct ChangePasswordV: View {
     
     @State private var phoneNumber_orEmail: String = ""
     @State private var password: String = ""
@@ -23,10 +23,10 @@ struct CreatePasswordV: View {
         LazyVStack(alignment: .leading) {
             Group(){
                 LazyVStack(alignment: .leading) {
-                    HeaderLabel(header: "Create Password")
+                    HeaderLabel(header: "Change Password")
 
                     Spacer()
-                    Text("Your password must be a minimum of 6 characters long.")
+                    Text("Set up your new password")
                         .font(.custom_font(.medium,size: 18))
                 }
                     .padding([.leading],leadingSpace)
@@ -36,7 +36,7 @@ struct CreatePasswordV: View {
             Group(){
                 LazyVStack(alignment: .leading){
                     Group {                     //----------------------------------------------------------------------
-                        Text("New Password")
+                        Text("Old Password")
                             .font(.custom_font(.regular,size: 16))
                         
                         
@@ -52,6 +52,21 @@ struct CreatePasswordV: View {
                                     .stroke(Color.gray, lineWidth: 1))
                         //----------------------------------------------------------------------
                             .padding(.bottom)
+                        //----------------------------------------------------------------------
+                        Text("New Password")
+                            .font(.custom_font(.regular,size: 16))
+                        
+                        TextField("xxxxxxxxxxx", text: $phoneNumber_orEmail)
+                            .placeholder(when: phoneNumber_orEmail.isEmpty) {
+                            }
+                            .frame(height:textFieldHeight)
+
+                            .padding()
+                        
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .stroke(Color.gray, lineWidth: 1))
+                        
                         //----------------------------------------------------------------------
                         Text("Confirm Password")
                             .font(.custom_font(.regular,size: 16))
@@ -75,7 +90,7 @@ struct CreatePasswordV: View {
             }
             .padding()
             NavigationLink(destination: LoginV()){
-            Text("Submit")
+            Text("Save")
                 .foregroundColor(.black)
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -97,5 +112,5 @@ struct CreatePasswordV: View {
 }
 
 #Preview {
-    CreatePasswordV()
+    ChangePasswordV()
 }

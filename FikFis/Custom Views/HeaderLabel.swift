@@ -10,12 +10,12 @@ import SwiftUI
 
 struct HeaderLabel: View {
     @State var header:String
-    @State var font:CGFloat = 20
+    @State var font:CGFloat = 22
 
     var body: some View {
         VStack(alignment: .leading) {
             Text(header)
-                .font(.custom_font(.medium,size: header_font))
+                .font(.custom_font(.medium,size: font))
                 .overlay(
                     Rectangle()
                         .fill(Color.theme)

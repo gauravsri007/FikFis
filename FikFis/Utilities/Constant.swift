@@ -9,14 +9,18 @@ import Foundation
 import UIKit
 import SwiftUI
 
+let baseURL = "https://gateway.fikfis.co.uk/"
+
 let leadingSpace : CGFloat = 5
 let leadingSpace_account : CGFloat = 25
+let textFieldHeight : CGFloat = 20
+
 
 let appWidth = UIScreen.main.bounds.width
 let appHeight = UIScreen.main.bounds.height
 let header_font: CGFloat = 22
 let arrImages_static = ["product1","product2","product3","product1","product2","product3"]
-let buttonCornerRadius:CGFloat = 25
+let buttonCornerRadius:CGFloat = 20
 
 let arrPrice = ["Under $100","Under $200","Under $300","Under $100","Under $100","Under $100"]
 let arrBrand = ["Samsung","Apple","OnePlus","Motorola"]

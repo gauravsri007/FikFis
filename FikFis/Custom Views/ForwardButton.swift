@@ -7,12 +7,19 @@
 
 import SwiftUI
 
-struct ForwardButton: View {
+struct ForwardButton<Destination: View>: View {
     var imageName : String
     var size: CGFloat = 30.0
+    var action: (() -> Void)?
+    var destination: Destination?
+    
+    @State private var navigateToScreen: Bool = false
     
     var body: some View {
-        NavigationLink(destination: ProductListingV()){
+        Button(action: {
+            (action ?? {})()
+            navigateToScreen.toggle()
+        }, label: {
             Image(systemName: imageName)
                 .frame(width: size, height: size)
                 .foregroundStyle(.white)
@@ -21,10 +28,13 @@ struct ForwardButton: View {
                     Color.themeColor
                 }
                 .clipShape(Circle())
-        }
+        })
+        .navigationDestination(isPresented: $navigateToScreen, destination: {
+            destination
+        })
     }
 }
 
 #Preview {
-    ForwardButton(imageName: "arrow.forward")
+    ForwardButton(imageName: "arrow.forward", action: nil, destination: ProductListingV())
 }

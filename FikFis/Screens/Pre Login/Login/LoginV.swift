@@ -16,8 +16,7 @@ struct LoginV: View {
     @State private var alertMessage: String = ""
     @State private var isLogin: Bool = false
     @State private var isSignup: Bool = false
-
-    let leadingSpace : CGFloat = 5
+    
     var body: some View {
         NavigationStack {
             LazyVStack(alignment: .leading) {
@@ -38,7 +37,7 @@ struct LoginV: View {
                             TextField("Email or mobile phone number", text: $phoneNumber_orEmail)
                                 .placeholder(when: phoneNumber_orEmail.isEmpty){
                                 }
-                            
+                                .frame(height:textFieldHeight)
                                 .padding()
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
@@ -53,9 +52,8 @@ struct LoginV: View {
                             TextField("xxxxxxxxxxx", text: $phoneNumber_orEmail)
                                 .placeholder(when: phoneNumber_orEmail.isEmpty) {
                                 }
-                            
+                                .frame(height:textFieldHeight)
                                 .padding()
-                            
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
                                         .stroke(Color.gray, lineWidth: 1))
@@ -87,14 +85,14 @@ struct LoginV: View {
                         .bold()
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(content: {
-                            RoundedRectangle(cornerRadius: buttonCornerRadius)
-                                .foregroundColor(Color.theme)
-                        })
+                        .background(Color.theme)
+                        .cornerRadius(buttonCornerRadius, corners: .allCorners)
+
                 }
                 .fullScreenCover(isPresented: $isLogin, content: {
                     TabV()
                 })
+                .frame(height:textFieldHeight)
                 .padding()
                 .alert(isPresented: $showingAlert) {
                     Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())

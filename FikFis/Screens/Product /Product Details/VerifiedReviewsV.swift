@@ -206,7 +206,7 @@ struct VerifiedReviewsV: View {
                 Text("Recent Viewed")
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(imageName: "arrow.forward", size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
             }
             .padding([.top, .horizontal])
             
@@ -239,7 +239,7 @@ struct VerifiedReviewsV: View {
                 Text("Home Appliances Up to 55% off")
                     .font(.custom_font(.medium, size: 17))
                 Spacer()
-                ForwardButton(imageName: "arrow.forward", size: 2)
+                ForwardButton(imageName: "arrow.forward", size: 2, destination: ProductListingV())
             }
             .padding(.top)
             .padding(.horizontal)

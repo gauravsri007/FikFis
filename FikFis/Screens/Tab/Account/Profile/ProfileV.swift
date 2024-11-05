@@ -13,17 +13,36 @@ struct ProfileV: View {
     @State private var email: String = ""
 
     @State private var password: String = ""
-    
+    @State private var navigateToDestination: Bool = false
+    @State private var isVisible: Bool = false
+
     var body: some View {
         NavigationHeader(isBellIconHidden: false)
         ScrollView{
-            VStack{
-                headerView
+            ZStack{
                 
-                contentView
-                    .padding()
+                VStack{
+                    headerView
+                    
+                    contentView
+                        .padding()
+                }
                 
-                RoundedButton(showingAlert: false, alertTitle: "", alertMessage: "", btnTitle: "SAVE CHANGES", btnHeight: 50, btnWidth: UIScreen.screenWidth - 30, font: .custom_font(.medium,size: 20))
+                if isVisible {
+                    VStack{
+                        Text("Hello")
+                    }
+                    .frame(width: UIScreen.screenWidth,height: UIScreen.screenHeight)
+                    .background(Color.pink)
+                    .foregroundColor(.white)
+                    .zIndex(1)  // Brings this view to the front
+                    .gesture(
+                        TapGesture()
+                            .onEnded { _ in
+                                isVisible = false
+                               }
+                    )
+                }
             }
         }
     }
@@ -43,8 +62,20 @@ struct ProfileV: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.gray, lineWidth: 1))
-                ForwardButton(imageName: "pencil", size: 20)
-
+                Button{
+                    
+                }
+                label:{
+                    Image(systemName: "pencil")
+                        .frame(width: 20, height: 20)
+                        .foregroundStyle(.white)
+                        .padding()
+                        .background {
+                            Color.themeColor
+                        }
+                        .clipShape(Circle())
+                }
+                
             }
             
             Text("Email")
@@ -59,44 +90,69 @@ struct ProfileV: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.gray, lineWidth: 1))
-                ForwardButton(imageName: "pencil", size: 20)
-
+                //                ForwardButton(imageName: "pencil", size: 20)
+                
             }
             Text("Mobile or Phone Number")
                 .font(.custom_font(.medium, size: 18))
             HStack{
-
-            TextField("Mobile or Phone Number", text: $phoneNumber_orEmail)
-                .placeholder(when: phoneNumber_orEmail.isEmpty){
-                }
-                .padding()
-                .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color.gray, lineWidth: 1))
-                ForwardButton(imageName: "pencil", size: 20)
+                
+                TextField("Mobile or Phone Number", text: $phoneNumber_orEmail)
+                    .placeholder(when: phoneNumber_orEmail.isEmpty){
+                    }
+                    .padding()
+                    .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.gray, lineWidth: 1))
+                //                ForwardButton(imageName: "pencil", size: 20)
             }
             
-            Text("Password")
-                .font(.custom_font(.medium, size: 18))
-            HStack{
-            TextField("Password", text: $phoneNumber_orEmail)
-                .placeholder(when: phoneNumber_orEmail.isEmpty){
-                }
+            Text("If you want to change your password click on change password.")
+                .font(.custom_font(.regular, size: 16))
                 .padding()
-                .frame(width: UIScreen.screenWidth - 90,height: textViewHeight)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color.gray, lineWidth: 1))
-            ForwardButton(imageName: "pencil", size: 20)
-
-        }
+            HStack{
+                
+                Text("Change Password")
+                    .font(.custom_font(.medium, size: 18))
+                    .overlay(
+                        Rectangle()
+                            .fill(Color.theme)
+                            .frame(height: 4)
+                            .offset(y:  10)
+                        , alignment: .bottom
+                    )
+                
+                //            HeaderLabel(header: "Change Password")
+                //                .font(.custom_font(.medium, size: 18))
+                
+                Spacer()
+                ForwardButton(imageName: "pencil", size: 20, action: {
+                    print("SGKJSDFHLKSDF")
+                    navigateToDestination = true
+                }, destination: CreatePasswordV())
+                .navigationDestination(isPresented: $navigateToDestination) {
+                    ChangePasswordV()
+                }
+                                
+            }
             
         }
         
     }
     
+    func editNameView(title:String) ->some View{
+        ZStack{
+            VStack{
+                Text("Enter ")
+                
+            }
+            }
+        .frame(width: UIScreen.screenWidth,height: UIScreen.screenHeight)
+        .background(Color.yellow)
+        .opacity(isVisible ? 1 : 0)
 
+    }
     
     var headerView:some View{
         HStack{
@@ -123,7 +179,7 @@ struct ProfileV: View {
                         .alignmentGuide(.trailing) { dim in
                             dim.width / 2
                         }
-                        .border(Color.gray, width: 1)
+//                        .border(Color.gray, width: 1)
                         .background(Color.themeColor)
                     }
 

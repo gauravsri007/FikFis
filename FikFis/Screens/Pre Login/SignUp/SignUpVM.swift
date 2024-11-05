@@ -42,4 +42,3 @@ class SignUpVM: ObservableObject {
         }
     }
 }
-

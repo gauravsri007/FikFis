@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import PagerTabStripView
+//import PagerTabStripView
+import XLPagerTabStrip
 
 struct TitleNavBarItem: View {
     let title: String
@@ -34,28 +35,28 @@ struct MyOrders: View {
             HeaderLabel(header: "Your Orders")
                 .padding(.leading)
 
-            PagerTabStripView() {
-                ActiveOrders()
-                    .pagerTabItem(tag: 0) {
-                        TitleNavBarItem(title: "Active Orders")
-                    }
-                DeliveredOrders()
-                    .pagerTabItem(tag: 1) {
-                        TitleNavBarItem(title: "Delivered Orders")
-                    }
-                ReturnOrder()
-                    .pagerTabItem(tag: 2) {
-                        TitleNavBarItem(title: "Return Order")
-                    }
-                CancelOrder()
-                    .pagerTabItem(tag: 3) {
-                        TitleNavBarItem(title: "Cancel Order")
-                    }
-            }
-            .pagerTabStripViewStyle(.scrollableBarButton(
-                padding: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),
-                indicatorView: { Rectangle().fill(Color.themeColor).cornerRadius(5).frame(height: 5).padding(.top, -8) }
-            ))
+//            PagerTabStripView() {
+//                ActiveOrders()
+//                    .pagerTabItem(tag: 0) {
+//                        TitleNavBarItem(title: "Active Orders")
+//                    }
+//                DeliveredOrders()
+//                    .pagerTabItem(tag: 1) {
+//                        TitleNavBarItem(title: "Delivered Orders")
+//                    }
+//                ReturnOrder()
+//                    .pagerTabItem(tag: 2) {
+//                        TitleNavBarItem(title: "Return Order")
+//                    }
+//                CancelOrder()
+//                    .pagerTabItem(tag: 3) {
+//                        TitleNavBarItem(title: "Cancel Order")
+//                    }
+//            }
+//            .pagerTabStripViewStyle(.scrollableBarButton(
+//                padding: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),
+//                indicatorView: { Rectangle().fill(Color.themeColor).cornerRadius(5).frame(height: 5).padding(.top, -8) }
+//            ))
         }
     }
 }
