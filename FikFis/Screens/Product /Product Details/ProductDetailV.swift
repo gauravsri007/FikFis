@@ -7,12 +7,20 @@
 
 import SwiftUI
 
+
 struct ProductDetailV: View {
     let coverImages: [ImagePagerM]
     let product : CommonModel
     let arrProductImages : [String]
     var arrSize = ["S", "M", "L", "XL", "XXL"]
+    @State private var review: String = ""
     @State private var size: String = ""
+    @State var showToast: Bool = true
+    @State private var isVisibleWriteReviews: Bool = false
+    
+
+    let textFieldHeight : CGFloat = 14
+
 
     fileprivate func plusButton() -> some View {
         return Button(action: {}) {
@@ -33,34 +41,48 @@ struct ProductDetailV: View {
 
     var body: some View {
 //        NavigationHeader(isBellIconHidden: false)
+        ZStack{
 
             VStack(alignment: .leading ){
                 
                 ScrollView{
-
-                coverImageSection
-                
-                productDtls
-         
-                productImages
-                
-                selectSizeView
-                
-                estimatedDelivery
-                
-                paymentMode
-                
-                textSection
-                
-                AdditionalInformationV()
-
-                VerifiedReviewsV()
-                
+                    
+                    coverImageSection
+                    
+                    productDtls
+                    
+                    productImages
+                    
+                    selectSizeView
+                    
+                    estimatedDelivery
+                    
+                    paymentMode
+                    
+                    textSection
+                    
+                    AdditionalInformationV()
+                    
+                    VerifiedReviewsV(isVisibleWriteReviews: $isVisibleWriteReviews)
+                    
+                }
             }
+            
+            if isVisibleWriteReviews {
+//                overlayManager.show(
+//                writeReviewView
+//                )
+            }
+
         }
         .padding([.horizontal],10)
         .toolbar(.hidden, for: .tabBar)
+//        .navigationBarHidden(isVisibleWriteReviews)
+
     }
+    
+
+    
     
     var textSection: some View {
         VStack(alignment: .leading ){

@@ -7,6 +7,43 @@
 
 import SwiftUI
 
+struct Toast<Presenting>: View where Presenting: View {
+
+    /// The binding that decides the appropriate drawing in the body.
+    @Binding var isShowing: Bool
+    /// The view that will be "presenting" this toast
+    let presenting: () -> Presenting
+    /// The text to show
+    let text: Text
+
+    var body: some View {
+
+        GeometryReader { geometry in
+
+            ZStack(alignment: .center) {
+
+                self.presenting()
+                    .blur(radius: self.isShowing ? 1 : 0)
+
+                VStack {
+                    self.text
+                }
+                .frame(width: geometry.size.width,
+                       height: geometry.size.height)
+                .background(Color.secondary.colorInvert())
+                .foregroundColor(Color.primary)
+                .cornerRadius(20)
+                .transition(.slide)
+                .opacity(self.isShowing ? 1 : 0)
+
+            }
+
+        }
+
+    }
+
+}
+
 struct VerifiedReviewsV: View {
     @State private var showingAlert = false
     @State private var alertTitle: String = "Important message"
@@ -14,6 +51,12 @@ struct VerifiedReviewsV: View {
     var arrReviewList = ReviewM.all()
     @State var arrRecentView = Card.row()
     @State var arrAppliance = Card.row2()
+    @Binding var isVisibleWriteReviews: Bool
+    @EnvironmentObject var overlayManager: OverlayManager
+    @State private var fullName_review: String = ""
+    @State private var email_review: String = ""
+    @State private var phone_review: String = ""
+    @State private var write_review: String = ""
 
     var body: some View {
         ScrollView{
@@ -32,11 +75,18 @@ struct VerifiedReviewsV: View {
     }
     
     var writeReviewButton : some View{
-        HStack(alignment:.center){
-            NavigationLink(destination: SignUpV()) {
+        
+        return HStack(alignment:.center){
+            Button{
+                isVisibleWriteReviews = true
+                overlayManager.show(
+                    writeReviewView
+                    ,dismissOnTap: false
+                )
                 
+            }
+            label:{
                 Text("Write Review")
-//                    .frame(minWidth: 0, maxWidth: .infinity)
                     .font(.custom_font(.regular,size: 18))
                     .padding()
                     .foregroundColor(.black)
@@ -44,13 +94,115 @@ struct VerifiedReviewsV: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.gray, lineWidth: 1)
-                        )
+                    )
             }
-            .cornerRadius(25)
+            
         }
-        .padding(.vertical)
+        .cornerRadius(25)
     }
     
+    
+    var writeReviewView: some View {
+        LazyVStack(alignment: .leading ){
+            HStack{
+                HeaderLabel(header: "Write a review")
+                
+                Spacer()
+                
+                Button{
+                    overlayManager.hide()
+                }label: {
+                    Image(systemName: "xmark")
+                        .tint(Color.theme)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding()
+            
+            StarRatingView(rating:.constant(0))
+                .frame(width: 150, height: 20)
+            
+            LazyVStack(alignment: .leading){
+                Text("Full name(First and last name)")
+                    .font(.custom_font(.regular,size: 16))
+                
+                
+                TextField("Full name(First and last name)", text: $fullName_review)
+                    .placeholder(when: fullName_review.isEmpty){
+                    }
+                    .frame(height:textFieldHeight)
+                
+                    .padding()
+                
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.gray, lineWidth: 1))
+                //----------------------------------------------------------------------
+                    .padding(.bottom)
+                //----------------------------------------------------------------------
+                Text("Email")
+                    .font(.custom_font(.regular,size: 16))
+                
+                TextField("Email", text: $email_review)
+                    .placeholder(when: email_review.isEmpty) {
+                    }
+                    .frame(height:textFieldHeight)
+                
+                    .padding()
+                
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.gray, lineWidth: 1))
+                
+                //----------------------------------------------------------------------
+                Text("Phone")
+                    .font(.custom_font(.regular,size: 16))
+                
+                TextField("Phone Number", text: $phone_review)
+                    .placeholder(when: phone_review.isEmpty) {
+                    }
+                
+                    .frame(height:textFieldHeight)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.gray, lineWidth: 1))
+                
+                Text("Write your review")
+                    .font(.custom_font(.regular,size: 16))
+                
+                TextField("Your review", text: $write_review)
+                    .frame(height:60)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.gray, lineWidth: 1))
+                
+                Button{
+                    //                        self.isLogin = true
+                } label:{
+                    Text("Submit")
+                        .foregroundColor(.black)
+                        .bold()
+                        .frame(maxWidth: .infinity)
+                        .frame(height:textFieldHeight)
+                        .padding()
+                        .background(Color.theme)
+                        .cornerRadius(buttonCornerRadius, corners: .allCorners)
+                    
+                }
+                .padding()
+                
+                
+            }
+            .padding(.horizontal)
+            
+        }
+        .frame(width: appWidth * 0.90, height: appHeight * 0.75)
+        .background(Color.white)
+        .cornerRadius(8)
+        
+    }
     
     var reviewsList : some View{
         HStack(alignment:.center){
@@ -283,5 +435,5 @@ struct VerifiedReviewsV: View {
 }
 
 #Preview {
-    VerifiedReviewsV()
+    VerifiedReviewsV(isVisibleWriteReviews: .constant(false))
 }

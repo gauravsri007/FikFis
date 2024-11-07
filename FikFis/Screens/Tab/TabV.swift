@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TabV: View {
     @State private var selectedIndex: Int = 0
-
+    @StateObject private var overlayManager = OverlayManager() // Create OverlayManager instance
+    
     var body: some View {
         TabView(selection: $selectedIndex) {
             //---------------------------------------
@@ -89,6 +90,19 @@ struct TabV: View {
             UITabBar.appearance().standardAppearance = appearance
             UITabBar.appearance().scrollEdgeAppearance = appearance
         })
+        .overlay {
+            if let overlayContent = overlayManager.overlayContent {
+                overlayContent
+                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Full screen
+                    .background(Color.black.opacity(0.4).ignoresSafeArea()) // Background color with ignoresSafeArea
+                    .onTapGesture {
+                        if overlayManager.shouldDismissOnTap {
+                            overlayManager.hide()
+                        }
+                    }
+            }
+        }
+        .environmentObject(overlayManager) // Provide environment object
         
     }
 }

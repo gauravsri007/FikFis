@@ -15,6 +15,8 @@ struct ProfileV: View {
     @State private var password: String = ""
     @State private var navigateToDestination: Bool = false
     @State private var isVisible: Bool = false
+    @State private var isFullName: Bool = false
+    @State private var showBottomView = false
 
     var body: some View {
         NavigationHeader(isBellIconHidden: false)
@@ -43,14 +45,84 @@ struct ProfileV: View {
                                }
                     )
                 }
+                
             }
+            .sheet(isPresented: $showBottomView) {
+                editFullNameView
+                    .presentationDetents([.height(appHeight * 0.25)]) // Available in iOS 16+
+                    .presentationDragIndicator(.visible)
+            }
+
         }
+    }
+    
+    
+    var editFullNameView: some View {
+        return VStack(alignment: .leading ){
+                Spacer()
+                LazyVStack(alignment: .leading){
+                    Text("Enter your name")
+                        .font(.custom_font(.bold,size: 18))
+                        .padding(.bottom)
+                    
+                    TextField("", text: $fullName)
+                        .placeholder(when: fullName.isEmpty){
+                        }
+                        .frame(height:textFieldHeight)
+                    
+                        .padding()
+                    
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.gray, lineWidth: 1))
+                    //----------------------------------------------------------------------
+                        .padding(.bottom)
+      
+                    HStack{
+                        Spacer()
+                        Button{
+                            showBottomView.toggle()
+                        } label:{
+                            Text("Cancel")
+                                .foregroundColor(.white)
+                                .bold()
+                                .frame(width: appWidth / 5)
+                                .frame(height:12)
+                                .padding()
+                                .background(Color.black)
+                                .cornerRadius(buttonCornerRadius, corners: .allCorners)
+                            
+                        }
+//                        .padding()
+                        
+                        Button{
+                            //                        self.isLogin = true
+                        } label:{
+                            Text("Save")
+                                .foregroundColor(.black)
+                                .bold()
+                                .frame(width: appWidth / 5)
+                                .frame(height:12)
+                                .padding()
+                                .background(Color.theme)
+                                .cornerRadius(buttonCornerRadius, corners: .allCorners)
+                            
+                        }
+//                        .padding()
+                    }
+                    .padding(.horizontal)
+                }
+                .padding(.horizontal)
+            }
+            .frame(width: appWidth, height: appHeight * 0.25)
+            .background(Color.white)
+            .cornerRadius(8)
+
     }
     
     var contentView:some View{
         var textViewHeight : CGFloat = 45
         return VStack(alignment: .leading) {
-            
             Text("Full Name")
                 .font(.custom_font(.medium, size: 18))
             HStack{
@@ -63,7 +135,10 @@ struct ProfileV: View {
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.gray, lineWidth: 1))
                 Button{
-                    
+                    isFullName = true
+                    withAnimation {
+                        showBottomView.toggle()
+                    }
                 }
                 label:{
                     Image(systemName: "pencil")
