@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-//import PagerTabStripView
-import XLPagerTabStrip
 
 struct TitleNavBarItem: View {
     let title: String
@@ -27,6 +25,8 @@ struct TitleNavBarItem: View {
 }
 
 struct MyOrders: View {
+    @State private var selectedTab: Tab_orders = .ActiveOrders
+    @Namespace private var animationNamespace //
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -35,32 +35,79 @@ struct MyOrders: View {
             HeaderLabel(header: "Your Orders")
                 .padding(.leading)
 
-//            PagerTabStripView() {
-//                ActiveOrders()
-//                    .pagerTabItem(tag: 0) {
-//                        TitleNavBarItem(title: "Active Orders")
-//                    }
-//                DeliveredOrders()
-//                    .pagerTabItem(tag: 1) {
-//                        TitleNavBarItem(title: "Delivered Orders")
-//                    }
-//                ReturnOrder()
-//                    .pagerTabItem(tag: 2) {
-//                        TitleNavBarItem(title: "Return Order")
-//                    }
-//                CancelOrder()
-//                    .pagerTabItem(tag: 3) {
-//                        TitleNavBarItem(title: "Cancel Order")
-//                    }
-//            }
-//            .pagerTabStripViewStyle(.scrollableBarButton(
-//                padding: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),
-//                indicatorView: { Rectangle().fill(Color.themeColor).cornerRadius(5).frame(height: 5).padding(.top, -8) }
-//            ))
+            Group {
+                VStack {
+                    // Tab content with slide-in animation
+                    // Tab buttons
+                    HStack {
+                        CustomTabOrders(label: "Active Orders", selectedTab: $selectedTab, tab: .ActiveOrders, animationNamespace: animationNamespace)
+                        Spacer()
+                        CustomTabOrders(label: "Delivered Orders", selectedTab: $selectedTab, tab: .DeliveredOrders, animationNamespace: animationNamespace)
+                        Spacer()
+                        CustomTabOrders(label: "Return Order", selectedTab: $selectedTab, tab: .ReturnOrder, animationNamespace: animationNamespace)
+                        Spacer()
+                        CustomTabOrders(label: "Cancel Order", selectedTab: $selectedTab, tab: .CancelOrder, animationNamespace: animationNamespace)
+                    }
+                    .padding()
+                    //                    .background(Color.gray.opacity(0.2))
+                    ZStack {
+                        if selectedTab == .ActiveOrders {
+                            ActiveOrders()                            //                              .transition(.move(edge: .leading))
+                                .animation(.easeInOut, value: selectedTab)
+                        } else if selectedTab == .DeliveredOrders {
+                            DeliveredOrders()                            //                              .transition(.move(edge: .trailing))
+                                .animation(.easeInOut, value: selectedTab)
+                        } else if selectedTab == .ReturnOrder {
+                            ReturnOrder()
+                            //                              .transition(.move(edge: .trailing))
+                                .animation(.easeInOut, value: selectedTab)
+                        }
+                        else if selectedTab == .CancelOrder {
+                            CancelOrder()
+                            //                              .transition(.move(edge: .trailing))
+                                .animation(.easeInOut, value: selectedTab)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(height: appHeight - 400)
+                    
+                }
+            }
         }
     }
 }
 
 #Preview {
     MyOrders()
+}
+
+
+struct CustomTabOrders: View {
+    var label: String
+    @Binding var selectedTab: Tab_orders
+    var tab: Tab_orders
+    var animationNamespace: Namespace.ID
+
+    var body: some View {
+        VStack {
+            Text(label)
+                .frame(height: 32)
+                .lineLimit(2)
+                .font(.custom_font(.medium,size: 12))
+                .foregroundColor(.black)
+
+            if selectedTab == tab {
+                Color.themeColor
+                    .frame(height: 4)
+                    .matchedGeometryEffect(id: "underline", in: animationNamespace)
+            } else {
+                Color.clear.frame(height: 4)
+            }
+        }
+        .onTapGesture {
+            withAnimation(.easeInOut) {
+                selectedTab = tab
+            }
+        }
+    }
 }

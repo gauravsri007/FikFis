@@ -33,6 +33,7 @@ struct AddAddress: View {
                 RoundedButton(showingAlert: false, alertTitle: "", alertMessage: "", btnTitle: "SAVE ADDRESS", btnHeight: 50, btnWidth: UIScreen.screenWidth - 30, font: .custom_font(.medium,size: 20))
             }
         }
+        .padding(.leading)
         
     }
     

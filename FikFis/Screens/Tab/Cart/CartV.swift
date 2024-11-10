@@ -6,38 +6,53 @@
 //
 
 import SwiftUI
-import PagerTabStripView
 
 struct CartV: View {
-    
+    @State private var selectedTab: Tab_cart = .Items
+    @Namespace private var animationNamespace //
     var body: some View {
         VStack(alignment: .leading) {
-//            NavigationHeader(isBellIconHidden: false)
+            NavigationHeader(isBellIconHidden: false)
+                .padding(.bottom)
+
             HeaderLabel(header: "Your Carts",font: header_font)
                 .padding(.leading)
-            
-            PagerTabStripView() {
-                ItemsV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))
-                    .pagerTabItem(tag: 0) {
-                        TitleNavBarItem(title: "Items")
+            Group {
+                VStack {
+                    // Tab content with slide-in animation
+                    // Tab buttons
+                    HStack {
+                        CustomTab(label: "Items", selectedTab: $selectedTab, tab: .Items, animationNamespace: animationNamespace)
+                        Spacer()
+                        CustomTab(label: "Shipping", selectedTab: $selectedTab, tab: .Shipping, animationNamespace: animationNamespace)
+                        Spacer()
+                        CustomTab(label: "Payment", selectedTab: $selectedTab, tab: .Payment, animationNamespace: animationNamespace)
                     }
-                ShippingV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))
-                    .pagerTabItem(tag: 1) {
-                        TitleNavBarItem(title: "Shipping")
+                    .padding()
+                    //                    .background(Color.gray.opacity(0.2))
+                    ZStack {
+                        if selectedTab == .Items {
+                            ItemsV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))                            //                              .transition(.move(edge: .leading))
+                                .animation(.easeInOut, value: selectedTab)
+                        } else if selectedTab == .Shipping {
+                            ShippingV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))                            //                              .transition(.move(edge: .trailing))
+                                .animation(.easeInOut, value: selectedTab)
+                        } else if selectedTab == .Payment {
+                            PaymentV()
+                            
+                            //                              .transition(.move(edge: .trailing))
+                                .animation(.easeInOut, value: selectedTab)
+                        }
                     }
-                PaymentV()
-                    .pagerTabItem(tag: 2) {
-                        TitleNavBarItem(title: "Payment")
-                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(height: appHeight - 400)
+                    
+                }
                 
             }
-            .pagerTabStripViewStyle(.scrollableBarButton(
-                padding: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),
-                indicatorView: { Rectangle().fill(Color.themeColor).cornerRadius(5).frame(height: 5).padding(.top, -8) }
-            ))
             .frame(width: appWidth)
-
         }
+        .toolbar(.visible, for: .tabBar)
     }
 }
 

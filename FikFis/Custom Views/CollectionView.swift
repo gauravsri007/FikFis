@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import XLPagerTabStrip
 
 struct CollectionView: View {
     let item : Card
@@ -37,38 +36,3 @@ struct CollectionView: View {
     CollectionView(item: Card(id: 2, title: "Mens shoes", imageUrl: "product1"), header: "main")
 }
 
-
-struct PagerTabStripWrapper: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> ButtonBarPagerTabStripViewController {
-        // Create an instance of ButtonBarPagerTabStripViewController
-        let pagerTabStripVC = ButtonBarPagerTabStripViewController()
-        pagerTabStripVC.delegate = context.coordinator
-        return pagerTabStripVC
-    }
-
-    func updateUIViewController(_ uiViewController: ButtonBarPagerTabStripViewController, context: Context) {
-        // Update any properties as needed
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-
-    class Coordinator: NSObject, PagerTabStripIsProgressiveDelegate {
-        func updateIndicator(for viewController: XLPagerTabStrip.PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {
-            
-        }
-        
-        func updateIndicator(for viewController: XLPagerTabStrip.PagerTabStripViewController, fromIndex: Int, toIndex: Int) {
-            
-        }
-        
-        var parent: PagerTabStripWrapper
-
-        init(_ parent: PagerTabStripWrapper) {
-            self.parent = parent
-        }
-
-        // Handle any delegate methods here if needed
-    }
-}

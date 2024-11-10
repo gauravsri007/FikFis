@@ -67,12 +67,6 @@ struct ProductDetailV: View {
                     
                 }
             }
-            
-            if isVisibleWriteReviews {
-//                overlayManager.show(
-//                writeReviewView
-//                )
-            }
 
         }
         .padding([.horizontal],10)

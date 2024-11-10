@@ -45,6 +45,4 @@ struct AppColor {
 
 }
 
-let baseURL = "https://gateway.fikfis.co.uk/"
-
 

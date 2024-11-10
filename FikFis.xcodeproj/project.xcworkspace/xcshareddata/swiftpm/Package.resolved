@@ -1,31 +1,13 @@
 {
-  "originHash" : "f53321c9396f4cf2564335ec5462e9cd92ea3f7f4b220bcaacf052b07c7ce31d",
+  "originHash" : "b7745c74c713f0459445cfebfd2d6941db79cc943a9e5d359ea03f5d085942d3",
   "pins" : [
     {
-      "identity" : "fxpagecontrol",
+      "identity" : "bryxbanner",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/nicklockwood/FXPageControl.git",
+      "location" : "https://github.com/bryx-inc/BRYXBanner",
       "state" : {
-        "revision" : "a94633402ba98c52f86c2a70e61ff086dec9de78",
-        "version" : "1.6.0"
-      }
-    },
-    {
-      "identity" : "pagertabstripview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/xmartlabs/PagerTabStripView",
-      "state" : {
-        "revision" : "39ec00d2577adf75d82d1c7023c56950b96d2298",
-        "version" : "4.0.0"
-      }
-    },
-    {
-      "identity" : "xlpagertabstrip",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/xmartlabs/XLPagerTabStrip.git",
-      "state" : {
-        "revision" : "211ed62aa376722cf93c429802a8b6ff66a8bd52",
-        "version" : "9.1.0"
+        "revision" : "1d00ffc19c379253712a5792a7f5121fa0d66243",
+        "version" : "0.8.5"
       }
     }
   ],

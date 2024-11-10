@@ -45,3 +45,22 @@ enum HTTPMethod: String {
     case DELETE
     case PATCH
 }
+
+
+enum Alert_message:String{
+    case success
+    case fail
+}
+
+
+enum Tab_cart {
+    case Items, Shipping, Payment, Confirmation
+}
+
+enum Tab_orders {
+    case ActiveOrders, DeliveredOrders, ReturnOrder, CancelOrder
+}
+
+enum Tab_address {
+    case AddAddress, SavedAddress
+}

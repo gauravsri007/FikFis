@@ -24,6 +24,8 @@ struct ShippingV: View {
     var orderSummary : OrderSummaryModel
     var arrCartList = ProductM.all()
     @State var presentAddressView : Bool = false
+    @EnvironmentObject var overlayManager: OverlayManager
+
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
@@ -57,7 +59,11 @@ struct ShippingV: View {
             HStack{
                 Spacer()
                 Button{
-                    presentAddressView.toggle()
+//                    presentAddressView.toggle()
+                    overlayManager.show(
+                        AddressShippingV()
+                        ,dismissOnTap: true
+                    )
                 }label: {
                     Text("Add Address")
                 }
