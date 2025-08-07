@@ -14,26 +14,41 @@ struct ContentView: View {
         NavigationStack {
             Group {
                 if self.isActive{
-                    
+                    if let isLoggedIn = Udefault.value(forKey: KEY_IS_LOGGEDIN) as? Bool {
+                        if isLoggedIn {
+                            TabV()
+                        }
+                        else {
+                            LoginV()
+                        }
+                    }
+                    else{
+                        LoginV()
+                    }
                 }
                 else{
                     Image("splash")
                         .scaledToFill()
                         .ignoresSafeArea()
+                        .onAppear {
+                            // Delay before transitioning
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                withAnimation {
+                                    isActive = true
+                                }
+                            }
+                        }
+                    
                 }
             }
-            .padding()
-
         }
-        .navigationDestination(isPresented: $navigateLoginView, destination: {
-            LoginV()
-                .ignoresSafeArea()
-        })
-
-        
     }
+    
+    
 }
 
 #Preview {
     ContentView()
 }
+
+

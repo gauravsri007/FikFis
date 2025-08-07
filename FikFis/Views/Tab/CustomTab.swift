@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CustomTab: View {
     var label: String
-    @Binding var selectedTab: Tab_cart
+//    @Binding var selectedTab: Tab_cart
+    @Binding var tabSelection: Tab_cart
     var tab: Tab_cart
     var animationNamespace: Namespace.ID
 
@@ -19,7 +20,7 @@ struct CustomTab: View {
                 .font(.custom_font(.medium,size: 16))
                 .foregroundColor(.black)
 
-            if selectedTab == tab {
+            if tabSelection == tab {
                 Color.themeColor
                     .frame(height: 4)
                     .matchedGeometryEffect(id: "underline", in: animationNamespace)
@@ -29,7 +30,7 @@ struct CustomTab: View {
         }
         .onTapGesture {
             withAnimation(.easeInOut) {
-                selectedTab = tab
+                tabSelection = tab
             }
         }
     }

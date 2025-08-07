@@ -22,10 +22,10 @@ struct WishListV: View {
                     }
             }
             .padding()
-            
             Spacer()
         }
         .padding()
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

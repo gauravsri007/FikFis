@@ -24,5 +24,16 @@ class GlobalFunction{
         banner.show(duration: 3.0)
     }
     
+    func storeLocalData(_ response: LoginResponse) {
+        print("response: \(response)")
+        Udefault.set(response.access_token, forKey: KEY_ACCESS_TOKEN)
+        Udefault.set(response.refresh_token, forKey: KEY_REFRESH_TOKEN)
+        Udefault.set(response.username, forKey: KEY_USER_NAME)
+        Udefault.set(response.email, forKey: KEY_EMAIL)
+        Udefault.set(response.phone, forKey: KEY_PHONE_NUMBER)
+        Udefault.set(true, forKey: KEY_IS_LOGGEDIN)
+        Udefault.synchronize()
+    }
+    
     
 }

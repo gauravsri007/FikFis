@@ -10,7 +10,7 @@ import SwiftUI
 struct SignUpV: View {
     
     @StateObject private var viewModel = SignUpVM()
-    
+    @State var userDetailsM: SignUpM?
     @State private var phoneNumber_orEmail: String = ""
     @State private var password: String = ""
     @State private var showingAlert = false
@@ -37,13 +37,12 @@ struct SignUpV: View {
                     Text("Email or mobile phone number")
                         .font(.custom_font(.regular,size: 16))
                     
-                    
                     TextField("Email or mobile phone number", text: $phoneNumber_orEmail)
                         .placeholder(when: phoneNumber_orEmail.isEmpty){
                         }
                     
                         .padding()
-                    
+                        .keyboardType(.emailAddress)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
                                 .stroke(Color.gray, lineWidth: 1))
@@ -53,11 +52,9 @@ struct SignUpV: View {
                     Text("Password")
                         .font(.custom_font(.regular,size: 16))
                     
-                    TextField("xxxxxxxxxxx", text: $phoneNumber_orEmail)
-                        .placeholder(when: phoneNumber_orEmail.isEmpty) {
-                        }
-                    
+                    SecureField("xxxxxxxxxxx", text: $password)
                         .padding()
+                        .keyboardType(.emailAddress)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
                                 .stroke(Color.gray, lineWidth: 1))
@@ -69,15 +66,39 @@ struct SignUpV: View {
             .padding(.bottom)
 
             Button(action: {
-                self.viewModel.registerUserOTP(username: phoneNumber_orEmail) { result in
-                    switch result {
-                    case .success(let response):
-                        self.navigateToOTPScreen.toggle()
-                        print("Success: \(String(describing: response.message))")
-                    case .failure(let error):
-                        print("Failed with error: \(error.localizedDescription)")
+                if phoneNumber_orEmail == ""{
+                    GlobalFunction.shared.showAlert_banner(msg: "Mobile number cannot empty.", bgColor: UIColor.red, type: .fail)
+                }
+                else if phoneNumber_orEmail.count < 10{
+                    GlobalFunction.shared.showAlert_banner(msg: "Mobile number must be 11 digit.", bgColor: UIColor.red, type: .fail)
+                }
+                else if password.isEmpty || password == ""{
+                    GlobalFunction.shared.showAlert_banner(msg: "Password cannot be empty.", bgColor: UIColor.red, type: .fail)
+                }
+                else if password.count < 8{
+                    GlobalFunction.shared.showAlert_banner(msg: "Password must be at least 8 characters.", bgColor: UIColor.red, type: .fail)
+                }
+                else{
+                    self.viewModel.registerUserOTP(username: phoneNumber_orEmail) { result,statusCode  in
+                        switch result {
+                        case .success(let response):
+                            guard let dataValue : DefaultResponse = response as? DefaultResponse else{
+                                return
+                            }
+                            print("statusCode: \(statusCode)")
+                            if statusCode == 200 || statusCode == 201{
+                                self.navigateToOTPScreen.toggle()
+                                print("Success: \(String(describing: response.message))")
+                            }
+                            if statusCode == 400{
+                                GlobalFunction.shared.showAlert_banner(msg:dataValue.messages?.error ?? "error", bgColor: UIColor.red, type: .fail)
+                            }
+                        case .failure(let error):
+                            print("Failed with error: \(error.localizedDescription)")
+                        }
                     }
                 }
+                
             }, label: {
                 Text("Continue")
                     .foregroundColor(.black)
@@ -94,7 +115,7 @@ struct SignUpV: View {
                 Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
             }
             .navigationDestination(isPresented: $navigateToOTPScreen, destination: {
-                OtpV()
+                OtpV(phoneNumber_orEmail: phoneNumber_orEmail,password: password,isfromPasswordAssistance:false)
             })
             
             LazyVStack(alignment: .leading){
@@ -124,12 +145,9 @@ struct SignUpV: View {
                     
                 }
             }
-            
-
         }
         .padding()
         Spacer()
-
     }
     
 }

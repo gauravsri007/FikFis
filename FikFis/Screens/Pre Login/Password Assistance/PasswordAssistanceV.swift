@@ -9,12 +9,14 @@ import SwiftUI
 
 struct PasswordAssistanceV: View {
     
+    @StateObject private var viewModel = PasswordAssistanceVM()
     @State private var phoneNumber_orEmail: String = ""
     @State private var password: String = ""
     @State private var showingAlert = false
     @State private var alertTitle: String = "Important message"
     @State private var alertMessage: String = ""
     let leadingSpace : CGFloat = 5
+    @State private var navigateToOTPScreen: Bool = false
 
     var body: some View {
         
@@ -64,8 +66,36 @@ struct PasswordAssistanceV: View {
                 .padding()
                 LazyVStack(alignment: .leading){
                     
-                    NavigationLink(destination: OtpV()){
-                        Text("Verify mobile number")
+                    Button{
+                        if phoneNumber_orEmail == ""{
+                            GlobalFunction.shared.showAlert_banner(msg: "Mobile number cannot empty.", bgColor: UIColor.red, type: .fail)
+                        }
+                        else if phoneNumber_orEmail.count < 13{
+                            GlobalFunction.shared.showAlert_banner(msg: "Mobile number must be 11 digit.", bgColor: UIColor.red, type: .fail)
+                        }
+                        else{
+                            self.viewModel.forgotPasswordRequest(username: phoneNumber_orEmail) { result,statusCode  in
+                                switch result {
+                                case .success(let response):
+                                    guard let dataValue : DefaultResponse = response as? DefaultResponse else{
+                                        return
+                                    }
+                                    print("statusCode: \(statusCode)")
+                                    if statusCode == 200 || statusCode == 201{
+                                        self.navigateToOTPScreen = true
+                                        print("Success: \(String(describing: response.message))")
+                                    }
+                                    if statusCode == 400{
+                                        GlobalFunction.shared.showAlert_banner(msg:dataValue.messages?.error ?? "error", bgColor: UIColor.red, type: .fail)
+                                    }
+                                case .failure(let error):
+                                    print("Failed with error: \(error.localizedDescription)")
+                                }
+                            }
+                        }
+                    }
+                label: {
+                    Text("Verify mobile number")
                             .foregroundColor(.black)
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -77,6 +107,9 @@ struct PasswordAssistanceV: View {
                     .alert(isPresented: $showingAlert) {
                         Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
                     }
+                    .navigationDestination(isPresented: $navigateToOTPScreen, destination: {
+                        OtpV(phoneNumber_orEmail: phoneNumber_orEmail,isfromPasswordAssistance:true)
+                    })
                     
                 }
                 .padding([.leading],leadingSpace)
@@ -103,7 +136,7 @@ struct PasswordAssistanceV: View {
                     .alert(isPresented: $showingAlert) {
                         Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
                     }
-                        Spacer()
+                    Spacer()
                         
                     }
                     

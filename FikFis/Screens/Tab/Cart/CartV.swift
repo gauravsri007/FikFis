@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+//class TabSelection: ObservableObject {
+//    @Published var selectedTab: Tab_cart = .Items
+//}
+
 struct CartV: View {
-    @State private var selectedTab: Tab_cart = .Items
+    @State private var tabSelection : Tab_cart = .Items
     @Namespace private var animationNamespace //
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,26 +26,27 @@ struct CartV: View {
                     // Tab content with slide-in animation
                     // Tab buttons
                     HStack {
-                        CustomTab(label: "Items", selectedTab: $selectedTab, tab: .Items, animationNamespace: animationNamespace)
+                        CustomTab(label: "Items",tabSelection: $tabSelection, tab: .Items, animationNamespace:animationNamespace)
                         Spacer()
-                        CustomTab(label: "Shipping", selectedTab: $selectedTab, tab: .Shipping, animationNamespace: animationNamespace)
+                        CustomTab(label: "Shipping", tabSelection: $tabSelection, tab: .Shipping, animationNamespace: animationNamespace)
                         Spacer()
-                        CustomTab(label: "Payment", selectedTab: $selectedTab, tab: .Payment, animationNamespace: animationNamespace)
+                        CustomTab(label: "Payment", tabSelection: $tabSelection, tab: .Payment, animationNamespace: animationNamespace)
                     }
                     .padding()
                     //                    .background(Color.gray.opacity(0.2))
                     ZStack {
-                        if selectedTab == .Items {
-                            ItemsV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))                            //                              .transition(.move(edge: .leading))
-                                .animation(.easeInOut, value: selectedTab)
-                        } else if selectedTab == .Shipping {
+                        if tabSelection == .Items {
+                            ItemsV(tabSelection: .constant(.Items), orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))                            //                              .transition(.move(edge: .leading))
+                                .animation(.easeInOut, value: tabSelection)
+                            
+                        } else if tabSelection == .Shipping {
                             ShippingV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))                            //                              .transition(.move(edge: .trailing))
-                                .animation(.easeInOut, value: selectedTab)
-                        } else if selectedTab == .Payment {
+                                .animation(.easeInOut, value: tabSelection)
+                        } else if tabSelection == .Payment {
                             PaymentV()
                             
                             //                              .transition(.move(edge: .trailing))
-                                .animation(.easeInOut, value: selectedTab)
+                                .animation(.easeInOut, value: tabSelection)
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -7,22 +7,8 @@
 
 import SwiftUI
 
-fileprivate func ContinueButton() -> some View {
-    NavigationLink(destination: ShippingV(orderSummary:OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0) )){
-
-        Text("Continue")
-            .font(.custom_font(.medium,size: 20))
-            .foregroundColor(.black)
-            .frame(height: 50)
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .background(Color.themeColor)
-            .cornerRadius(25)
-    }
-    .padding([.horizontal,.bottom], 10)
-}
-
-
 struct ItemsV: View {
+    @Binding var tabSelection: Tab_cart
     var orderSummary = OrderSummaryModel.value()
     var arrCartList = ProductM.all()
     var body: some View {
@@ -32,7 +18,7 @@ struct ItemsV: View {
                 Spacer()
                 
                 orderSummarySection
-                
+            
                 ContinueButton()
                 
                 FikfisCommitment
@@ -43,6 +29,26 @@ struct ItemsV: View {
         .padding().ignoresSafeArea()
         .scrollIndicators(.hidden)
     }
+    
+    func ContinueButton() -> some View {
+        
+      /* NavigationLink(destination:*/
+        Button{
+//            ShippingV(orderSummary:OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0) )
+            tabSelection = .Shipping
+
+        }label: {
+            Text("Continue")
+                .font(.custom_font(.medium,size: 20))
+                .foregroundColor(.black)
+                .frame(height: 50)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .background(Color.themeColor)
+                .cornerRadius(25)
+        }
+   
+       .padding([.horizontal,.bottom], 10)
+   }
     
     
     var orderSummarySection : some View{
@@ -163,7 +169,7 @@ struct ItemsV: View {
 }
 
 #Preview {
-    ItemsV(orderSummary:OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0) )
+    ItemsV (tabSelection: .constant(.Items), orderSummary:OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0) )
 }
 
 

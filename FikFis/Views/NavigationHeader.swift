@@ -62,6 +62,7 @@ struct NavigationHeader: View {
                 .frame(height: 80)
             }
             .background(Color.themeColor.ignoresSafeArea(.all).cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
+            
         }
     }
 }

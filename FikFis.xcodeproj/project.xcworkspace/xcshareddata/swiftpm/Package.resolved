@@ -1,5 +1,5 @@
 {
-  "originHash" : "b7745c74c713f0459445cfebfd2d6941db79cc943a9e5d359ea03f5d085942d3",
+  "originHash" : "4d9c7ef06430866aad7404f872da2eb1ca825186cc413174151b1ca76059d3c6",
   "pins" : [
     {
       "identity" : "bryxbanner",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "1d00ffc19c379253712a5792a7f5121fa0d66243",
         "version" : "0.8.5"
+      }
+    },
+    {
+      "identity" : "stripe-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-ios",
+      "state" : {
+        "revision" : "3f0d668f75e2728c901f77340c44445ab89ceb2c",
+        "version" : "24.0.0"
       }
     }
   ],

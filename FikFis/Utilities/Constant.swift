@@ -30,6 +30,18 @@ let arrColor = ["Red","White","Black","Green","Yellow","Purple","Cyan"]
 let arrSize = ["S","M","L","XL","XLL"]
 
 
+let KEY_DEVICE_TOKEN = "device_token"
+let KEY_USER_NAME = "user_name"
+let KEY_PASSWORD = "Password"
+let KEY_PHONE_NUMBER = "phone_number"
+let KEY_EMAIL = "email"
+let KEY_REFRESH_TOKEN = "refresh_token"
+let KEY_ACCESS_TOKEN = "access_token"
+let KEY_IS_LOGGEDIN = "isLogin"
+let KEY_PROFILE_PIC = "profile_pic"
+
+let Udefault = UserDefaults.standard
+
 struct AppColor {
     static let primaryBlack = Color.init(hexa: "1F1F1F")
     static let secondaryBlack = Color.init(hexa: "464B5F")

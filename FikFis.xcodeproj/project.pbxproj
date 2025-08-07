@@ -12,6 +12,7 @@
 		180FA5D92C7A2CFE00FDE73E /* App_offersV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */; };
 		1862DFE12C84CDF100608425 /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE02C84CDF100608425 /* CardViewModifier.swift */; };
 		1862DFE32C84D18A00608425 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862DFE22C84D18A00608425 /* SwiftUIView.swift */; };
+		186404462CEB993B00989C3E /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186404452CEB993B00989C3E /* ProfileVM.swift */; };
 		186D5E032C878AF500D5CCBC /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D5E022C878AF500D5CCBC /* NavigationDemo.swift */; };
 		186FB1E72C8CC67D00565820 /* OfferRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB1E62C8CC67D00565820 /* OfferRow.swift */; };
 		186FB1EA2C8D721100565820 /* ProductListingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FB1E92C8D721100565820 /* ProductListingV.swift */; };
@@ -44,6 +45,15 @@
 		18ADCEDA2C69038E00E081DD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADCED92C69038E00E081DD /* Card.swift */; };
 		18B05DB42CE0F54100522888 /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B05DB32CE0F54100522888 /* CustomTab.swift */; };
 		18B05DB62CE12AE700522888 /* AddressShippingV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B05DB52CE12AE700522888 /* AddressShippingV.swift */; };
+		18BA3ADA2CE52F0D00B2C309 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 18BA3AD92CE52F0D00B2C309 /* Stripe */; };
+		18BA3ADC2CE52F0D00B2C309 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 18BA3ADB2CE52F0D00B2C309 /* StripeApplePay */; };
+		18BA3ADE2CE52F0D00B2C309 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 18BA3ADD2CE52F0D00B2C309 /* StripeCardScan */; };
+		18BA3AE02CE52F0D00B2C309 /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 18BA3ADF2CE52F0D00B2C309 /* StripeFinancialConnections */; };
+		18BA3AE22CE52F0D00B2C309 /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 18BA3AE12CE52F0D00B2C309 /* StripeIdentity */; };
+		18BA3AE62CE668D800B2C309 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3AE52CE668D800B2C309 /* SignUpM.swift */; };
+		18BA3AE82CE66AB000B2C309 /* GlogalModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3AE72CE66AB000B2C309 /* GlogalModal.swift */; };
+		18BA3AED2CE9016300B2C309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3AEC2CE9016300B2C309 /* AppDelegate.swift */; };
+		18BA3AEF2CEA059100B2C309 /* AccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3AEE2CEA059100B2C309 /* AccountVM.swift */; };
 		18BB93DD2C5D659100B6AAA0 /* PasswordAssistanceV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */; };
 		18BB93DF2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */; };
 		18BB93E12C5E1BC300B6AAA0 /* OtpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */; };
@@ -125,6 +135,7 @@
 		180FA5D82C7A2CFE00FDE73E /* App_offersV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_offersV.swift; sourceTree = "<group>"; };
 		1862DFE02C84CDF100608425 /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
 		1862DFE22C84D18A00608425 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		186404452CEB993B00989C3E /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		186D5E022C878AF500D5CCBC /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 		186FB1E62C8CC67D00565820 /* OfferRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRow.swift; sourceTree = "<group>"; };
 		186FB1E92C8D721100565820 /* ProductListingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingV.swift; sourceTree = "<group>"; };
@@ -158,6 +169,10 @@
 		18ADCED92C69038E00E081DD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		18B05DB32CE0F54100522888 /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
 		18B05DB52CE12AE700522888 /* AddressShippingV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressShippingV.swift; sourceTree = "<group>"; };
+		18BA3AE52CE668D800B2C309 /* SignUpM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpM.swift; sourceTree = "<group>"; };
+		18BA3AE72CE66AB000B2C309 /* GlogalModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlogalModal.swift; sourceTree = "<group>"; };
+		18BA3AEC2CE9016300B2C309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18BA3AEE2CEA059100B2C309 /* AccountVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVM.swift; sourceTree = "<group>"; };
 		18BB93DC2C5D659100B6AAA0 /* PasswordAssistanceV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceV.swift; sourceTree = "<group>"; };
 		18BB93DE2C5D65BE00B6AAA0 /* PasswordAssistanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAssistanceVM.swift; sourceTree = "<group>"; };
 		18BB93E02C5E1BC300B6AAA0 /* OtpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpV.swift; sourceTree = "<group>"; };
@@ -239,7 +254,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BA3AE02CE52F0D00B2C309 /* StripeFinancialConnections in Frameworks */,
+				18BA3ADE2CE52F0D00B2C309 /* StripeCardScan in Frameworks */,
+				18BA3ADC2CE52F0D00B2C309 /* StripeApplePay in Frameworks */,
+				18BA3AE22CE52F0D00B2C309 /* StripeIdentity in Frameworks */,
 				18F7F2AA2CDE39D800296CC8 /* BRYXBanner in Frameworks */,
+				18BA3ADA2CE52F0D00B2C309 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +401,7 @@
 				18C8FE732C825371000BCF6C /* BlogModel.swift */,
 				18C8FE792C84358A000BCF6C /* ReviewModel.swift */,
 				187DF6A82C8AD3E7003148A4 /* NoticationModel.swift */,
+				18BA3AE72CE66AB000B2C309 /* GlogalModal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,6 +459,7 @@
 				18C8FE4F2C7D1476000BCF6C /* Address */,
 				18C8FE362C7CB4FA000BCF6C /* Reviews */,
 				18BB94002C61509500B6AAA0 /* AccountV.swift */,
+				18BA3AEE2CEA059100B2C309 /* AccountVM.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -506,6 +528,7 @@
 			children = (
 				18C8FE4D2C7CD951000BCF6C /* ProfileV.swift */,
 				180164E02CD8F7FA00BAA646 /* ChangePasswordV.swift */,
+				186404452CEB993B00989C3E /* ProfileVM.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -567,6 +590,7 @@
 		18D4FEF22C5A1F550026E335 = {
 			isa = PBXGroup;
 			children = (
+				18BA3AEC2CE9016300B2C309 /* AppDelegate.swift */,
 				18D4FEFD2C5A1F550026E335 /* FikFis */,
 				18D4FEFC2C5A1F550026E335 /* Products */,
 			);
@@ -681,6 +705,7 @@
 			children = (
 				18BB93E82C5E217500B6AAA0 /* SignUpV.swift */,
 				18BB93EA2C5E218700B6AAA0 /* SignUpVM.swift */,
+				18BA3AE52CE668D800B2C309 /* SignUpM.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -758,6 +783,11 @@
 			name = FikFis;
 			packageProductDependencies = (
 				18F7F2A92CDE39D800296CC8 /* BRYXBanner */,
+				18BA3AD92CE52F0D00B2C309 /* Stripe */,
+				18BA3ADB2CE52F0D00B2C309 /* StripeApplePay */,
+				18BA3ADD2CE52F0D00B2C309 /* StripeCardScan */,
+				18BA3ADF2CE52F0D00B2C309 /* StripeFinancialConnections */,
+				18BA3AE12CE52F0D00B2C309 /* StripeIdentity */,
 			);
 			productName = FikFis;
 			productReference = 18D4FEFB2C5A1F550026E335 /* FikFis.app */;
@@ -789,6 +819,7 @@
 			mainGroup = 18D4FEF22C5A1F550026E335;
 			packageReferences = (
 				18F7F2A82CDE39D800296CC8 /* XCRemoteSwiftPackageReference "BRYXBanner" */,
+				18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */,
 			);
 			productRefGroup = 18D4FEFC2C5A1F550026E335 /* Products */;
 			projectDirPath = "";
@@ -863,6 +894,7 @@
 				18C8FE532C7D14A0000BCF6C /* AddAddress.swift in Sources */,
 				18C8FE842C84A6B2000BCF6C /* ConfirmationV.swift in Sources */,
 				18C8FE7C2C84A65B000BCF6C /* ItemsV.swift in Sources */,
+				186404462CEB993B00989C3E /* ProfileVM.swift in Sources */,
 				18D4FF012C5A1F550026E335 /* ContentView.swift in Sources */,
 				18C8FE3C2C7CB508000BCF6C /* ReviewsV.swift in Sources */,
 				1894F1012C99A946006A0D85 /* FilterContentV.swift in Sources */,
@@ -892,6 +924,7 @@
 				1AE630972C8AD872004594AA /* CommonModel.swift in Sources */,
 				18C8FE722C825143000BCF6C /* BlogV.swift in Sources */,
 				180164E12CD8F7FA00BAA646 /* ChangePasswordV.swift in Sources */,
+				18BA3AE62CE668D800B2C309 /* SignUpM.swift in Sources */,
 				18ADCED72C69027400E081DD /* CardView_category.swift in Sources */,
 				18D4FEFF2C5A1F550026E335 /* FikFisApp.swift in Sources */,
 				186FB1F42C90B21700565820 /* AdditionalInformationV.swift in Sources */,
@@ -905,6 +938,7 @@
 				18ADCED32C67F1D100E081DD /* TabV.swift in Sources */,
 				1ABDE8172C763C1300905E98 /* ForwardButton.swift in Sources */,
 				18BB940D2C66116000B6AAA0 /* NavigationHeader.swift in Sources */,
+				18BA3AED2CE9016300B2C309 /* AppDelegate.swift in Sources */,
 				18C8FE3A2C7CB508000BCF6C /* ReviewsCell.swift in Sources */,
 				187DF6A52C8AD2D0003148A4 /* NotificationV.swift in Sources */,
 				18C8FE7A2C84358A000BCF6C /* ReviewModel.swift in Sources */,
@@ -919,9 +953,11 @@
 				1A2A83DC2C7A3ED200D7F5E7 /* MyOrders.swift in Sources */,
 				1AE630932C8AC84D004594AA /* NavBarAccessor.swift in Sources */,
 				18C8FE512C7D1490000BCF6C /* YourAddress.swift in Sources */,
+				18BA3AE82CE66AB000B2C309 /* GlogalModal.swift in Sources */,
 				1894F0F32C96DB95006A0D85 /* FikFisCommitment.swift in Sources */,
 				18BB93F42C60AAD800B6AAA0 /* ImagePagerM.swift in Sources */,
 				18C8FE442C7CB802000BCF6C /* RoundedButton.swift in Sources */,
+				18BA3AEF2CEA059100B2C309 /* AccountVM.swift in Sources */,
 				187DF6A72C8AD301003148A4 /* NotificationRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,7 +1090,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
@@ -1077,7 +1113,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1090,7 +1126,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FikFis/FikFis.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"FikFis/Preview Content\"";
@@ -1113,7 +1149,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fikfis.FikFis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_AppStore;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FikFis_dev;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1144,6 +1180,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
 		18F7F2A82CDE39D800296CC8 /* XCRemoteSwiftPackageReference "BRYXBanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bryx-inc/BRYXBanner";
@@ -1155,6 +1199,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		18BA3AD92CE52F0D00B2C309 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+		18BA3ADB2CE52F0D00B2C309 /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeApplePay;
+		};
+		18BA3ADD2CE52F0D00B2C309 /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeCardScan;
+		};
+		18BA3ADF2CE52F0D00B2C309 /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeFinancialConnections;
+		};
+		18BA3AE12CE52F0D00B2C309 /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BA3AD82CE52F0D00B2C309 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeIdentity;
+		};
 		18F7F2A92CDE39D800296CC8 /* BRYXBanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 18F7F2A82CDE39D800296CC8 /* XCRemoteSwiftPackageReference "BRYXBanner" */;

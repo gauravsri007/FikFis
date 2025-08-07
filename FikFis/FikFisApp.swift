@@ -10,13 +10,37 @@ import SwiftUI
 
 @main
 struct FikFisApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            LoginV()
-//            HomeV(coverImages: [ImagePagerM(image: UIImage(named: "paging1"), title: "1", titleColor: .red, action: {} ),ImagePagerM(image: UIImage(named: "paging2"), title: "1", titleColor: .red, action: {} )])
-//            TabV()
-//            NavigationDemo()
+            ContentView()
+//            if let isLoggedIn = Udefault.value(forKey: KEY_IS_LOGGEDIN) as? Bool {
+//                if isLoggedIn {
+//                    TabV()
+//                }
+//                else {
+//                    LoginV()
+//                }
+//            }
+//            else{
+//                LoginV()
+//            }
         }
+        
     }
 }
+
+
+//class AppDelegate: NSObject, UIApplicationDelegate {
+//    
+//    func application(_ application: UIApplication,
+//        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+//    ) -> Bool {
+//        print("App has launched.")
+//        registerForPushNotifications()
+//
+//        return true
+//    }
+//    
+//}

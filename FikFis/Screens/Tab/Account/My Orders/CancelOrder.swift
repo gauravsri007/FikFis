@@ -21,6 +21,8 @@ struct CancelOrder: View {
             }
         }
         .padding(.horizontal)
+        .toolbar(.hidden, for: .tabBar)
+
     }
 }
 

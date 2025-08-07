@@ -1,45 +1,43 @@
 //
-//  LoginVM.swift
+//  LogoutVM.swift
 //  FikFis
 //
-//  Created by apple on 31/07/24.
+//  Created by apple on 17/11/24.
 //
 
 import Foundation
 
-
-class LoginVM: ObservableObject {
+class LogoutVM: ObservableObject {
     
     @Published var responseMessage: String = ""
-    
-        func loginAPI(userName: String,password: String, completion: @escaping (Result<LoginResponse, Error>,Int) -> Void) {
-        // Define the parameters to send
 
+    func logoutAPI(completion: @escaping (Result<DefaultResponse, Error>,Int) -> Void) {
+        // Define the parameters to send
         let parameters: [String: Any] = [
-            "username": userName,
-            "password": password,
-            "device_type": "ios",
             "device_token": Udefault.value(forKey: KEY_DEVICE_TOKEN)!,
-            "fcm_token": "XYZ",
         ]
         print("parameters \(parameters)")
         // Call the API to register OTP
+       
         ApiManager.shared.request(
-            to: "login",
+            to: "logout",
             method: .POST,
             parameters: parameters,
             fileData: nil,
             fileName: nil,
             mimeType: nil,
-            bearerToken: "",
-            responseType: LoginResponse.self
+            bearerToken: Udefault.value(forKey: KEY_ACCESS_TOKEN) as! String,
+            responseType: DefaultResponse.self
         ) { [weak self] result,statusCode  in
             DispatchQueue.main.async {
+                
+                
                 switch result {
                 case .success(let response):
                     self?.responseMessage = response.message ?? "" // Update with the response message
                     print(response.message)
                     completion(.success(response), statusCode) // Trigger the success completion
+                    
                 case .failure(let error):
                     self?.responseMessage = "Error: \(error.localizedDescription)"
                     completion(.failure(error), statusCode) // Trigger the failure completion
@@ -47,18 +45,10 @@ class LoginVM: ObservableObject {
             }
         }
     }
-}
-
-
-struct LoginResponse: Codable {
-    let status: Int?
-    let error: Int?
-    let message: String?
-    let fullname: String?
-    let refresh_token: String?
-    let access_token: String?
-    let username: String?
-    let phone: String?
-    let email: String?
-    let profile_pic: String?
+    
+    func clearLocalData() {
+        Udefault.set(false, forKey: KEY_IS_LOGGEDIN)
+        Udefault.synchronize()
+    }
+    
 }

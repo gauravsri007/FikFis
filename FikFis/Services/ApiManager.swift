@@ -36,21 +36,25 @@ class ApiManager {
     func request<T: Decodable>(
         to url: String,
         method: HTTPMethod = .POST, // Default to POST
-        parameters: [String: String],
+        parameters: [String: Any],
         fileData: Data?,
         fileName: String?,
         mimeType: String?,
+        bearerToken:String?,
         responseType: T.Type,
-        completion: @escaping (Result<T, Error>) -> Void
+        completion: @escaping (Result<T, Error>, Int) -> Void
     ) {
         guard let requestUrl = URL(string: "\(baseURL)\(url)") else {
-            completion(.failure(NSError(domain: "Invalid URL", code: 400, userInfo: nil)))
+            completion(.failure(NSError(domain: "Invalid URL", code: 400, userInfo: nil)),400 )
             return
         }
 
         var request = URLRequest(url: requestUrl)
         request.httpMethod = method.rawValue
-
+        
+        // Set the Authorization header
+        request.setValue("Bearer \(bearerToken!)", forHTTPHeaderField: "Authorization")
+        
         let boundary = "Boundary-\(UUID().uuidString)"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
@@ -80,20 +84,27 @@ class ApiManager {
         // Send the request using URLSession
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                completion(.failure(error))
+                completion(.failure(error),500)
                 return
             }
+            
+            // Handle response
+            guard let httpResponse = response as? HTTPURLResponse else{
+                return
+            }
+            print("Status Code: \(httpResponse.statusCode)")
+
 
             guard let data = data else {
-                completion(.failure(NSError(domain: "No response data", code: 500, userInfo: nil)))
+                completion(.failure(NSError(domain: "No response data", code: 500, userInfo: nil)),500)
                 return
             }
 
             do {
                 let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decodedResponse))
+                completion(.success(decodedResponse), httpResponse.statusCode)
             } catch let decodingError {
-                completion(.failure(decodingError))
+                completion(.failure(decodingError), 0)
             }
         }.resume()
     }

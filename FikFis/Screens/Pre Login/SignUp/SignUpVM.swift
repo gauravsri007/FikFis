@@ -11,7 +11,7 @@ class SignUpVM: ObservableObject {
     
     @Published var responseMessage: String = ""
     
-    func registerUserOTP(username: String, completion: @escaping (Result<DefaultResponse, Error>) -> Void) {
+    func registerUserOTP(username: String, completion: @escaping (Result<DefaultResponse, Error>,Int) -> Void) {
         // Define the parameters to send
         let parameters: [String: String] = [
             "username": username
@@ -25,18 +25,19 @@ class SignUpVM: ObservableObject {
             fileData: nil,
             fileName: nil,
             mimeType: nil,
+            bearerToken: "",
             responseType: DefaultResponse.self
-        ) { [weak self] result in
+        ) { [weak self] result,statusCode  in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
                     self?.responseMessage = response.message ?? "" // Update with the response message
                     print(response.message)
-                    completion(.success(response)) // Trigger the success completion
+                    completion(.success(response), statusCode) // Trigger the success completion
                     
                 case .failure(let error):
                     self?.responseMessage = "Error: \(error.localizedDescription)"
-                    completion(.failure(error)) // Trigger the failure completion
+                    completion(.failure(error), statusCode) // Trigger the failure completion
                 }
             }
         }

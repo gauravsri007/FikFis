@@ -20,6 +20,8 @@ struct ReviewsV: View {
                 }
         }
         .padding()
+        .toolbar(.hidden, for: .tabBar)
+
     }
 }
 

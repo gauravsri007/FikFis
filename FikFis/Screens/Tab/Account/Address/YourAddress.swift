@@ -42,6 +42,8 @@ struct YourAddress: View {
                 
             }
         }
+        .toolbar(.hidden, for: .tabBar)
+
     }
     
     var addressCollection : some View{
@@ -53,7 +55,7 @@ struct YourAddress: View {
 
             ]) {
                 ForEach(self.arrAddress, id: \.id) { _address in
-                    AddressRow(address: _address)
+                    AddressRow(address: _address, widthFrame: appWidth / 2 - 16, heightFrame: 200)
                 }
             }
 
@@ -71,26 +73,25 @@ struct YourAddress: View {
 
 struct AddressRow: View {
     var address: Address
+    var widthFrame: CGFloat
+    var heightFrame: CGFloat
 
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer().frame(height: 10)
             Text(address.userName)
                 .font(.custom_font(.bold,size: 16))
                 .foregroundColor(AppColor.secondaryBlack)
+                .padding(.top)
             
-            Spacer().frame(height: 10)
-
             Text("Full Addreess : \(address.fullAddress)")
-                .font(.custom_font(.medium,size: 15))
+                .font(.custom_font(.medium,size: 14))
                 .foregroundColor(AppColor.secondaryBlack)
+                .frame(height:40)
+//                .background(Color.yellow)
             
-            Spacer().frame(height: 10)
-
             Text("Phone Number : \(address.phoneNumber)")
                 .font(.custom_font(.medium,size: 15))
                 .foregroundColor(AppColor.secondaryBlack)
-            
             HStack{
                 Button(action: {
                 }) {
@@ -116,14 +117,12 @@ struct AddressRow: View {
                 }
                 .foregroundColor(AppColor.themeColor_yellow)
             }
-            .padding(.vertical)
+//            .padding(.vertical)
 
         }
-        .padding(.horizontal, 6)
+//        .padding(.horizontal, 6)
+        .frame(width: widthFrame, height: heightFrame)
         .border(Color.gray)
-        .frame(width: appWidth / 2 - 16, height: 200)
-//        .padding()
-        
-//        .clipped()
+//        .background(Color.green.opacity(0.5))
     }
 }

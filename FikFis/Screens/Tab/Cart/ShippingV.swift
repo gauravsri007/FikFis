@@ -43,9 +43,11 @@ struct ShippingV: View {
                 availableOffer
                 
             }
+
         }
         .padding()
         .scrollIndicators(.hidden)
+  
 
     }
     
@@ -62,8 +64,9 @@ struct ShippingV: View {
 //                    presentAddressView.toggle()
                     overlayManager.show(
                         AddressShippingV()
-                        ,dismissOnTap: true
+                        ,dismissOnTap: false
                     )
+       
                 }label: {
                     Text("Add Address")
                 }

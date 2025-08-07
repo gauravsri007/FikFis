@@ -32,6 +32,8 @@ struct OrderView: View {
             Spacer()
         }
         .padding(.bottom, 5)
+        .toolbar(.hidden, for: .tabBar)
+
         .overlay(alignment: .bottomTrailing, content: {
             if !hideBtn {
                 NavigationLink(destination: OrderDetail(item: item), label: {

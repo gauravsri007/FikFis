@@ -21,6 +21,8 @@ struct ReturnOrder: View {
             }
         }
         .padding(.horizontal)
+        .toolbar(.hidden, for: .tabBar)
+
     }
 }
 

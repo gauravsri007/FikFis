@@ -10,9 +10,10 @@ import SwiftUI
 struct AccountV: View {
     
     @Environment(\.dismiss) var dismiss
-    
+    @StateObject private var viewModel = LogoutVM()
     @State private var inputText: String = ""
-    
+    @State private var isLogout: Bool = false
+
     @State var collection1 : [Card] = [
         Card(id: 0, title: "Your Profile", imageUrl: "user"),
         Card(id: 1, title: "Your Orders", imageUrl: "shopping"),
@@ -91,10 +92,22 @@ struct AccountV: View {
         VStack {
             if collection.id == 8 {
                 Button {
-                    dismiss()
+                    viewModel.logoutAPI(completion:
+                                            { result, statusCode in
+                        switch result {
+                        case .success(let response):
+                            if statusCode == 200 || statusCode == 201{
+                                viewModel.clearLocalData()
+                                dismiss()
+                            }
+                        case .failure(let error):
+                            print("Failed with error: \(error.localizedDescription)")
+                        }
+                    })
                 } label: {
                     labelView(collection: collection)
                 }
+                
             } else {
                 NavigationLink(destination: {
                     if collection.id == 0 {

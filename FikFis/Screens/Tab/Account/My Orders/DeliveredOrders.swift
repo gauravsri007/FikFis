@@ -20,6 +20,7 @@ struct DeliveredOrders: View {
             }
         }
         .padding(.horizontal)
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 
