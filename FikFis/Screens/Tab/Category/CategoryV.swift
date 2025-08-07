@@ -28,6 +28,7 @@ struct CategoryV: View {
 
     @State private var inputText: String = ""
     @State var header : String
+    @EnvironmentObject var overlayManager: OverlayManager
 
     var body: some View {
         VStack(alignment: .leading) {

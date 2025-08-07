@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 
 //class TabSelection: ObservableObject {
 //    @Published var selectedTab: Tab_cart = .Items
 //}
+=======
+import PagerTabStripView
+import XLPagerTabStrip
+
+>>>>>>> Stashed changes
 
 struct CartV: View {
     @State private var tabSelection : Tab_cart = .Items
@@ -21,6 +27,7 @@ struct CartV: View {
 
             HeaderLabel(header: "Your Carts",font: header_font)
                 .padding(.leading)
+<<<<<<< Updated upstream
             Group {
                 VStack {
                     // Tab content with slide-in animation
@@ -31,6 +38,14 @@ struct CartV: View {
                         CustomTab(label: "Shipping", tabSelection: $tabSelection, tab: .Shipping, animationNamespace: animationNamespace)
                         Spacer()
                         CustomTab(label: "Payment", tabSelection: $tabSelection, tab: .Payment, animationNamespace: animationNamespace)
+=======
+//            PagerTabStripWrapper()
+
+            PagerTabStripView() {
+                ItemsV(orderSummary: OrderSummaryModel(items_total: 2000.0, items_discount: 100.0, delivery: 10.0, tax: 10.0))
+                    .pagerTabItem(tag: 0) {
+                        TitleNavBarItem(title: "Items")
+>>>>>>> Stashed changes
                     }
                     .padding()
                     //                    .background(Color.gray.opacity(0.2))

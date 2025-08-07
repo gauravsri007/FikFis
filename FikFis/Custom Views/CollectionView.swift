@@ -13,7 +13,7 @@ struct CollectionView: View {
     @State var header : String
 
     var body: some View {
-        NavigationLink(destination: ProductCategoryList()){
+//        NavigationLink(destination: ProductCategoryList()){
         VStack {
             Image("\(item.imageUrl)")
                 .resizable()
@@ -28,7 +28,10 @@ struct CollectionView: View {
                 .frame(width: size, height: 60, alignment: .top)
         }
         .frame(width: size, height: size + 60)
-                       }
+        .onTapGesture {
+            
+        }
+//    }
     }
 }
 

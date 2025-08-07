@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4A8EAEA4-5ECE-4649-824F-27EF15BCA946"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FikFis/Utilities/Extension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "71300BD9-0771-4C8A-8C59-4C9950EBACE1"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -66,6 +50,7 @@
             endingLineNumber = "16"
             landmarkName = "FavoriteButton()"
             landmarkType = "7">
+<<<<<<< Updated upstream
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -416,11 +401,14 @@
                   endingLineNumber = "98">
                </Location>
             </Locations>
+=======
+>>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< Updated upstream
             uuid = "AB3A815B-D3BD-4C5D-BD6D-65CC447F0C5B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -431,12 +419,73 @@
             startingLineNumber = "107"
             endingLineNumber = "107"
             landmarkName = "request(to:method:parameters:fileData:fileName:mimeType:bearerToken:responseType:completion:)"
+=======
+            uuid = "12B54902-F633-4562-9795-E15DB5672D6A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Tab/Account/Profile/ProfileV.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "contentView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "577ECE93-4FF6-42EB-91B8-1125E311B200"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Tab/Account/Profile/ProfileV.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EA5B479-E2CC-41D8-B802-CFB41BD6C998"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Product /Product Details/ProductDetailV.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "931359E6-327F-4F59-8CCC-E1CCA5523543"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Pre Login/SignUp/SignUpVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "registerUserOTP(username:completion:)"
+>>>>>>> Stashed changes
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< Updated upstream
             uuid = "E23711A4-3603-4DA3-8872-9FB51475EF2A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -447,12 +496,25 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "logoutAPI(completion:)"
+=======
+            uuid = "AAB01BA0-C4A2-4BBB-BE49-FFF3DFC471EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Pre Login/SignUp/SignUpVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "registerUserOTP(username:completion:)"
+>>>>>>> Stashed changes
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< Updated upstream
             uuid = "D88C42C4-AA29-4EC2-83D9-043A912BCA3C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -463,12 +525,25 @@
             startingLineNumber = "101"
             endingLineNumber = "101"
             landmarkName = "headerTab(collection:)"
+=======
+            uuid = "F2DD8D0D-FE1B-46F6-B2BC-55E93F909947"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Pre Login/SignUp/SignUpVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "registerUserOTP(username:completion:)"
+>>>>>>> Stashed changes
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< Updated upstream
             uuid = "1F1C1001-2FD3-4C7E-8ED9-885341C23FF0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -526,6 +601,33 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
+=======
+            uuid = "FB6F2731-A8CD-49C8-84C8-84A455D6C741"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Screens/Pre Login/SignUp/SignUpVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "registerUserOTP(username:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B36B663F-E32B-47C2-ACB8-49B82EB7A512"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FikFis/Custom Views/CollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+>>>>>>> Stashed changes
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
